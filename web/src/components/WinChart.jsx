@@ -17,6 +17,7 @@ export default function WinChart({ p }) {
   const moda = p.moda[0];
   const derrotas = (w) => p.v + p.d + p.n_rest - w;
 
+  const raro = R.length > 22; // 82 jogos: mostra só múltiplos de 5
   const marcas = [];
   for (let v = passo; v <= topo; v += passo) marcas.push(v);
 
@@ -49,7 +50,7 @@ export default function WinChart({ p }) {
         </div>
         <div className="xax">
           {R.map((r) => (
-            <span key={r.w}>{r.w}</span>
+            <span key={r.w}>{!raro || r.w % 5 === 0 ? r.w : ''}</span>
           ))}
         </div>
         <div className="xtitle">Vitórias no fim da temporada regular</div>

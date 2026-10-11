@@ -1,13 +1,14 @@
 import { useMemo } from 'react';
 import WinChart from './WinChart.jsx';
 import RestGames from './RestGames.jsx';
-import { num1, pct, record } from '../lib/format.js';
+import { num1, pct, record, usaLinha } from '../lib/format.js';
 import { store } from '../lib/store.js';
 
-const GRUPOS = ['AFC Leste', 'AFC Norte', 'AFC Sul', 'AFC Oeste', 'NFC Leste', 'NFC Norte', 'NFC Sul', 'NFC Oeste'];
+const GRUPOS_NFL = ['AFC Leste', 'AFC Norte', 'AFC Sul', 'AFC Oeste', 'NFC Leste', 'NFC Norte', 'NFC Sul', 'NFC Oeste'];
 
 export default function TeamTab({ data, code, onSelect }) {
-  const { times, projecoes } = data;
+  const { meta, times, projecoes } = data;
+  const grupos = meta.grupos ?? GRUPOS_NFL;
   const codigos = Object.keys(times);
   const maisForte = useMemo(() => [...codigos].sort((a, b) => times[a].elo_rank - times[b].elo_rank)[0], [times]); // eslint-disable-line react-hooks/exhaustive-deps
   const salvo = store.get('pv_team');
@@ -20,7 +21,7 @@ export default function TeamTab({ data, code, onSelect }) {
       <div className="picker">
         <label htmlFor="team">Time</label>
         <select id="team" value={sigla} onChange={(e) => onSelect(e.target.value)}>
-          {GRUPOS.map((g) => (
+          {grupos.map((g) => (
             <optgroup key={g} label={g}>
               {codigos
                 .filter((c) => `${times[c].conf} ${times[c].div}` === g)
@@ -38,7 +39,7 @@ export default function TeamTab({ data, code, onSelect }) {
         <div>
           <h2>{t.nome}</h2>
           <p>
-            {t.conf} {t.div} · Poder #{t.elo_rank} de 32 (Elo {t.elo}) · o modelo acertou {pct(t.acc, 1)} dos jogos desse time desde 2016 ({t.acc_n} jogos)
+            {t.conf} {t.div} · Poder #{t.elo_rank} de {codigos.length} (Elo {t.elo}) · o modelo acertou {pct(t.acc, 1)} dos jogos desse time desde {meta.anos_ref[0]} ({t.acc_n} jogos)
           </p>
         </div>
         <div className="forma" aria-label="Últimos 5 jogos">
@@ -68,13 +69,18 @@ export default function TeamTab({ data, code, onSelect }) {
                 <div><span>Faixa provável (80%)</span><b>{p.faixa[0]} a {p.faixa[1]} vitórias</b></div>
                 <div><span>Jogos restantes</span><b>{p.n_rest}</b></div>
               </div>
+              {p.n_sem_data > 0 && (
+                <p className="note" style={{ marginTop: 10 }}>
+                  O calendário ainda não define {p.n_sem_data} jogos deste time (ligados à NBA Cup). Eles entram na conta com a chance média do time nos jogos já marcados.
+                </p>
+              )}
             </div>
             <div className="card">
               <h3>Chance de cada total de vitórias</h3>
               <WinChart p={p} />
             </div>
           </div>
-          <RestGames p={p} times={times} />
+          <RestGames p={p} times={times} usaLinha={usaLinha(meta)} />
         </>
       )}
     </>

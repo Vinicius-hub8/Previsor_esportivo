@@ -61,3 +61,22 @@ td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 .meter .v { font: 700 1.2rem/1 var(--f-display); width: 3.2em; text-align: right; }
 .meter .v sup { color: var(--muted); font-weight: 400; font-size: .7em; }
 @media (max-width: 520px) { .rg { grid-template-columns: 70px minmax(0, 1fr); } .rg .meter { grid-column: 1 / -1; } }
+.card .more { display: block; }
+caption { text-align: left; color: var(--muted); font-size: .8rem; padding: 8px 0 4px; caption-side: top; }
+@media (max-width: 520px) { .xax { font-size: .66rem; } }
+
+/* CLASSIFICAÇÃO E TÍTULO (simulação) */
+.rank { display: grid; gap: 6px; }
+.rk { display: grid; grid-template-columns: 22px 110px minmax(0, 1fr) 46px; gap: 10px; align-items: center; }
+.rk .pos { color: var(--muted); font-size: .8rem; text-align: right; }
+.rk .nm { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rk .trk { height: 12px; background: var(--track); border-radius: 6px; overflow: hidden; }
+.rk .trk i { display: block; height: 100%; background: var(--accent); border-radius: 6px; }
+.rk b { font: 700 1.1rem/1 var(--f-display); text-align: right; }
+.tabela td.pos, .tabela th:first-child { width: 28px; color: var(--muted); }
+.tabela td.pc { background: linear-gradient(to right, var(--accent-soft) var(--w), transparent var(--w)); min-width: 58px; }
+.tabela tr.corte td { border-top: 2px solid var(--muted); }
+.tabela .lnk { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; padding: 0; font-weight: 600; color: var(--ink); white-space: nowrap; text-align: left; }
+.tabela .lnk:hover { color: var(--accent-ink); text-decoration: underline; }
+.badge.sm { width: 38px; height: 26px; font-size: .78rem; border-radius: 6px; }
+@media (max-width: 520px) { .rk { grid-template-columns: 20px 92px minmax(0, 1fr) 42px; gap: 8px; } }

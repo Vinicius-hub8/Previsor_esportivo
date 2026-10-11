@@ -35,6 +35,27 @@ function Resultado({ g }) {
   );
 }
 
+const diasTxt = (d) => (d <= 1 ? 'jogo em dia seguido (back-to-back)' : d >= 7 ? '7 dias ou mais' : `${d} dias`);
+
+// Detalhes da NBA: sem linha de aposta, mostra Elo, saldo médio recente e descanso.
+function DetalhesSemLinha({ g, v, m }) {
+  const forma = (i) =>
+    g.nj[i] === 0 ? 'ainda sem jogos nesta temporada' : `saldo médio ${g.forma[i] > 0 ? '+' : ''}${num1(g.forma[i])} pts (${g.nj[i]} jogos)`;
+  return (
+    <div className="det">
+      {g.elo != null && (
+        <div>
+          <span>Força (Elo)</span>
+          <b>{g.elo === 0 ? 'iguais' : `${(g.elo > 0 ? m : v).apelido} +${Math.abs(g.elo)}`}</b>
+        </div>
+      )}
+      <div><span>{v.apelido}, jogos recentes</span><b>{forma(0)}</b></div>
+      <div><span>{m.apelido}, jogos recentes</span><b>{forma(1)}</b></div>
+      <div><span>Descanso</span><b>{v.apelido}: {diasTxt(g.desc[0])} · {m.apelido}: {diasTxt(g.desc[1])}</b></div>
+    </div>
+  );
+}
+
 function Detalhes({ g, v, m }) {
   const sp = g.spread;
   const linha =
@@ -58,7 +79,7 @@ function Detalhes({ g, v, m }) {
   );
 }
 
-export default function GameCard({ g, times }) {
+export default function GameCard({ g, times, usaLinha = true }) {
   const [aberto, setAberto] = useState(false);
   const v = times[g.v];
   const m = times[g.m];
@@ -77,7 +98,7 @@ export default function GameCard({ g, times }) {
     <article className="game" aria-label={aria}>
       <div className="g-top">
         <span>{dayShort(g.data)}{g.hora ? ` · ${g.hora} ET` : ''}</span>
-        {!g.linha && tem && !g.placar && (
+        {usaLinha && !g.linha && tem && !g.placar && (
           <span className="tag" title="A linha de aposta ainda não foi divulgada; o palpite usa o modelo sem ela.">
             sem linha de aposta
           </span>
@@ -104,7 +125,7 @@ export default function GameCard({ g, times }) {
       <button className="more" onClick={() => setAberto(!aberto)} aria-expanded={aberto}>
         {aberto ? 'Ocultar detalhes' : 'Ver detalhes'}
       </button>
-      {aberto && <Detalhes g={g} v={v} m={m} />}
+      {aberto && (usaLinha ? <Detalhes g={g} v={v} m={m} /> : <DetalhesSemLinha g={g} v={v} m={m} />)}
     </article>
   );
 }

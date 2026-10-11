@@ -1,17 +1,17 @@
 import { SPORTS } from '../sports/registry.js';
-import { pct } from '../lib/format.js';
+import { accPrincipal, pct, semanaAtualRotulo } from '../lib/format.js';
 
 function ActiveCard({ sport, meta, onOpen }) {
   return (
     <button className="sport on" onClick={() => onOpen(sport.id)}>
       <span className="sig">{sport.nome}</span>
       <span className="meta">
-        Temporada {meta.temporada} · Semana {meta.semana_atual}
+        Temporada {meta.temporada_rotulo ?? meta.temporada} · {semanaAtualRotulo(meta)}
         <br />
         {sport.descricao}
       </span>
       <span className="fig">
-        <b>{pct(meta.acc_com_linha, 1)}</b>
+        <b>{pct(accPrincipal(meta), 1)}</b>
         <span>de acerto histórico ({meta.anos_ref[0]}–{meta.anos_ref[1]})</span>
       </span>
       <span className="cta">
@@ -55,11 +55,11 @@ export default function Home({ datas, onOpen }) {
       <section className="how" aria-label="Como funciona">
         <div>
           <h3>Dados abertos</h3>
-          <p>Resultados e calendário vêm de uma base pública (nflverse) e se atualizam a cada rodada.</p>
+          <p>Resultados e calendários vêm de bases públicas (nflverse, hoopR/ESPN) e se atualizam todo dia.</p>
         </div>
         <div>
           <h3>Modelo simples e explicável</h3>
-          <p>Força dos times (Elo), pontos recentes, descanso e a linha de aposta entram numa regressão logística.</p>
+          <p>Força dos times (Elo), desempenho recente, descanso e, quando existe, a linha de aposta entram numa regressão logística.</p>
         </div>
         <div>
           <h3>Acurácia medida de verdade</h3>

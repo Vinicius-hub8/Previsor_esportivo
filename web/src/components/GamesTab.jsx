@@ -1,10 +1,11 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import GameCard from './GameCard.jsx';
-import { dayLong, pct } from '../lib/format.js';
+import { dayLong, pct, rotTemp, usaLinha } from '../lib/format.js';
 
 const confianca = (g) => (g.p == null ? 0 : Math.max(g.p, 1 - g.p));
+// Texto curto do botão da semana: o JSON pode trazer "curto"; senão (NFL) usa o número ou a sigla da fase.
 const rotuloSemana = (w, info) =>
-  info.tipo === 'REG' ? w : { WC: 'Wild Card', DIV: 'Divisional', CON: 'Conf.', SB: 'Super Bowl' }[info.tipo] || w;
+  info.curto ?? (info.tipo === 'REG' ? w : { WC: 'Wild Card', DIV: 'Divisional', CON: 'Conf.', SB: 'Super Bowl' }[info.tipo] || w);
 
 export default function GamesTab({ data, season, week, onSelect }) {
   const { meta, semanas, times } = data;
@@ -12,6 +13,7 @@ export default function GamesTab({ data, season, week, onSelect }) {
   const seasonKey = semanas[season] ? season : String(meta.temporada);
   const weeks = semanas[seasonKey];
   const semanaPadrao = seasonKey === String(meta.temporada) ? String(meta.semana_atual) : Object.keys(weeks)[0];
+  const linha = usaLinha(meta);
   const weekKey = weeks[week] ? week : weeks[semanaPadrao] ? semanaPadrao : Object.keys(weeks)[0];
   const info = weeks[weekKey];
 
@@ -40,26 +42,26 @@ export default function GamesTab({ data, season, week, onSelect }) {
     return (
       <Fragment key={g.id}>
         {novoDia && <div className="day">{dayLong(g.data)}</div>}
-        <GameCard g={g} times={times} />
+        <GameCard g={g} times={times} usaLinha={linha} />
       </Fragment>
     );
   });
 
   const temSemLinha = jogos.some((g) => g.p != null && !g.linha);
-  const titulo = info.tipo === 'REG' ? `Semana ${weekKey}` : info.rotulo;
+  const titulo = info.rotulo;
 
   return (
     <>
       <div className="ctrls">
         <div className="seg" role="group" aria-label="Temporada">
           {temporadas.map((s) => (
-            <button key={s} aria-pressed={s === seasonKey} onClick={() => onSelect(s)}>{s}</button>
+            <button key={s} aria-pressed={s === seasonKey} onClick={() => onSelect(s)}>{rotTemp(meta, s)}</button>
           ))}
         </div>
         <div className="weeks" role="group" aria-label="Semana" ref={chipsRef}>
           {Object.keys(weeks).map((w) => {
-            const atual = seasonKey === String(meta.temporada) && Number(w) === meta.semana_atual;
-            const nome = weeks[w].tipo === 'REG' ? `Semana ${w}` : weeks[w].rotulo;
+            const atual = seasonKey === String(meta.temporada) && w === String(meta.semana_atual);
+            const nome = weeks[w].rotulo;
             return (
               <button
                 key={w}
@@ -77,7 +79,7 @@ export default function GamesTab({ data, season, week, onSelect }) {
 
       <div className="wk-head">
         <div>
-          <h2>{titulo} · {seasonKey}</h2>
+          <h2>{titulo} · {rotTemp(meta, seasonKey)}</h2>
           <div className="sum">{resumo}</div>
         </div>
         <div className="seg" role="group" aria-label="Ordenar">
@@ -87,7 +89,7 @@ export default function GamesTab({ data, season, week, onSelect }) {
       </div>
 
       <div className="games">{cartoes}</div>
-      {temSemLinha && (
+      {linha && temSemLinha && (
         <p className="note">
           Jogos marcados com “sem linha de aposta” ainda não têm a linha divulgada. Nesses casos o palpite usa o modelo sem ela, que é menos preciso.
         </p>

@@ -19,8 +19,8 @@
 .acc summary { cursor: pointer; color: var(--accent-ink); font-weight: 600; }
 .acc details p { margin: 8px 0 0; max-width: 70ch; }
 
-.tabs { display: inline-flex; background: var(--chip); border-radius: 12px; padding: 4px; gap: 4px; justify-self: start; max-width: 100%; }
-.tabs button { border: 0; background: transparent; padding: 9px 16px; border-radius: 9px; font-weight: 600; color: var(--ink-2); }
+.tabs { display: inline-flex; overflow-x: auto; background: var(--chip); border-radius: 12px; padding: 4px; gap: 4px; justify-self: start; max-width: 100%; }
+.tabs button { white-space: nowrap; border: 0; background: transparent; padding: 9px 16px; border-radius: 9px; font-weight: 600; color: var(--ink-2); }
 .tabs button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
 
 .seg { display: inline-flex; gap: 4px; background: var(--chip); padding: 4px; border-radius: 10px; justify-self: start; }

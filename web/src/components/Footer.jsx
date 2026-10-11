@@ -1,12 +1,14 @@
 import { dateBR } from '../lib/format.js';
 
-export default function Footer({ meta }) {
+export default function Footer({ metas = [] }) {
+  const fontes = [...new Set(metas.map((m) => m.fonte))].join(' · ');
+  const atualizado = metas.map((m) => m.atualizado).sort().at(-1);
   return (
     <footer>
       <div className="wrap">
-        {meta && (
+        {metas.length > 0 && (
           <span>
-            Dados: {meta.fonte}. Atualizado em {dateBR(meta.atualizado)}.
+            Dados: {fontes}. Atualizado em {dateBR(atualizado)}.
           </span>
         )}
         <span>Estudo estatístico e educacional. Não é recomendação de aposta.</span>

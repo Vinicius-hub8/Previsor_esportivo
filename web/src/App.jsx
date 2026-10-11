@@ -31,14 +31,14 @@ export default function App() {
     conteudo = <Home datas={datas} onOpen={(id) => navigate(id)} />;
   }
 
-  const meta = datas[ATIVOS[0]]?.meta;
+  const metas = Object.values(datas).map((d) => d.meta);
   return (
     <>
       <Header onHome={() => navigate()} onToggleTheme={toggle} />
       <div className="wrap">
         <main>{conteudo}</main>
       </div>
-      <Footer meta={meta} />
+      <Footer metas={metas} />
     </>
   );
 }
