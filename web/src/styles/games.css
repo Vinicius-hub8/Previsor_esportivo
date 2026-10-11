@@ -1,0 +1,36 @@
+/* JOGOS DA SEMANA: seletor de semana e cartões de jogo. */
+.ctrls { display: grid; gap: 12px; }
+.weeks { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding: 2px 2px 8px; margin-inline: -2px; }
+.weeks button { flex: none; scroll-snap-align: center; min-width: 44px; height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font: 600 1.05rem var(--f-display); letter-spacing: .02em; color: var(--ink-2); position: relative; }
+.weeks button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.weeks button.now::after { content: ""; position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.weeks button[aria-pressed="true"].now::after { background: #fff; }
+
+.wk-head { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: end; justify-content: space-between; }
+.wk-head h2 { margin: 0; font: 700 1.8rem/1 var(--f-display); text-transform: uppercase; }
+.wk-head .sum { color: var(--ink-2); font-size: .92rem; }
+.day { grid-column: 1 / -1; margin: 8px 0 -4px; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.games { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); }
+.game { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); min-width: 0; }
+.g-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--muted); font-size: .8rem; margin-bottom: 6px; }
+.tm { display: grid; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 4px 0; }
+.tm .nm { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tm .nm small { display: block; font-weight: 400; color: var(--muted); font-size: .75rem; }
+.tm.win .nm { font-weight: 700; }
+.pct { font: 700 1.5rem/1 var(--f-display); letter-spacing: .01em; }
+.pct.dim { color: var(--muted); }
+.score { font: 700 1.7rem/1 var(--f-display); }
+.split { display: flex; gap: 2px; height: 10px; margin: 10px 0; }
+.split i { display: block; border-radius: 5px; background: var(--track); min-width: 6px; }
+.split i.fav { background: var(--accent); }
+.pick { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: .88rem; color: var(--ink-2); }
+.pick b { color: var(--ink); }
+.res { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; font-size: .8rem; padding: 3px 9px; border-radius: 999px; }
+.res svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.res.ok { background: var(--good-bg); color: var(--good-ink); }
+.res.no { background: var(--bad-bg); color: var(--bad-ink); }
+.res.na { background: var(--chip); color: var(--ink-2); }
+.more { margin-top: 10px; background: none; border: 0; padding: 4px 0; color: var(--accent-ink); font-weight: 600; font-size: .85rem; }
+.det { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 6px; font-size: .86rem; color: var(--ink-2); }
+.det div { display: flex; justify-content: space-between; gap: 12px; }
+.det b { color: var(--ink); font-weight: 600; text-align: right; }

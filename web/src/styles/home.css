@@ -1,0 +1,19 @@
+/* HOME: escolha do esporte. */
+.hero h1 { font: 700 clamp(2.2rem, 7vw, 3.8rem)/.95 var(--f-display); text-transform: uppercase; letter-spacing: .01em; margin: 0 0 12px; text-wrap: balance; }
+.hero p { margin: 0; max-width: 56ch; color: var(--ink-2); font-size: 1.05rem; }
+.sports { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.sport { text-align: left; border-radius: 16px; padding: 20px; border: 1px solid var(--line); background: var(--surface); display: grid; gap: 14px; align-content: start; box-shadow: var(--shadow); }
+.sport.on { border-color: var(--accent); }
+.sport.on:hover { transform: translateY(-2px); transition: transform .15s; }
+.sport.off { background: transparent; border-style: dashed; box-shadow: none; color: var(--muted); }
+.sport .sig { font: 700 3.6rem/.85 var(--f-display); letter-spacing: .02em; }
+.sport.on .sig { color: var(--accent-ink); }
+.sport .meta { color: var(--ink-2); font-size: .9rem; }
+.sport .fig { display: flex; align-items: baseline; gap: 8px; }
+.sport .fig b { font: 700 2rem/1 var(--f-display); }
+.sport .fig span { color: var(--muted); font-size: .85rem; }
+.cta { font-weight: 600; color: var(--accent-ink); display: inline-flex; gap: 6px; align-items: center; }
+.how { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.how div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.how h3 { margin: 0 0 4px; font-size: .95rem; }
+.how p { margin: 0; color: var(--ink-2); font-size: .9rem; }

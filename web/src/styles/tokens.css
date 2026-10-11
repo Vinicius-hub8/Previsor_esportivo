@@ -1,0 +1,38 @@
+/* TOKENS: todas as cores e fontes do site. Mude aqui para mudar o visual inteiro.
+   Azul = slot 1 da paleta validada de dataviz. Verde/vermelho só para acerto/erro (sempre com ícone e texto).
+   Tema: o padrão segue o sistema; o botão do topo força claro ou escuro via data-theme. */
+:root {
+  --bg: #f2f4f8; --surface: #ffffff; --surface-2: #f7f9fc;
+  --ink: #0e1620; --ink-2: #475467; --muted: #6b7686;
+  --line: #e0e5ec; --track: #d9dfe8; --chip: #e9eef5;
+  --accent: #2a78d6; --accent-ink: #1c5cab; --accent-soft: #cde2fb; --accent-mid: #86b6ef;
+  --good: #0ca30c; --good-ink: #006300; --good-bg: #e3f4e3;
+  --bad: #d03b3b; --bad-ink: #b32d2d; --bad-bg: #fbe8e8;
+  --warn-bg: #fff4d6; --warn-line: #f0d48a; --warn-ink: #6b4a00;
+  --shadow: 0 1px 2px rgba(14,22,32,.05), 0 4px 14px rgba(14,22,32,.04);
+  --f-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1218; --surface: #151b23; --surface-2: #1a212b;
+    --ink: #eef1f5; --ink-2: #b6bfcb; --muted: #8b95a3;
+    --line: #26303b; --track: #2b3541; --chip: #212a35;
+    --accent: #3987e5; --accent-ink: #86b6ef; --accent-soft: #1b3552; --accent-mid: #2b64a8;
+    --good: #0ca30c; --good-ink: #4cc24c; --good-bg: #12301a;
+    --bad: #e66767; --bad-ink: #ee8a8a; --bad-bg: #3a1c1f;
+    --warn-bg: #2f2710; --warn-line: #5a4a1a; --warn-ink: #f0d48a;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1218; --surface: #151b23; --surface-2: #1a212b;
+  --ink: #eef1f5; --ink-2: #b6bfcb; --muted: #8b95a3;
+  --line: #26303b; --track: #2b3541; --chip: #212a35;
+  --accent: #3987e5; --accent-ink: #86b6ef; --accent-soft: #1b3552; --accent-mid: #2b64a8;
+  --good: #0ca30c; --good-ink: #4cc24c; --good-bg: #12301a;
+  --bad: #e66767; --bad-ink: #ee8a8a; --bad-bg: #3a1c1f;
+  --warn-bg: #2f2710; --warn-line: #5a4a1a; --warn-ink: #f0d48a;
+  --shadow: none; color-scheme: dark;
+}

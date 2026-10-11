@@ -1,0 +1,35 @@
+/* UI: peças reutilizáveis (tags, abas, botões segmentados, cartões, avisos, acurácia). */
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; font-weight: 600; padding: 3px 9px; border-radius: 999px; background: var(--chip); color: var(--ink-2); }
+.note { color: var(--ink-2); font-size: .88rem; margin: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); min-width: 0; }
+.card h3 { margin: 0 0 10px; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+.crumb { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.back { background: none; border: 0; color: var(--accent-ink); font-weight: 600; padding: 4px 0; }
+.sport-title { font: 700 2.4rem/1 var(--f-display); text-transform: uppercase; margin: 0; }
+.sport-title .tag { vertical-align: middle; }
+.panel { display: grid; gap: 20px; }
+
+.acc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
+.acc h2 { margin: 0; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.acc .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.acc .n { font: 700 2.2rem/1 var(--f-display); }
+.acc .l { color: var(--ink-2); font-size: .85rem; }
+.acc details { color: var(--ink-2); font-size: .88rem; }
+.acc summary { cursor: pointer; color: var(--accent-ink); font-weight: 600; }
+.acc details p { margin: 8px 0 0; max-width: 70ch; }
+
+.tabs { display: inline-flex; background: var(--chip); border-radius: 12px; padding: 4px; gap: 4px; justify-self: start; max-width: 100%; }
+.tabs button { border: 0; background: transparent; padding: 9px 16px; border-radius: 9px; font-weight: 600; color: var(--ink-2); }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+
+.seg { display: inline-flex; gap: 4px; background: var(--chip); padding: 4px; border-radius: 10px; justify-self: start; }
+.seg button { border: 0; background: transparent; padding: 6px 12px; border-radius: 7px; font-weight: 600; color: var(--ink-2); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); }
+
+.notice { background: var(--warn-bg); border: 1px solid var(--warn-line); color: var(--warn-ink); border-radius: 12px; padding: 12px 16px; font-size: .9rem; }
+.notice strong { display: block; margin-bottom: 4px; }
+.notice ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.notice button { background: none; border: 0; padding: 0; margin-top: 8px; color: inherit; font-weight: 700; text-decoration: underline; }
+
+.badge { height: 32px; border-radius: 7px; background: var(--chip); display: grid; place-items: center; font: 700 1.15rem/1 var(--f-display); letter-spacing: .04em; }

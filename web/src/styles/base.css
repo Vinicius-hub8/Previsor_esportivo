@@ -1,0 +1,25 @@
+/* BASE: reset, tipografia, estrutura da página (topo, conteúdo, rodapé). */
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+button, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 16px; }
+@media (min-width: 720px) { .wrap { padding-inline: 24px; } }
+main { padding-block: 24px 40px; display: grid; gap: 20px; }
+
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.brand { display: flex; align-items: center; gap: 10px; background: none; border: 0; padding: 0; }
+.brand svg { width: 34px; height: 20px; }
+.brand b { font: 700 1.35rem/1 var(--f-display); letter-spacing: .06em; text-transform: uppercase; }
+.brand span { color: var(--muted); font-size: .8rem; }
+.icon-btn { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); display: grid; place-items: center; }
+.icon-btn svg { width: 20px; height: 20px; stroke: var(--ink-2); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+footer { border-top: 1px solid var(--line); padding-block: 20px 28px; color: var(--muted); font-size: .82rem; }
+footer .wrap { display: grid; gap: 4px; }
+
+.state { padding: 40px 0; color: var(--ink-2); }
+.state code { background: var(--chip); padding: 2px 6px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
