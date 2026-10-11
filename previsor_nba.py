@@ -108,9 +108,26 @@ def _rodada(tipo, nota):
     return "Playoffs"
 
 
+def _completar_com_espn(d):
+    """O hoopR atualiza uma vez por dia; a ESPN (de onde vêm os ids dos jogos) tem o placar minutos depois."""
+    import espn
+    finais = espn.finais("nba")
+    if not finais:
+        return d
+    n = 0
+    for i in d.index[~d["status_type_completed"].astype(bool)]:
+        r = finais.get(str(int(d.at[i, "game_id"])))
+        if r:
+            d.at[i, "away_score"], d.at[i, "home_score"], d.at[i, "status_type_completed"] = r[0], r[1], True
+            n += 1
+    if n:
+        print(f"ESPN: {n} placar(es) completado(s)")
+    return d
+
+
 def carregar():
     """Baixa o calendário/placares e devolve um DataFrame limpo, só com os 30 times e jogos que valem."""
-    d = pd.read_csv(URL, usecols=COLUNAS, low_memory=False)
+    d = _completar_com_espn(pd.read_csv(URL, usecols=COLUNAS, low_memory=False))
     d = d[d["season_type"].isin([2, 3, 5]) & (d["season"] >= 2003)]
     d = d[~d["status_type_name"].isin(["STATUS_POSTPONED", "STATUS_CANCELED"])]
 

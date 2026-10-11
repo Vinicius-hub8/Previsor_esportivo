@@ -67,7 +67,7 @@ def main(saida=None, temporadas=2):
         for g in sub.itertuples():
             jogado = pd.notna(g.home_score)
             item = {
-                "id": g.game_id, "data": g.gameday.strftime("%Y-%m-%d"), "hora": g.gametime if isinstance(g.gametime, str) else None,
+                "id": g.game_id, "espn": str(int(g.espn)) if pd.notna(g.espn) else None, "data": g.gameday.strftime("%Y-%m-%d"), "hora": g.gametime if isinstance(g.gametime, str) else None,
                 "v": g.away_team, "m": g.home_team, "spread": r(g.spread_line, 1),
                 "placar": [int(g.away_score), int(g.home_score)] if jogado else None,
                 "p": None, "linha": bool(pd.notna(g.spread_line)), "ok": None,

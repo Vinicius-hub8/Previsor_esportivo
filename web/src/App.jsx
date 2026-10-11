@@ -6,13 +6,16 @@ import { SPORTS, sportById } from './sports/registry.js';
 import { useHashRoute } from './lib/useHashRoute.js';
 import { useTheme } from './lib/useTheme.js';
 import { useSportsData } from './lib/useSportsData.js';
+import { useAoVivo } from './lib/useAoVivo.js';
 
 const ATIVOS = SPORTS.filter((s) => s.ativo).map((s) => s.id);
+const COM_PLACAR = SPORTS.filter((s) => s.ativo && s.espn);
 
 export default function App() {
   const [route, navigate] = useHashRoute();
   const { toggle } = useTheme();
   const { datas, loading, error } = useSportsData(ATIVOS);
+  const aoVivo = useAoVivo(COM_PLACAR);
   const [sportId, ...resto] = route;
   const sport = sportById(sportId);
 
@@ -26,7 +29,7 @@ export default function App() {
       </p>
     );
   } else if (sport && sport.ativo && datas[sport.id]) {
-    conteudo = <SportPage sport={sport} data={datas[sport.id]} route={resto} navigate={navigate} />;
+    conteudo = <SportPage sport={sport} data={datas[sport.id]} live={aoVivo[sport.id]} route={resto} navigate={navigate} />;
   } else {
     conteudo = <Home datas={datas} onOpen={(id) => navigate(id)} />;
   }

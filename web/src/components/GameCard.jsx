@@ -27,6 +27,7 @@ function TeamRow({ lado, codigo, time, p, placar, favorito, vencedor }) {
 
 function Resultado({ g }) {
   if (!g.placar) return null;
+  if (g.aoVivo) return <span className="res na">em andamento</span>;
   if (g.ok == null) return <span className="res na">{g.p == null ? 'sem palpite' : 'empate'}</span>;
   return g.ok ? (
     <span className="res ok"><IconOk /> Acertou</span>
@@ -88,7 +89,7 @@ export default function GameCard({ g, times, usaLinha = true }) {
   const pv = tem ? 1 - g.p : null;
   const favorito = tem ? (pm >= 0.5 ? 'm' : 'v') : null;
   const q = tem ? Math.max(pm, pv) : 0;
-  const vencedor = g.placar ? (g.placar[1] > g.placar[0] ? 'm' : g.placar[0] > g.placar[1] ? 'v' : 'e') : null;
+  const vencedor = g.placar && !g.aoVivo ? (g.placar[1] > g.placar[0] ? 'm' : g.placar[0] > g.placar[1] ? 'v' : 'e') : null;
   const nomeFav = favorito === 'm' ? m : v;
   const aria = tem
     ? `${v.nome} contra ${m.nome}. Palpite: ${nomeFav.nome}, ${pct(q)}.`
@@ -98,6 +99,11 @@ export default function GameCard({ g, times, usaLinha = true }) {
     <article className="game" aria-label={aria}>
       <div className="g-top">
         <span>{dayShort(g.data)}{g.hora ? ` · ${g.hora} ET` : ''}</span>
+        {g.aoVivo && (
+          <span className="tag live" aria-live="polite">
+            <i aria-hidden="true" /> AO VIVO{g.detalhe ? ` · ${g.detalhe}` : ''}
+          </span>
+        )}
         {usaLinha && !g.linha && tem && !g.placar && (
           <span className="tag" title="A linha de aposta ainda não foi divulgada; o palpite usa o modelo sem ela.">
             sem linha de aposta

@@ -34,3 +34,7 @@
 .det { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 6px; font-size: .86rem; color: var(--ink-2); }
 .det div { display: flex; justify-content: space-between; gap: 12px; }
 .det b { color: var(--ink); font-weight: 600; text-align: right; }
+.tag.live { display: inline-flex; align-items: center; gap: 6px; background: var(--bad-bg); color: var(--bad-ink); font-weight: 700; }
+.tag.live i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: pulsa 1.4s ease-in-out infinite; }
+@keyframes pulsa { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .tag.live i { animation: none; } }

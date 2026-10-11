@@ -1,13 +1,14 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import GameCard from './GameCard.jsx';
 import { dayLong, pct, rotTemp, usaLinha } from '../lib/format.js';
+import { aplicarAoVivo, chaveEspn } from '../lib/aoVivo.js';
 
 const confianca = (g) => (g.p == null ? 0 : Math.max(g.p, 1 - g.p));
 // Texto curto do botão da semana: o JSON pode trazer "curto"; senão (NFL) usa o número ou a sigla da fase.
 const rotuloSemana = (w, info) =>
   info.curto ?? (info.tipo === 'REG' ? w : { WC: 'Wild Card', DIV: 'Divisional', CON: 'Conf.', SB: 'Super Bowl' }[info.tipo] || w);
 
-export default function GamesTab({ data, season, week, onSelect }) {
+export default function GamesTab({ data, live, season, week, onSelect }) {
   const { meta, semanas, times } = data;
   const temporadas = Object.keys(semanas).sort().reverse();
   const seasonKey = semanas[season] ? season : String(meta.temporada);
@@ -23,16 +24,19 @@ export default function GamesTab({ data, season, week, onSelect }) {
     chipsRef.current?.querySelector('[aria-pressed=true]')?.scrollIntoView({ inline: 'center', block: 'nearest' });
   }, [seasonKey, weekKey]);
 
-  const jogos = info.jogos.slice();
+  // mescla o placar ao vivo (se houver) nos jogos desta semana
+  const todos = info.jogos.map((g) => aplicarAoVivo(g, live?.[chaveEspn(g)]));
+  const jogos = todos.slice();
   if (ordem === 'conf') jogos.sort((a, b) => confianca(b) - confianca(a));
 
-  const feitos = info.jogos.filter((g) => g.placar);
+  const feitos = todos.filter((g) => g.placar && !g.aoVivo);
   const avaliados = feitos.filter((g) => g.ok != null);
   const acertos = avaliados.filter((g) => g.ok).length;
   let resumo;
-  if (!feitos.length) resumo = `${info.jogos.length} jogos · palpites ainda sem resultado`;
-  else if (feitos.length < info.jogos.length)
-    resumo = `${feitos.length} de ${info.jogos.length} jogos já foram disputados · acertos até agora: ${acertos} de ${avaliados.length}`;
+  const aoVivoN = todos.filter((g) => g.aoVivo).length;
+  if (!feitos.length) resumo = `${todos.length} jogos · palpites ainda sem resultado`;
+  else if (feitos.length < todos.length)
+    resumo = `${feitos.length} de ${todos.length} jogos já foram disputados · acertos até agora: ${acertos} de ${avaliados.length}`;
   else resumo = `Acertamos ${acertos} de ${avaliados.length} (${pct(acertos / avaliados.length)}) · palpites feitos só com dados anteriores a cada jogo`;
 
   let ultimoDia = '';
@@ -80,7 +84,7 @@ export default function GamesTab({ data, season, week, onSelect }) {
       <div className="wk-head">
         <div>
           <h2>{titulo} · {rotTemp(meta, seasonKey)}</h2>
-          <div className="sum">{resumo}</div>
+          <div className="sum">{resumo}{aoVivoN > 0 && ` · ${aoVivoN} ao vivo agora`}</div>
         </div>
         <div className="seg" role="group" aria-label="Ordenar">
           <button aria-pressed={ordem === 'data'} onClick={() => setOrdem('data')}>Por data</button>

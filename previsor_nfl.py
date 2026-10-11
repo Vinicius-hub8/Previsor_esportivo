@@ -80,7 +80,24 @@ def carregar():
     jogos["gameday"] = pd.to_datetime(jogos["gameday"])
     for c in ("home_team", "away_team"):
         jogos[c] = jogos[c].replace(FRANQUIAS)
-    return jogos.reset_index(drop=True)
+    return _completar_com_espn(jogos.reset_index(drop=True))
+
+
+def _completar_com_espn(jogos):
+    """O nflverse demora horas para publicar o placar; a ESPN costuma ter minutos depois do jogo."""
+    import espn
+    finais = espn.finais("nfl")
+    if not finais or "espn" not in jogos.columns:
+        return jogos
+    n = 0
+    for i in jogos.index[jogos["home_score"].isna() & jogos["espn"].notna()]:
+        r = finais.get(str(int(jogos.at[i, "espn"])))
+        if r:
+            jogos.at[i, "away_score"], jogos.at[i, "home_score"] = r
+            n += 1
+    if n:
+        print(f"ESPN: {n} placar(es) completado(s)")
+    return jogos
 
 
 def construir(jogos):

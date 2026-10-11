@@ -1,0 +1,38 @@
+# Verifica a cada 15 minutos se terminou algum jogo que o site ainda não mostra.
+# Se terminou, dispara a publicação (que atualiza modelo, tabelas e simulação).
+# Custo: ~10 segundos por verificação; nada é publicado se não houver jogo novo.
+# Obs.: o GitHub pode atrasar execuções agendadas e as desativa se o repositório ficar 60 dias sem nenhuma atividade.
+name: Verificar jogos terminados
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: verificar
+  cancel-in-progress: false
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: v
+        run: python3 verificar_novos.py
+      - name: Disparar a publicação
+        if: steps.v.outputs.atualizar == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # evita republicar em sequência: espera 20 minutos desde a última publicação
+          ultimo=$(gh run list --repo "${{ github.repository }}" --workflow publicar.yml --limit 1 --json createdAt -q '.[0].createdAt')
+          if [ -n "$ultimo" ] && [ $(( $(date +%s) - $(date -d "$ultimo" +%s) )) -lt 1200 ]; then
+            echo "Publicação recente (menos de 20 min). Aguardando a próxima verificação."
+          else
+            gh workflow run publicar.yml --repo "${{ github.repository }}" --ref main
+          fi

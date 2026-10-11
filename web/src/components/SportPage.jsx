@@ -8,7 +8,7 @@ import { store } from '../lib/store.js';
 
 // Rotas desta página (depois de #/<esporte>):
 //   /jogos/<temporada>/<semana>      /time/<sigla>      /tabela (só esportes com simulação, como a NBA)
-export default function SportPage({ sport, data, route, navigate }) {
+export default function SportPage({ sport, data, live, route, navigate }) {
   const { meta } = data;
   const abas = [
     { id: 'jogos', nome: 'Jogos da semana' },
@@ -39,7 +39,7 @@ export default function SportPage({ sport, data, route, navigate }) {
         ) : tab === 'time' ? (
           <TeamTab data={data} code={route[1]} onSelect={(c) => { store.set('pv_team', c); navigate(sport.id, 'time', c); }} />
         ) : (
-          <GamesTab data={data} season={route[1]} week={route[2]} onSelect={(s, w) => navigate(sport.id, 'jogos', s, w)} />
+          <GamesTab data={data} live={live} season={route[1]} week={route[2]} onSelect={(s, w) => navigate(sport.id, 'jogos', s, w)} />
         )}
       </div>
       <Notice meta={meta} />
