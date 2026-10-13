@@ -3,6 +3,10 @@ import GameCard from './GameCard.jsx';
 import { dayLong, pct, rotTemp, usaLinha } from '../lib/format.js';
 import { aplicarAoVivo, chaveEspn } from '../lib/aoVivo.js';
 
+// Data e hora de Brasília (o Python manda db/hb); se faltarem, usa a data original.
+const diaDe = (g) => g.db ?? g.data;
+const horaDe = (g) => g.hb ?? '99:99';
+const porHorario = (a, b) => (diaDe(a) + horaDe(a) + a.id).localeCompare(diaDe(b) + horaDe(b) + b.id);
 const confianca = (g) => (g.p == null ? 0 : Math.max(g.p, 1 - g.p));
 // Texto curto do botão da semana: o JSON pode trazer "curto"; senão (NFL) usa o número ou a sigla da fase.
 const rotuloSemana = (w, info) =>
@@ -26,7 +30,7 @@ export default function GamesTab({ data, live, season, week, onSelect }) {
 
   // mescla o placar ao vivo (se houver) nos jogos desta semana
   const todos = info.jogos.map((g) => aplicarAoVivo(g, live?.[chaveEspn(g)]));
-  const jogos = todos.slice();
+  const jogos = todos.slice().sort(porHorario);
   if (ordem === 'conf') jogos.sort((a, b) => confianca(b) - confianca(a));
 
   const feitos = todos.filter((g) => g.placar && !g.aoVivo);
@@ -41,11 +45,11 @@ export default function GamesTab({ data, live, season, week, onSelect }) {
 
   let ultimoDia = '';
   const cartoes = jogos.map((g) => {
-    const novoDia = ordem === 'data' && g.data !== ultimoDia;
-    if (novoDia) ultimoDia = g.data;
+    const novoDia = ordem === 'data' && diaDe(g) !== ultimoDia;
+    if (novoDia) ultimoDia = diaDe(g);
     return (
       <Fragment key={g.id}>
-        {novoDia && <div className="day">{dayLong(g.data)}</div>}
+        {novoDia && <div className="day">{dayLong(diaDe(g))}</div>}
         <GameCard g={g} times={times} usaLinha={linha} />
       </Fragment>
     );
@@ -86,8 +90,9 @@ export default function GamesTab({ data, live, season, week, onSelect }) {
           <h2>{titulo} · {rotTemp(meta, seasonKey)}</h2>
           <div className="sum">{resumo}{aoVivoN > 0 && ` · ${aoVivoN} ao vivo agora`}</div>
         </div>
+        <span className="tag" title="Todos os horários desta página estão no horário de Brasília.">Horário de Brasília</span>
         <div className="seg" role="group" aria-label="Ordenar">
-          <button aria-pressed={ordem === 'data'} onClick={() => setOrdem('data')}>Por data</button>
+          <button aria-pressed={ordem === 'data'} onClick={() => setOrdem('data')}>Por horário</button>
           <button aria-pressed={ordem === 'conf'} onClick={() => setOrdem('conf')}>Mais confiantes</button>
         </div>
       </div>

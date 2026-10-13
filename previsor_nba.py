@@ -25,6 +25,8 @@ from datetime import date
 
 import numpy as np
 import pandas as pd
+
+import noticias
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -253,7 +255,20 @@ def prever_futuros(S, fut):
     """Chance de o mandante vencer em jogos que ainda não aconteceram (força dos times congelada no estado atual)."""
     if fut.empty:
         return fut.assign(p=[])
+    fut = fut.copy()
+    adj = _noticias()
+    if adj:  # ajustes por notícia (lesões etc.), só nos dias em que valem
+        fut["dif_elo"] = fut["dif_elo"] + [noticias.delta(adj, m, d) - noticias.delta(adj, v, d) for m, v, d in zip(fut["m"], fut["v"], fut["dia"])]
     return fut.assign(p=S["modelo"].predict_proba(fut[FEATS])[:, 1])
+
+
+_NOT = {}
+
+
+def _noticias():
+    if "adj" not in _NOT:
+        _NOT["adj"] = noticias.carregar("nba")
+    return _NOT["adj"]
 
 
 # ----------------------------------------------------------------------------

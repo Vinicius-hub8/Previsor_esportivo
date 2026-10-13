@@ -2,9 +2,9 @@
 .ctrls { display: grid; gap: 12px; }
 .weeks { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding: 2px 2px 8px; margin-inline: -2px; }
 .weeks button { flex: none; scroll-snap-align: center; min-width: 44px; height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font: 600 1.05rem var(--f-display); letter-spacing: .02em; color: var(--ink-2); position: relative; }
-.weeks button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.weeks button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .weeks button.now::after { content: ""; position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-.weeks button[aria-pressed="true"].now::after { background: #fff; }
+.weeks button[aria-pressed="true"].now::after { background: var(--on-accent); }
 
 .wk-head { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: end; justify-content: space-between; }
 .wk-head h2 { margin: 0; font: 700 1.8rem/1 var(--f-display); text-transform: uppercase; }
@@ -34,7 +34,10 @@
 .det { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 6px; font-size: .86rem; color: var(--ink-2); }
 .det div { display: flex; justify-content: space-between; gap: 12px; }
 .det b { color: var(--ink); font-weight: 600; text-align: right; }
-.tag.live { display: inline-flex; align-items: center; gap: 6px; background: var(--bad-bg); color: var(--bad-ink); font-weight: 700; }
+.tag.live { display: inline-flex; align-items: center; gap: 6px; background: var(--live); color: var(--on-live); font-weight: 700; letter-spacing: .03em; }
 .tag.live i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: pulsa 1.4s ease-in-out infinite; }
 @keyframes pulsa { 50% { opacity: .25; } }
 @media (prefers-reduced-motion: reduce) { .tag.live i { animation: none; } }
+.tag.news { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--warn-line); }
+.news-list a { color: var(--accent-ink); }
+.news-list { margin-top: 6px; }

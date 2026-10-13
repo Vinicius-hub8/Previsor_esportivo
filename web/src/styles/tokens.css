@@ -1,38 +1,58 @@
-/* TOKENS: todas as cores e fontes do site. Mude aqui para mudar o visual inteiro.
-   Azul = slot 1 da paleta validada de dataviz. Verde/vermelho só para acerto/erro (sempre com ícone e texto).
-   Tema: o padrão segue o sistema; o botão do topo força claro ou escuro via data-theme. */
+/* TOKENS: todas as cores e fontes do site (paleta completa em docs/paleta-de-cores.md).
+   Cada esporte tem a sua cor de destaque: o atributo data-sport vai no <html> (App.jsx) e nos cartões da página inicial.
+   Verde/vermelho só para acerto/erro (sempre com ícone e texto). Rosa = ao vivo.
+   Tema: o padrão segue o sistema; o botão do topo força claro ou escuro via data-theme.
+   light-dark() escolhe o valor pelo tema (color-scheme) e todos os pares passam em contraste WCAG AA. */
 :root {
+  color-scheme: light;
   --bg: #f2f4f8; --surface: #ffffff; --surface-2: #f7f9fc;
   --ink: #0e1620; --ink-2: #475467; --muted: #6b7686;
   --line: #e0e5ec; --track: #d9dfe8; --chip: #e9eef5;
-  --accent: #2a78d6; --accent-ink: #1c5cab; --accent-soft: #cde2fb; --accent-mid: #86b6ef;
+
+  /* cores de esporte: [claro, escuro] */
+  --brand: light-dark(#2671d0, #4a93ea);       --brand-ink: light-dark(#1c5cab, #9cc4f5);
+  --c-nfl: light-dark(#3556d3, #7b97ff);       --c-nfl-ink: light-dark(#2b46b0, #aebfff);
+  --c-nba: light-dark(#b84f08, #f08a3c);       --c-nba-ink: light-dark(#9a4106, #f7b07a);
+  --c-fut: light-dark(#157a3a, #3bbf72);       --c-fut-ink: light-dark(#0f6330, #86dba7);
+
+  /* destaque em uso (muda por esporte) */
+  --accent: var(--brand); --accent-ink: var(--brand-ink);
+  --on-accent: light-dark(#ffffff, #0b1220);   /* texto sobre fundo de destaque */
+  --accent-soft: color-mix(in srgb, var(--accent) 22%, var(--surface));
+  --accent-mid: color-mix(in srgb, var(--accent) 58%, var(--surface));
+
   --good: #0ca30c; --good-ink: #006300; --good-bg: #e3f4e3;
   --bad: #d03b3b; --bad-ink: #b32d2d; --bad-bg: #fbe8e8;
   --warn-bg: #fff4d6; --warn-line: #f0d48a; --warn-ink: #6b4a00;
+  --live: light-dark(#c9184a, #ff5a86); --on-live: light-dark(#ffffff, #2a0010);
   --shadow: 0 1px 2px rgba(14,22,32,.05), 0 4px 14px rgba(14,22,32,.04);
   --f-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
   --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  color-scheme: light;
 }
+[data-sport="nfl"] { --accent: var(--c-nfl); --accent-ink: var(--c-nfl-ink); }
+[data-sport="nba"] { --accent: var(--c-nba); --accent-ink: var(--c-nba-ink); }
+[data-sport="futebol"] { --accent: var(--c-fut); --accent-ink: var(--c-fut-ink); }
+[data-sport] { --accent-soft: color-mix(in srgb, var(--accent) 22%, var(--surface)); --accent-mid: color-mix(in srgb, var(--accent) 58%, var(--surface)); }
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --bg: #0d1218; --surface: #151b23; --surface-2: #1a212b;
     --ink: #eef1f5; --ink-2: #b6bfcb; --muted: #8b95a3;
     --line: #26303b; --track: #2b3541; --chip: #212a35;
-    --accent: #3987e5; --accent-ink: #86b6ef; --accent-soft: #1b3552; --accent-mid: #2b64a8;
     --good: #0ca30c; --good-ink: #4cc24c; --good-bg: #12301a;
     --bad: #e66767; --bad-ink: #ee8a8a; --bad-bg: #3a1c1f;
     --warn-bg: #2f2710; --warn-line: #5a4a1a; --warn-ink: #f0d48a;
-    --shadow: none; color-scheme: dark;
+    --shadow: none;
   }
 }
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #0d1218; --surface: #151b23; --surface-2: #1a212b;
   --ink: #eef1f5; --ink-2: #b6bfcb; --muted: #8b95a3;
   --line: #26303b; --track: #2b3541; --chip: #212a35;
-  --accent: #3987e5; --accent-ink: #86b6ef; --accent-soft: #1b3552; --accent-mid: #2b64a8;
   --good: #0ca30c; --good-ink: #4cc24c; --good-bg: #12301a;
   --bad: #e66767; --bad-ink: #ee8a8a; --bad-bg: #3a1c1f;
   --warn-bg: #2f2710; --warn-line: #5a4a1a; --warn-ink: #f0d48a;
-  --shadow: none; color-scheme: dark;
+  --shadow: none;
 }

@@ -3,6 +3,7 @@ import Tabs from './Tabs.jsx';
 import GamesTab from './GamesTab.jsx';
 import TeamTab from './TeamTab.jsx';
 import TabelaTab from './TabelaTab.jsx';
+import TabelaNfl from './TabelaNfl.jsx';
 import Notice from './Notice.jsx';
 import { store } from '../lib/store.js';
 
@@ -13,7 +14,7 @@ export default function SportPage({ sport, data, live, route, navigate }) {
   const abas = [
     { id: 'jogos', nome: 'Jogos da semana' },
     { id: 'time', nome: 'Projeção de time' },
-    ...(data.simulacao ? [{ id: 'tabela', nome: 'Classificação e título' }] : []),
+    ...(data.simulacao ? [{ id: 'tabela', nome: 'Classificação e título' }] : data.projecoes ? [{ id: 'tabela', nome: 'Classificação' }] : []),
   ];
   const tab = abas.some((a) => a.id === route[0]) ? route[0] : 'jogos';
 
@@ -34,7 +35,9 @@ export default function SportPage({ sport, data, live, route, navigate }) {
       <AccuracyStrip meta={meta} />
       <Tabs tab={tab} onChange={abrirAba} abas={abas} />
       <div id="panel" role="tabpanel" aria-labelledby={`tab-${tab}`} className="panel">
-        {tab === 'tabela' ? (
+        {tab === 'tabela' && !data.simulacao ? (
+          <TabelaNfl data={data} onTeam={(c) => { store.set('pv_team', c); navigate(sport.id, 'time', c); }} />
+        ) : tab === 'tabela' ? (
           <TabelaTab data={data} onTeam={(c) => { store.set('pv_team', c); navigate(sport.id, 'time', c); }} />
         ) : tab === 'time' ? (
           <TeamTab data={data} code={route[1]} onSelect={(c) => { store.set('pv_team', c); navigate(sport.id, 'time', c); }} />

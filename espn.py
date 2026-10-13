@@ -21,7 +21,7 @@ def _baixar(url, tentativas=3):
     erro = None
     for i in range(tentativas):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "previsor-esportivo/1.0 (projeto de estudo)"})
+            req = urllib.request.Request(url, headers={"User-Agent": "fator-casa/1.0 (projeto de estudo)"})
             with urllib.request.urlopen(req, timeout=20) as r:
                 return json.load(r)
         except Exception as e:  # rede, JSON inválido, 5xx...
@@ -51,6 +51,9 @@ def interpretar(dados):
             "id": str(ev.get("id")), "estado": tipo.get("state"), "final": bool(tipo.get("completed")),
             "casa": lados["home"].get("team", {}).get("abbreviation"), "fora": lados["away"].get("team", {}).get("abbreviation"),
             "pts_casa": pts(lados["home"]), "pts_fora": pts(lados["away"]), "detalhe": tipo.get("shortDetail"),
+            # usados pelo futebol, onde o jogo é achado pelo nome dos times e pela data
+            "nome_casa": lados["home"].get("team", {}).get("displayName"), "nome_fora": lados["away"].get("team", {}).get("displayName"),
+            "data": ev.get("date"),
         })
     return saida
 
@@ -58,7 +61,7 @@ def interpretar(dados):
 def jogos_do_periodo(esporte, dias=3, hoje=None):
     hoje = hoje or date.today()
     ini, fim = hoje - timedelta(days=dias), hoje + timedelta(days=1)
-    url = BASE.format(esporte=ESPORTES[esporte]) + f"?dates={ini:%Y%m%d}-{fim:%Y%m%d}&limit=500"
+    url = BASE.format(esporte=ESPORTES.get(esporte, esporte)) + f"?dates={ini:%Y%m%d}-{fim:%Y%m%d}&limit=500"
     return interpretar(_baixar(url))
 
 

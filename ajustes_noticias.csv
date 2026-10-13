@@ -1,0 +1,11 @@
+# AJUSTES POR NOTÍCIAS. Linhas começadas com # são ignoradas. Depois de editar: python atualizar.py   (e commit do arquivo).
+# O modelo não lê notícia; aqui você registra o efeito de uma notícia como pontos de Elo para um time, numa janela de datas.
+# Colunas: esporte (nfl|nba|futebol), liga (só futebol: premier|laliga|seriea|bundesliga|ligue1|brasileirao),
+#          time (NFL/NBA: sigla; futebol: nome como aparece no site), delta_elo (negativo enfraquece), motivo, fonte (link),
+#          inicio (opcional, AAAA-MM-DD), valido_ate (AAAA-MM-DD, obrigatório)
+# Ordem de grandeza (julgamento, não testado no histórico): NFL quarterback titular fora -90 | astro da NBA fora -40
+#   futebol: craque ou goleiro titular fora -25 | técnico novo ou crise: use pouco (±10).
+# Na NFL, jogos que já têm linha de aposta não são ajustados (a linha já embute a notícia).
+# Exemplo (apague o # para valer):
+# nfl,,KC,-90,Quarterback titular fora por lesão,https://exemplo.com/noticia,2026-10-12,2026-10-25
+esporte,liga,time,delta_elo,motivo,fonte,inicio,valido_ate

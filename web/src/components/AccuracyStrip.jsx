@@ -1,4 +1,4 @@
-import { pct, rotTemp, usaLinha } from '../lib/format.js';
+import { num1, pct, rotTemp, usaLinha } from '../lib/format.js';
 
 // Três números de destaque. Com linha de aposta (NFL): com linha / sem linha / temporada.
 // Sem linha (NBA): modelo / "sempre no mandante" / temporada.
@@ -25,6 +25,7 @@ export default function AccuracyStrip({ meta }) {
       </div>
       <details>
         <summary>Como ler esses números</summary>
+        {meta.como_ler ? <p>{meta.como_ler}</p> : (
         <p>
           Para cada temporada de {meta.anos_ref[0]} a {meta.anos_ref[1]}, o modelo aprendeu só com os anos anteriores e previu os jogos
           daquele ano.{' '}
@@ -32,6 +33,10 @@ export default function AccuracyStrip({ meta }) {
             ? 'Se o time da casa sempre vencesse, acertaria cerca de 55% dos jogos. A linha de aposta é uma informação pública antes do jogo, mas já embute a opinião das casas, por isso o modelo com ela fica perto do mercado.'
             : `Se o time da casa sempre vencesse, acertaria ${pct(meta.acc_mandante, 0)} dos jogos. O modelo usa a força dos times, a forma recente e o descanso.`}
         </p>
+        )}
+        {meta.mae_margem != null && (
+          <p>Placar previsto: nos jogos testados, a margem prevista errou em média {num1(meta.mae_margem)} pontos. Acertar o placar exato é raro; o número serve como ordem de grandeza.</p>
+        )}
         {meta.faixas && (
           <div className="table-wrap">
             <table>

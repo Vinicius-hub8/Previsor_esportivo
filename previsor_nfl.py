@@ -21,6 +21,8 @@ import warnings
 
 import numpy as np
 import pandas as pd
+
+import noticias
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.pipeline import make_pipeline
@@ -161,6 +163,9 @@ def construir(jogos):
     }
 
 
+_NOT = {}
+
+
 def prever_futuros(S, fut):
     """Probabilidade de vitória do mandante para jogos que ainda não aconteceram."""
     fut = fut.copy()
@@ -169,6 +174,14 @@ def prever_futuros(S, fut):
     fut["dif_pa"] = fut["home_team"].map(S["ult"]["pa"]) - fut["away_team"].map(S["ult"]["pa"])
     fut["dif_rest"] = (fut["home_rest"] - fut["away_rest"]).fillna(0)
     fut["tem_linha"] = fut["spread_line"].notna()
+    # ajustes por notícia (lesões etc.): só em jogos SEM linha de aposta, porque a linha já embute a notícia
+    if "adj" not in _NOT:
+        _NOT["adj"] = noticias.carregar("nfl")
+    if _NOT["adj"]:
+        dias = fut["gameday"].dt.strftime("%Y-%m-%d")
+        aj = [0.0 if tl else noticias.delta(_NOT["adj"], h, d) - noticias.delta(_NOT["adj"], a, d)
+              for h, a, d, tl in zip(fut["home_team"], fut["away_team"], dias, fut["tem_linha"])]
+        fut["dif_elo"] = fut["dif_elo"] + aj
     fut["prob_casa"] = np.nan
     ok_base = fut[FEATS_BASE].notna().all(axis=1)
     ok_full = ok_base & fut["tem_linha"]

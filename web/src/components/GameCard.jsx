@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import NoticiasLista from './NoticiasLista.jsx';
 import { confLabel, dayShort, num1, pct } from '../lib/format.js';
 
 const IconOk = () => (
@@ -98,12 +99,13 @@ export default function GameCard({ g, times, usaLinha = true }) {
   return (
     <article className="game" aria-label={aria}>
       <div className="g-top">
-        <span>{dayShort(g.data)}{g.hora ? ` · ${g.hora} ET` : ''}</span>
+        <span>{dayShort(g.db ?? g.data)}{g.hb ? ` · ${g.hb}` : g.hora && !g.db ? ` · ${g.hora} ET` : ''}</span>
         {g.aoVivo && (
           <span className="tag live" aria-live="polite">
             <i aria-hidden="true" /> AO VIVO{g.detalhe ? ` · ${g.detalhe}` : ''}
           </span>
         )}
+        {g.nt && <span className="tag news" title="A previsão foi ajustada por uma notícia (veja em Ver detalhes).">notícia considerada</span>}
         {usaLinha && !g.linha && tem && !g.placar && (
           <span className="tag" title="A linha de aposta ainda não foi divulgada; o palpite usa o modelo sem ela.">
             sem linha de aposta
@@ -121,6 +123,7 @@ export default function GameCard({ g, times, usaLinha = true }) {
           <div className="pick">
             <span>
               Palpite <b>{nomeFav.apelido}</b> · {pct(q)} · {confLabel(q)}
+              {g.ps && <> · placar previsto {g.ps[0]}–{g.ps[1]}</>}
             </span>
             <Resultado g={g} />
           </div>
@@ -132,6 +135,7 @@ export default function GameCard({ g, times, usaLinha = true }) {
         {aberto ? 'Ocultar detalhes' : 'Ver detalhes'}
       </button>
       {aberto && (usaLinha ? <Detalhes g={g} v={v} m={m} /> : <DetalhesSemLinha g={g} v={v} m={m} />)}
+      {aberto && <NoticiasLista nt={g.nt} nomeDe={(c) => times[c]?.apelido ?? c} />}
     </article>
   );
 }

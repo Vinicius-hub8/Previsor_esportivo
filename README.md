@@ -1,9 +1,11 @@
-# Previsor Esportivo
+# Fator Casa
 
-Previsões de jogos da NFL e da NBA com Python (pandas + scikit-learn) e um site em React para consultar os resultados:
+Previsões de jogos da NFL, da NBA e de 6 ligas de futebol com Python (pandas + scikit-learn) e um site em React para consultar os resultados:
 palpites de cada semana, projeção de recorde de cada time e a acurácia real do modelo.
 
 ## Estrutura
+
+O nome do repositório continua `Previsor_esportivo` (renomear no GitHub é opcional e mudaria o endereço do site e a prévia de link).
 
 ```
 previsor-esportivo/
@@ -11,6 +13,12 @@ previsor-esportivo/
 ├── exportar_dados.py      # roda o modelo da NFL e gera web/public/dados/nfl.json
 ├── previsor_nba.py        # modelo da NBA + terminal
 ├── exportar_nba.py        # roda o modelo da NBA e gera web/public/dados/nba.json
+├── previsor_futebol.py    # modelo de futebol (6 ligas): Elo + gols (Poisson) + simulação da tabela
+├── exportar_futebol.py    # gera web/public/dados/futebol.json e futebol/<liga>.json
+├── noticias.py            # ajustes por notícia (lesões etc.) lidos de ajustes_noticias.csv
+├── ajustes_noticias.csv   # onde você registra as notícias que mudam a previsão
+├── placar.py              # placar previsto (NFL/NBA) e horário de Brasília
+├── docs/                  # paleta de cores (md + png) e logos (svg + png)
 ├── atualizar.py           # atualiza os dados de todos os esportes
 ├── espn.py                # placares da ESPN (completa jogos recém-terminados)
 ├── verificar_novos.py     # detecta jogo terminado que o site ainda não mostra
@@ -78,6 +86,9 @@ O endereço da ESPN é público, mas não oficial: pode mudar sem aviso. Por iss
 
 ```
 python tests/test_tempo_real.py
+python tests/test_futebol.py
+python tests/test_noticias.py
+python tests/test_placar.py
 ```
 
 ## Usar no terminal
@@ -117,6 +128,37 @@ Chegar a 70% de forma honesta não é realista na NFL; um número assim indicari
 - **Classificação e título:** a aba simula a temporada 10 mil vezes (jogos restantes, play-in e playoffs melhor de 7) e mostra a chance de cada time chegar aos playoffs, à final e ao título. Cada simulação sorteia também uma variação na força dos times, medida no histórico (o Elo de pré-temporada erra ~105 pontos), para o favorito não ficar favorito demais.
 - Terminal: `python previsor_nba.py time BOS` ou `python previsor_nba.py dia 2026-10-20`.
 
+## Futebol
+
+Seis ligas: Premier League, La Liga, Serie A, Bundesliga, Ligue 1 e Brasileirão Série A. Cada uma tem três abas: **Jogos da rodada** (horário de Brasília), **Tabela atual** e **Tabela prevista**.
+
+- **Dados:** calendário e placares do [openfootball](https://github.com/openfootball) (domínio público), 2018-19 em diante. Quando eles ainda não têm um resultado recente, a ESPN completa (o jogo é achado pelo nome dos times e pela data).
+- **Modelo:** Elo de cada time (peso maior para goleada, vantagem de casa, regressão à média a cada temporada) alimenta uma regressão de Poisson que dá os gols esperados de cada lado; daí saem as chances de vitória, empate e derrota e o placar mais provável.
+- **Acurácia (2020-21 a 2025-26, só com dados anteriores a cada temporada):** cerca de 53% nas ligas da Inglaterra, Espanha e Itália, 51% na Alemanha e na França e 48% no Brasileirão (o mandante vence 44% a 47% das vezes, e 1 jogo em 4 termina empatado). É normal: futebol tem três resultados e muito acaso. O Elo ficou num platô, e K, vantagem de casa e reversão à média quase não mudam o resultado.
+- **Tabela prevista:** simula os jogos restantes 10 mil vezes (gols sorteados + variação na força dos times, calibrada em backtest) e mostra pontos esperados, faixa de 80%, chance de título, de vaga continental (simplificada: top 4, top 3 na França, top 6 no Brasil) e de rebaixamento, além da chance de cada posição.
+- **Horários:** convertidos do fuso de cada país para Brasília. Jogo sem horário divulgado aparece como "horário a definir"; jogo adiado sem nova data aparece como "adiado".
+- Terminal: `python previsor_futebol.py premier` (ou `laliga`, `seriea`, `bundesliga`, `ligue1`, `brasileirao`) e `python atualizar.py futebol`.
+- Ainda não tem placar ao vivo no futebol; a tabela atualiza quando o site é publicado de novo.
+- Ao entrar em Futebol, o site mostra as 6 ligas para você escolher.
+
+## Placar previsto e horários
+
+- **Horário de Brasília** em todos os esportes: NFL e NBA (originalmente em horário do leste dos EUA) e as ligas de futebol (fuso de cada país) são convertidos no Python. Os jogos de cada rodada aparecem agrupados por dia e ordenados por horário (na NFL e na NBA ainda dá para ordenar por "Mais confiantes").
+- **Placar previsto (NFL e NBA):** a chance de vitória vira uma margem esperada (ajustada no histórico) e o total de pontos sai do ritmo recente dos dois times. É a estimativa do placar mais típico, não do exato: nos jogos testados, a margem errou em média cerca de 9,8 pontos na NFL e 11,4 na NBA. No futebol o cartão mostra o placar mais provável do modelo de gols.
+
+## Notícias que mudam a previsão
+
+O modelo só enxerga resultados passados e não lê notícia sozinho. Para uma lesão, suspensão ou descanso de astro entrar na conta, registre uma linha em `ajustes_noticias.csv` (time, ajuste de força em pontos de Elo, motivo, link da fonte e até que dia vale) e rode `python atualizar.py`. O ajuste vale só para os jogos dentro da janela, muda as chances (e a tabela prevista, no futebol) e aparece no cartão do jogo como "notícia considerada", com o motivo e o link.
+
+Ordem de grandeza sugerida (julgamento, **não testado no histórico**): quarterback titular da NFL fora, −90; astro da NBA fora, −40; craque ou goleiro titular no futebol, −25. Na NFL, jogos que já têm linha de aposta não são ajustados, porque a linha já embute a notícia. O arquivo vem vazio de propósito: só entra notícia que alguém conferiu (fonte e data).
+
+## Tentativas de subir a acurácia
+
+Testadas com o mesmo método do site (cada temporada prevista só com o que existia antes dela). Resultado: **sem ganho**, então nada disso entrou.
+- Futebol, 6 ligas: regressão logística direta, com forma recente, ataque/defesa e descanso, e árvores de gradiente (HistGradientBoosting) ficaram iguais ou piores que o Elo + gols de Poisson (perda logarítmica: 1,000 no Poisson, 1,000 a 1,005 nas regressões e 1,065 nas árvores; acerto: 51,5% no Poisson, 51,4% a 51,5% nas regressões e 48,9% nas árvores). Variar K, vantagem de casa e reversão do Elo também não muda.
+- NFL e NBA: o ajuste fino das features já estava num platô (NBA 65,2%; NFL 66,6% com linha).
+Para subir de verdade falta informação nova (odds de mercado no futebol e na NBA, gols esperados, escalações e lesões). O caminho já aberto é o das notícias acima.
+
 ## Limitações
 
 - Lesões, troca de quarterback, clima e suspensões não entram no modelo.
@@ -133,6 +175,9 @@ Ordem sugerida: terminar cada frente antes de abrir a próxima.
 **Feito**
 - [x] NFL e NBA com palpites, projeção de recorde e acurácia medida (walk-forward)
 - [x] NBA: simulação da temporada (classificação, play-in, playoffs e chance de título)
+- [x] Futebol: 6 ligas com palpite de 3 resultados, tabela atual, tabela prevista e horário de Brasília
+- [x] Marca Fator Casa (logo, paleta, cores por esporte), placar previsto, horário de Brasília em tudo e ajustes por notícias
+- [x] NFL: classificação por divisão com recorde previsto
 - [x] Publicação automática (GitHub Pages) e placar ao vivo + atualização ao fim do jogo
 
 **1. Analytics da NFL** (dados do nflverse)
@@ -140,11 +185,13 @@ Ordem sugerida: terminar cada frente antes de abrir a próxima.
 - [ ] Página do quarterback: onde no campo ele joga melhor (zona, profundidade, EPA, % de acerto, sob pressão)
 - [ ] Rotas só existem de 2023 em diante; a temporada atual entra quando a fonte publicar
 
-**2. Futebol**
-- [ ] 6 ligas (Premier League, La Liga, Serie A, Bundesliga, Ligue 1 e uma sexta a definir, sugestão: Brasileirão)
-- [ ] Modelo de 3 resultados (vitória, empate, derrota), simulação de tabela, título, vaga em copas e rebaixamento
+**2. Futebol** (as 6 ligas já estão no ar; falta o resto)
+- [ ] Placar ao vivo e atualização ao fim do jogo no futebol
+- [ ] Simulação dos playoffs da NFL (chance de título e de playoff por time)
+- [ ] Coletor automático de lesões (ESPN) para preencher os ajustes por notícia
 - [ ] Botão **Analytics**: mapas de calor de jogadores (Bundesliga 2023/24, dados abertos IMPECT, com crédito) e o que mais for possível
 - [ ] Mapa de chutes das temporadas atuais, se houver fonte estável e permitida
+- [ ] Confronto direto como desempate (La Liga e Serie A) e regras de vaga continental por liga
 
 **3. Previsões de jogadores**
 - [ ] Líderes de estatística: artilheiro e assistências (futebol), pontos (NBA), jardas e sacks (NFL), projetados pelo ritmo atual

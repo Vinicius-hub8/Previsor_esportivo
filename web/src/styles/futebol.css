@@ -1,0 +1,43 @@
+/* FUTEBOL: seletor de liga, cartão de 3 resultados, tabelas com zonas e mapa de posições. */
+.ligas { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; margin-inline: -2px; }
+.ligas button { flex: none; height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-weight: 600; color: var(--ink-2); white-space: nowrap; }
+.ligas button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+
+.tri { display: flex; gap: 2px; height: 10px; margin: 10px 0 4px; }
+.tri i { display: block; border-radius: 5px; background: var(--track); min-width: 6px; }
+.tri i.emp { background: var(--line); border-radius: 3px; }
+.tri i.fav { background: var(--accent); }
+.tri-l { display: flex; justify-content: space-between; gap: 8px; font-size: .78rem; color: var(--muted); margin-bottom: 8px; }
+.tri-l span.on { color: var(--ink); font-weight: 700; }
+.game.fut .tm { grid-template-columns: 46px minmax(0, 1fr) auto; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.tbl-liga td, .tbl-liga th { padding: 7px 8px; white-space: nowrap; }
+.tbl-liga tr.z-topo td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+.tbl-liga tr.z-reb td:first-child { box-shadow: inset 3px 0 0 var(--bad); }
+.tbl-liga .lnk { cursor: default; }
+.tbl-liga .lnk:hover { color: inherit; text-decoration: none; }
+.tbl-liga .forma .c { width: 20px; height: 20px; font-size: .72rem; }
+@media (max-width: 640px) { .hide-sm { display: none; } .tbl-liga td, .tbl-liga th { padding: 7px 6px; } }
+
+.mapa { font-size: .78rem; }
+.mapa th, .mapa td { padding: 4px 3px; text-align: center; border: 0; white-space: nowrap; }
+.mapa td.nm { text-align: left; padding-right: 10px; font-weight: 600; position: sticky; left: 0; background: var(--surface); }
+.mapa td.n { min-width: 26px; background: color-mix(in srgb, var(--accent) calc(var(--a) * 70%), transparent); font-variant-numeric: tabular-nums; }
+.table-v { padding: 16px 18px; }
+
+/* escolha da liga (entrada do futebol) */
+.liga-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.liga-card { text-align: left; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); display: grid; gap: 4px; align-content: start; }
+.liga-card:hover { transform: translateY(-2px); transition: transform .15s; border-color: var(--accent); }
+.liga-card .pais { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.liga-card .nm { font: 700 2.1rem/1 var(--f-display); text-transform: uppercase; margin-bottom: 6px; }
+.liga-card .lin { color: var(--ink-2); font-size: .88rem; }
+.liga-card .lin b { color: var(--ink); }
+.liga-card .lin.dim { color: var(--muted); }
+
+/* classificação da NFL */
+.conf-t { font: 700 1.8rem/1 var(--f-display); text-transform: uppercase; margin: 8px 0 12px; }
+.div-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.div-grid .tbl-liga .lnk { cursor: pointer; }
+.div-grid .tbl-liga .lnk:hover { color: var(--accent-ink); text-decoration: underline; }

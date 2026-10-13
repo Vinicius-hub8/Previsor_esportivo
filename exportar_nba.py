@@ -8,6 +8,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import noticias
+import placar as PL
 import previsor_nba as N
 
 RAIZ = Path(__file__).resolve().parent
@@ -65,7 +67,9 @@ def main(saida=None, temporadas=2):
                     "placar": [int(g.pts_v), int(g.pts_m)] if g.jogado else None,
                     "p": None, "ok": None, "elo": int(round(g.dif_elo)), "pf": None,
                     # [visitante, mandante]: saldo médio dos últimos jogos, quantos jogos entraram, dias de descanso
-                    "forma": [r(g.a_forma, 1), r(g.h_forma, 1)], "nj": [int(g.a_nf), int(g.h_nf)], "desc": [int(g.a_desc), int(g.h_desc)]}
+                    "forma": [r(g.a_forma, 1), r(g.h_forma, 1)], "nj": [int(g.a_nf), int(g.h_nf)], "desc": [int(g.a_desc), int(g.h_desc)],
+                    "db": g.dt.tz_convert(PL.TZ_BR).strftime("%Y-%m-%d"),
+                    "hb": g.dt.tz_convert(PL.TZ_BR).strftime("%H:%M") if isinstance(g.hora, str) else None, "ps": None}
             if g.jogado and g.game_id in bt.index:
                 item["p"] = r(bt.loc[g.game_id, "p"])
                 item["ok"] = bool(bt.loc[g.game_id, "ok"])
@@ -78,6 +82,47 @@ def main(saida=None, temporadas=2):
             prox = sub[sub["dia"] >= hoje]
             chave_atual = chave_de[(prox.iloc[0] if len(prox) else sub.iloc[-1])["game_id"]]
             rotulo_atual = grupos[chave_atual]["rotulo"]
+
+    # --- Placar previsto (margem pela chance de vitória; total pelo ritmo recente dos dois times) -------------
+    jogados_df = jg[jg["jogado"]].sort_values("dt")
+    long = pd.concat([jogados_df[["game_id", "dt", "m", "pts_m", "pts_v"]].set_axis(["game_id", "dt", "time", "pf", "pa"], axis=1),
+                      jogados_df[["game_id", "dt", "v", "pts_v", "pts_m"]].set_axis(["game_id", "dt", "time", "pf", "pa"], axis=1)]).sort_values("dt")
+    gr = long.groupby("time")
+    ritmo_antes = {}
+    for col in ("pf", "pa"):
+        long[col + "_r"] = gr[col].transform(lambda s_: s_.shift(1).rolling(10, min_periods=3).mean())
+    for row in long.itertuples():
+        ritmo_antes[(row.game_id, row.time)] = (row.pf_r, row.pa_r)
+    ritmo_hoje = {t: (x["pf"].tail(10).mean(), x["pa"].tail(10).mean()) for t, x in gr}
+    media_total = float((jogados_df[jogados_df["season"] == atual][["pts_m", "pts_v"]].sum(axis=1)).mean()) if (jogados_df["season"] == atual).any() else 225.0
+    todos = [it for sem in out["semanas"].values() for w in sem.values() for it in w["jogos"]]
+    real = {str(g.game_id): g.pts_m - g.pts_v for g in jogados_df.itertuples()}
+    par = [(it["p"], real[it["id"]]) for it in todos if it["p"] is not None and it["id"] in real]
+    k = PL.inclinacao([a for a, _ in par], [b for _, b in par], padrao=12.0)
+    out_mae = r(PL.erro_medio([a for a, _ in par], [b for _, b in par], k), 1) if par else None
+    gid_tipo = {str(g.game_id): (g.v, g.m) for g in jg.itertuples()}
+    for it in todos:
+        if it["p"] is None:
+            continue
+        v, m = it["v"], it["m"]
+        pv, pa_v = ritmo_antes.get((int(it["id"]) if it["id"].isdigit() else it["id"], v), ritmo_hoje.get(v, (np.nan, np.nan)))
+        pm, pa_m = ritmo_antes.get((int(it["id"]) if it["id"].isdigit() else it["id"], m), ritmo_hoje.get(m, (np.nan, np.nan)))
+        if np.isnan([pv, pa_v, pm, pa_m]).any():
+            pv, pa_v, pm, pa_m = [media_total / 2] * 4
+        total = (pv + pa_m) / 2 + (pm + pa_v) / 2
+        it["ps"] = PL.placar_previsto(it["p"], total, k)
+
+    # --- Notícias: ajustes que valem para cada jogo futuro --------------------------------------------
+    adj = N._noticias()
+    ruins = noticias.desconhecidos(adj, N.TIMES)
+    if ruins:
+        print(f"::warning::ajustes_noticias.csv: sigla(s) da NBA desconhecida(s): {', '.join(ruins)}")
+    if adj:
+        for it in todos:
+            if it["placar"] is None:
+                nt = noticias.para_json(adj, [(it["v"], it["v"], it["data"]), (it["m"], it["m"], it["data"])])
+                if nt:
+                    it["nt"] = nt
 
     # --- Times: metadados, forma recente, Elo, acerto histórico ------------------
     ids = {**dict(zip(jg["id_m"], jg["m"])), **dict(zip(jg["id_v"], jg["v"]))}
@@ -129,7 +174,7 @@ def main(saida=None, temporadas=2):
         "atualizado": date.today().isoformat(), "usa_linha": False,
         "acc": r(S["acc"]), "acc_mandante": r(S["acc_mandante"]), "n_ref": S["n_ref"], "faixas": faixas,
         "anos_ref": [N.rotulo_temporada(N.ANOS_REF[0]), N.rotulo_temporada(N.ANOS_REF[1])],
-        "acc_temporada": r(S["acc_atual"]), "n_temporada": S["n_atual"],
+        "acc_temporada": r(S["acc_atual"]), "n_temporada": S["n_atual"], "mae_margem": out_mae, "k_margem": r(k, 2),
         "fonte": "hoopR / ESPN (dados abertos)", "avisos": N.AVISOS,
         "grupos": [f"{c} {d}" for c in ("Leste", "Oeste") for d in
                    {"Leste": ("Atlântico", "Central", "Sudeste"), "Oeste": ("Noroeste", "Pacífico", "Sudoeste")}[c]],

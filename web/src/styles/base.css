@@ -11,9 +11,12 @@ main { padding-block: 24px 40px; display: grid; gap: 20px; }
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .brand { display: flex; align-items: center; gap: 10px; background: none; border: 0; padding: 0; }
-.brand svg { width: 34px; height: 20px; }
-.brand b { font: 700 1.35rem/1 var(--f-display); letter-spacing: .06em; text-transform: uppercase; }
-.brand span { color: var(--muted); font-size: .8rem; }
+.brand-icon { width: 36px; height: 36px; flex: none; }
+.brand-txt { display: grid; line-height: 1; text-align: left; }
+.brand-txt b { font: 700 1.5rem/1 var(--f-display); letter-spacing: .06em; text-transform: uppercase; }
+.brand-txt b i { font-style: normal; color: var(--brand-ink); }
+.brand-txt span { color: var(--muted); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; margin-top: 3px; }
+@media (max-width: 380px) { .brand-txt span { display: none; } }
 .icon-btn { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); display: grid; place-items: center; }
 .icon-btn svg { width: 20px; height: 20px; stroke: var(--ink-2); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 

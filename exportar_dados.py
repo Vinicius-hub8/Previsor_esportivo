@@ -8,6 +8,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import noticias
+import placar as PL
 import previsor_nfl as P
 
 TIMES = {
@@ -71,8 +73,9 @@ def main(saida=None, temporadas=2):
                 "v": g.away_team, "m": g.home_team, "spread": r(g.spread_line, 1),
                 "placar": [int(g.away_score), int(g.home_score)] if jogado else None,
                 "p": None, "linha": bool(pd.notna(g.spread_line)), "ok": None,
-                "elo": None, "pf": None,
+                "elo": None, "pf": None, "ps": None,
             }
+            item["db"], item["hb"] = PL.para_brasilia(item["data"], item["hora"])
             if jogado:
                 if g.game_id in bt.index:
                     p = float(bt.loc[g.game_id, "p_full"])
@@ -95,6 +98,32 @@ def main(saida=None, temporadas=2):
             sem_dict.setdefault(str(int(g.week)), {"rotulo": ROTULO_FASE.get(g.game_type, f"Semana {int(g.week)}"),
                                                     "tipo": g.game_type, "jogos": []})["jogos"].append(item)
         out["semanas"][str(temp)] = sem_dict
+
+    # --- Placar previsto: margem esperada a partir da chance de vitória + total pelo ritmo dos times ----------
+    todos = [(it, str(t)) for t, sem in out["semanas"].items() for w in sem.values() for it in w["jogos"]]
+    real = {g.game_id: g.home_score - g.away_score for g in jogos.itertuples() if pd.notna(g.home_score)}
+    par = [(it["p"], real[it["id"]]) for it, _ in todos if it["p"] is not None and it["id"] in real]
+    k = PL.inclinacao([a for a, _ in par], [b for _, b in par], padrao=13.0)
+    out["meta"]["mae_margem"] = r(PL.erro_medio([a for a, _ in par], [b for _, b in par], k), 1) if par else None
+    for it, _ in todos:
+        if it["p"] is None:
+            continue
+        pf = it["pf"]
+        total = (pf[0] + pf[3]) / 2 + (pf[2] + pf[1]) / 2 if pf and None not in pf else 44.0
+        it["ps"] = PL.placar_previsto(it["p"], total, k)
+    out["meta"]["k_margem"] = r(k, 2)
+
+    # --- Notícias: só jogos sem linha de aposta (a linha já embute a notícia) -------------------------
+    adj = noticias.carregar("nfl")
+    ruins = noticias.desconhecidos(adj, TIMES)
+    if ruins:
+        print(f"::warning::ajustes_noticias.csv: sigla(s) da NFL desconhecida(s): {', '.join(ruins)}")
+    if adj:
+        for it, _ in todos:
+            if it["placar"] is None and not it["linha"]:
+                nt = noticias.para_json(adj, [(it["v"], it["v"], it["data"]), (it["m"], it["m"], it["data"])])
+                if nt:
+                    it["nt"] = nt
 
     # --- Times: metadados, forma recente, Elo, acerto histórico ------------------
     elo_rank = {t: i + 1 for i, (t, _) in enumerate(sorted(S["elo"].items(), key=lambda x: -x[1]))}
