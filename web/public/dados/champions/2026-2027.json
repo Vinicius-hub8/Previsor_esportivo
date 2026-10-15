@@ -1,0 +1,659 @@
+{
+  "meta": {
+    "competicao": "UEFA Champions League",
+    "temporada": "2026-2027",
+    "quantidade": 54,
+    "finalizadas": 36,
+    "fonte": "ESPN"
+  },
+  "jogos": [
+    {
+      "id": "401915426",
+      "data": "2026-09-08",
+      "hora": "13:45",
+      "mandante": "Club Brugge",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "401915452",
+      "data": "2026-09-08",
+      "hora": "13:45",
+      "mandante": "AEK Athens",
+      "visitante": "LASK Linz",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "401915425",
+      "data": "2026-09-08",
+      "hora": "16:00",
+      "mandante": "FC Porto",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "401915449",
+      "data": "2026-09-08",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Villarreal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "401915450",
+      "data": "2026-09-08",
+      "hora": "16:00",
+      "mandante": "Lille",
+      "visitante": "Real Betis",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "401915451",
+      "data": "2026-09-08",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "401915424",
+      "data": "2026-09-09",
+      "hora": "13:45",
+      "mandante": "Barcelona",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": "401915448",
+      "data": "2026-09-09",
+      "hora": "13:45",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Viking FK",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "401915423",
+      "data": "2026-09-09",
+      "hora": "16:00",
+      "mandante": "Napoli",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "401915445",
+      "data": "2026-09-09",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Slovan Bratislava",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        6,
+        1
+      ]
+    },
+    {
+      "id": "401915446",
+      "data": "2026-09-09",
+      "hora": "16:00",
+      "mandante": "Liverpool",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "401915447",
+      "data": "2026-09-09",
+      "hora": "16:00",
+      "mandante": "Sporting CP",
+      "visitante": "Galatasaray",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "401915422",
+      "data": "2026-09-10",
+      "hora": "13:45",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "401915444",
+      "data": "2026-09-10",
+      "hora": "13:45",
+      "mandante": "Fenerbahce",
+      "visitante": "AS Roma",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "401915440",
+      "data": "2026-09-10",
+      "hora": "16:00",
+      "mandante": "Slavia Prague",
+      "visitante": "Lens",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "401915441",
+      "data": "2026-09-10",
+      "hora": "16:00",
+      "mandante": "Como",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "401915442",
+      "data": "2026-09-10",
+      "hora": "16:00",
+      "mandante": "Manchester United",
+      "visitante": "Sabah FK",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "401915443",
+      "data": "2026-09-10",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Bodo/Glimt",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "401915418",
+      "data": "2026-10-13",
+      "hora": "13:45",
+      "mandante": "Lens",
+      "visitante": "Sporting CP",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "401915436",
+      "data": "2026-10-13",
+      "hora": "13:45",
+      "mandante": "Sabah FK",
+      "visitante": "Slavia Prague",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "401915410",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "Villarreal",
+      "visitante": "Napoli",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "401915411",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "Viking FK",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "401915412",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Manchester United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "401915413",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "401915417",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "Lille",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "401915434",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "RB Leipzig",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "401915435",
+      "data": "2026-10-13",
+      "hora": "16:00",
+      "mandante": "Galatasaray",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "401915415",
+      "data": "2026-10-14",
+      "hora": "13:45",
+      "mandante": "LASK Linz",
+      "visitante": "Liverpool",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        6
+      ]
+    },
+    {
+      "id": "401915416",
+      "data": "2026-10-14",
+      "hora": "13:45",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Como",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "401915393",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "Bodo/Glimt",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "401915405",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "Slovan Bratislava",
+      "visitante": "VfB Stuttgart",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "401915406",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "AEK Athens",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "401915407",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "401915408",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "Real Betis",
+      "visitante": "FC Porto",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "401915409",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "Aston Villa",
+      "visitante": "Fenerbahce",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        6,
+        0
+      ]
+    },
+    {
+      "id": "401915414",
+      "data": "2026-10-14",
+      "hora": "16:00",
+      "mandante": "AS Roma",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "401915403",
+      "data": "2026-10-20",
+      "hora": "13:45",
+      "mandante": "Fenerbahce",
+      "visitante": "Slavia Prague",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915404",
+      "data": "2026-10-20",
+      "hora": "13:45",
+      "mandante": "Sabah FK",
+      "visitante": "Borussia Dortmund",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915392",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Atlético Madrid",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915397",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Liverpool",
+      "visitante": "Villarreal",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915398",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "FC Porto",
+      "visitante": "PSV Eindhoven",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915399",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Barcelona",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915400",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Napoli",
+      "visitante": "Bodo/Glimt",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915401",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "AEK Athens",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915402",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "AS Roma",
+      "visitante": "Slovan Bratislava",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915395",
+      "data": "2026-10-21",
+      "hora": "13:45",
+      "mandante": "Como",
+      "visitante": "Manchester United",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915396",
+      "data": "2026-10-21",
+      "hora": "13:45",
+      "mandante": "Lille",
+      "visitante": "Galatasaray",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915312",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Arsenal",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915313",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "RB Leipzig",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915388",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Club Brugge",
+      "visitante": "Lens",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915389",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Real Betis",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915390",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915391",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Sporting CP",
+      "visitante": "LASK Linz",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    },
+    {
+      "id": "401915394",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Aston Villa",
+      "visitante": "Viking FK",
+      "estado": "pre",
+      "finalizado": false,
+      "placar": null
+    }
+  ]
+}

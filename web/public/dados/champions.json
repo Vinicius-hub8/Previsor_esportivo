@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "competicao": "UEFA Champions League",
+    "gerado_em": "2026-10-14T20:32:58.151099-03:00",
+    "total": 18,
+    "modelo": "Elo + Poisson experimental"
+  },
+  "jogos": [
+    {
+      "id": "401915403",
+      "data": "2026-10-20",
+      "hora": "13:45",
+      "mandante": "Fenerbahce",
+      "visitante": "Slavia Prague",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 50.1,
+        "empate": 22.0,
+        "visitante": 27.8
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.94,
+        1.4
+      ]
+    },
+    {
+      "id": "401915404",
+      "data": "2026-10-20",
+      "hora": "13:45",
+      "mandante": "Sabah FK",
+      "visitante": "Borussia Dortmund",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 38.0,
+        "empate": 23.0,
+        "visitante": 39.0
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.64,
+        1.66
+      ]
+    },
+    {
+      "id": "401915392",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Atlético Madrid",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 35.6,
+        "empate": 23.0,
+        "visitante": 41.4
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.58,
+        1.72
+      ]
+    },
+    {
+      "id": "401915397",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Liverpool",
+      "visitante": "Villarreal",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 62.5,
+        "empate": 19.1,
+        "visitante": 18.4
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.3,
+        1.18
+      ]
+    },
+    {
+      "id": "401915398",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "FC Porto",
+      "visitante": "PSV Eindhoven",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 46.5,
+        "empate": 22.5,
+        "visitante": 30.9
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.85,
+        1.47
+      ]
+    },
+    {
+      "id": "401915399",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Barcelona",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 50.8,
+        "empate": 21.9,
+        "visitante": 27.3
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.96,
+        1.39
+      ]
+    },
+    {
+      "id": "401915400",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Napoli",
+      "visitante": "Bodo/Glimt",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 37.8,
+        "empate": 23.0,
+        "visitante": 39.2
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.63,
+        1.67
+      ]
+    },
+    {
+      "id": "401915401",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "AEK Athens",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 52.7,
+        "empate": 21.6,
+        "visitante": 25.8
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.01,
+        1.36
+      ]
+    },
+    {
+      "id": "401915402",
+      "data": "2026-10-20",
+      "hora": "16:00",
+      "mandante": "AS Roma",
+      "visitante": "Slovan Bratislava",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 55.0,
+        "empate": 21.1,
+        "visitante": 23.9
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.08,
+        1.31
+      ]
+    },
+    {
+      "id": "401915395",
+      "data": "2026-10-21",
+      "hora": "13:45",
+      "mandante": "Como",
+      "visitante": "Manchester United",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 45.8,
+        "empate": 22.6,
+        "visitante": 31.6
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.83,
+        1.49
+      ]
+    },
+    {
+      "id": "401915396",
+      "data": "2026-10-21",
+      "hora": "13:45",
+      "mandante": "Lille",
+      "visitante": "Galatasaray",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 47.8,
+        "empate": 22.4,
+        "visitante": 29.8
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.88,
+        1.45
+      ]
+    },
+    {
+      "id": "401915312",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Arsenal",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 41.5,
+        "empate": 23.0,
+        "visitante": 35.5
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.72,
+        1.58
+      ]
+    },
+    {
+      "id": "401915313",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "RB Leipzig",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 62.1,
+        "empate": 19.2,
+        "visitante": 18.7
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.29,
+        1.19
+      ]
+    },
+    {
+      "id": "401915388",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Club Brugge",
+      "visitante": "Lens",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 45.4,
+        "empate": 22.7,
+        "visitante": 31.9
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.82,
+        1.5
+      ]
+    },
+    {
+      "id": "401915389",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Real Betis",
+      "visitante": "Feyenoord Rotterdam",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 47.3,
+        "empate": 22.4,
+        "visitante": 30.2
+      },
+      "placar_provavel": [
+        1,
+        1
+      ],
+      "gols_esperados": [
+        1.87,
+        1.46
+      ]
+    },
+    {
+      "id": "401915390",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Shakhtar Donetsk",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 52.7,
+        "empate": 21.6,
+        "visitante": 25.7
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.01,
+        1.35
+      ]
+    },
+    {
+      "id": "401915391",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Sporting CP",
+      "visitante": "LASK Linz",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 53.0,
+        "empate": 21.5,
+        "visitante": 25.5
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.02,
+        1.35
+      ]
+    },
+    {
+      "id": "401915394",
+      "data": "2026-10-21",
+      "hora": "16:00",
+      "mandante": "Aston Villa",
+      "visitante": "Viking FK",
+      "temporada": "2026-2027",
+      "probabilidades": {
+        "mandante": 53.5,
+        "empate": 21.4,
+        "visitante": 25.1
+      },
+      "placar_provavel": [
+        2,
+        1
+      ],
+      "gols_esperados": [
+        2.03,
+        1.34
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2468 @@
+{
+  "meta": {
+    "competicao": "UEFA Champions League",
+    "temporada": "2024-2025",
+    "quantidade": 189,
+    "finalizadas": 189,
+    "fonte": "ESPN"
+  },
+  "jogos": [
+    {
+      "id": "720418",
+      "data": "2024-09-17",
+      "hora": "13:45",
+      "mandante": "Juventus",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720419",
+      "data": "2024-09-17",
+      "hora": "13:45",
+      "mandante": "Young Boys",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "720365",
+      "data": "2024-09-17",
+      "hora": "16:00",
+      "mandante": "AC Milan",
+      "visitante": "Liverpool",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "720420",
+      "data": "2024-09-17",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "VfB Stuttgart",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720421",
+      "data": "2024-09-17",
+      "hora": "16:00",
+      "mandante": "Sporting CP",
+      "visitante": "Lille",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720422",
+      "data": "2024-09-17",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Dinamo Zagreb",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        9,
+        2
+      ]
+    },
+    {
+      "id": "720423",
+      "data": "2024-09-18",
+      "hora": "13:45",
+      "mandante": "Sparta Prague",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "720424",
+      "data": "2024-09-18",
+      "hora": "13:45",
+      "mandante": "Bologna",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720425",
+      "data": "2024-09-18",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Girona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720426",
+      "data": "2024-09-18",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720427",
+      "data": "2024-09-18",
+      "hora": "16:00",
+      "mandante": "Celtic",
+      "visitante": "Slovan Bratislava",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": "720428",
+      "data": "2024-09-18",
+      "hora": "16:00",
+      "mandante": "Club Brugge",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "720429",
+      "data": "2024-09-19",
+      "hora": "13:45",
+      "mandante": "Red Star Belgrade",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "720430",
+      "data": "2024-09-19",
+      "hora": "13:45",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Bayer Leverkusen",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "720431",
+      "data": "2024-09-19",
+      "hora": "16:00",
+      "mandante": "Atalanta",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720432",
+      "data": "2024-09-19",
+      "hora": "16:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720433",
+      "data": "2024-09-19",
+      "hora": "16:00",
+      "mandante": "Brest",
+      "visitante": "SK Sturm Graz",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720434",
+      "data": "2024-09-19",
+      "hora": "16:00",
+      "mandante": "AS Monaco",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720435",
+      "data": "2024-10-01",
+      "hora": "13:45",
+      "mandante": "RB Salzburg",
+      "visitante": "Brest",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "720436",
+      "data": "2024-10-01",
+      "hora": "13:45",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Sparta Prague",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720437",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "Bayer Leverkusen",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720438",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        7,
+        1
+      ]
+    },
+    {
+      "id": "720439",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "Slovan Bratislava",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "720440",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "720441",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Sporting CP",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720442",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "Barcelona",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "720443",
+      "data": "2024-10-01",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720444",
+      "data": "2024-10-02",
+      "hora": "13:45",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "Atalanta",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "720445",
+      "data": "2024-10-02",
+      "hora": "13:45",
+      "mandante": "Girona",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720366",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "Liverpool",
+      "visitante": "Bologna",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720446",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "Dinamo Zagreb",
+      "visitante": "AS Monaco",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "720447",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "Benfica",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "720448",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "Lille",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720449",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "RB Leipzig",
+      "visitante": "Juventus",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720450",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "SK Sturm Graz",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720451",
+      "data": "2024-10-02",
+      "hora": "16:00",
+      "mandante": "Aston Villa",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720452",
+      "data": "2024-10-22",
+      "hora": "13:45",
+      "mandante": "AS Monaco",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": "720453",
+      "data": "2024-10-22",
+      "hora": "13:45",
+      "mandante": "AC Milan",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720454",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "Girona",
+      "visitante": "Slovan Bratislava",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720455",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720456",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "Juventus",
+      "visitante": "VfB Stuttgart",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720457",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "Aston Villa",
+      "visitante": "Bologna",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720458",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "SK Sturm Graz",
+      "visitante": "Sporting CP",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "720459",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        2
+      ]
+    },
+    {
+      "id": "720460",
+      "data": "2024-10-22",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720461",
+      "data": "2024-10-23",
+      "hora": "13:45",
+      "mandante": "Atalanta",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720462",
+      "data": "2024-10-23",
+      "hora": "13:45",
+      "mandante": "Brest",
+      "visitante": "Bayer Leverkusen",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720367",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "RB Leipzig",
+      "visitante": "Liverpool",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720371",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "Young Boys",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720372",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "Barcelona",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "720373",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Lille",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "720374",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "Sparta Prague",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "720463",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "Benfica",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "720464",
+      "data": "2024-10-23",
+      "hora": "16:00",
+      "mandante": "RB Salzburg",
+      "visitante": "Dinamo Zagreb",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "720375",
+      "data": "2024-11-05",
+      "hora": "14:45",
+      "mandante": "Slovan Bratislava",
+      "visitante": "Dinamo Zagreb",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "720376",
+      "data": "2024-11-05",
+      "hora": "14:45",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Girona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "720368",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Liverpool",
+      "visitante": "Bayer Leverkusen",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "720377",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Celtic",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720378",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Lille",
+      "visitante": "Juventus",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720379",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Sporting CP",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "720380",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "720381",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "SK Sturm Graz",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720382",
+      "data": "2024-11-05",
+      "hora": "17:00",
+      "mandante": "Bologna",
+      "visitante": "AS Monaco",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720383",
+      "data": "2024-11-06",
+      "hora": "14:45",
+      "mandante": "Club Brugge",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720384",
+      "data": "2024-11-06",
+      "hora": "14:45",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720385",
+      "data": "2024-11-06",
+      "hora": "17:00",
+      "mandante": "Red Star Belgrade",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "720386",
+      "data": "2024-11-06",
+      "hora": "17:00",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "720387",
+      "data": "2024-11-06",
+      "hora": "17:00",
+      "mandante": "Internazionale",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720388",
+      "data": "2024-11-06",
+      "hora": "17:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "720390",
+      "data": "2024-11-06",
+      "hora": "17:00",
+      "mandante": "Sparta Prague",
+      "visitante": "Brest",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "720391",
+      "data": "2024-11-06",
+      "hora": "17:00",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Atalanta",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "720389",
+      "data": "2024-11-06",
+      "hora": "17:15",
+      "mandante": "Bayern Munich",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720392",
+      "data": "2024-11-26",
+      "hora": "14:45",
+      "mandante": "Sparta Prague",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "720393",
+      "data": "2024-11-26",
+      "hora": "14:45",
+      "mandante": "Slovan Bratislava",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720394",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Barcelona",
+      "visitante": "Brest",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "720395",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Bayer Leverkusen",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "720396",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720397",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Internazionale",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720398",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Manchester City",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "720399",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Sporting CP",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "720400",
+      "data": "2024-11-26",
+      "hora": "17:00",
+      "mandante": "Young Boys",
+      "visitante": "Atalanta",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "720401",
+      "data": "2024-11-27",
+      "hora": "14:45",
+      "mandante": "SK Sturm Graz",
+      "visitante": "Girona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720402",
+      "data": "2024-11-27",
+      "hora": "14:45",
+      "mandante": "Red Star Belgrade",
+      "visitante": "VfB Stuttgart",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": "720369",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "Liverpool",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720403",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "Bologna",
+      "visitante": "Lille",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "720404",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "Celtic",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720405",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "Aston Villa",
+      "visitante": "Juventus",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720406",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "Dinamo Zagreb",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "720407",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "AS Monaco",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720408",
+      "data": "2024-11-27",
+      "hora": "17:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "720370",
+      "data": "2024-12-10",
+      "hora": "14:45",
+      "mandante": "Girona",
+      "visitante": "Liverpool",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720409",
+      "data": "2024-12-10",
+      "hora": "14:45",
+      "mandante": "Dinamo Zagreb",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720410",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "Club Brugge",
+      "visitante": "Sporting CP",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720411",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "Brest",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720412",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "Bayer Leverkusen",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720413",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "Atalanta",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720414",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "RB Salzburg",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "720415",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "720416",
+      "data": "2024-12-10",
+      "hora": "17:00",
+      "mandante": "RB Leipzig",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720321",
+      "data": "2024-12-11",
+      "hora": "14:45",
+      "mandante": "Atlético Madrid",
+      "visitante": "Slovan Bratislava",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720417",
+      "data": "2024-12-11",
+      "hora": "14:45",
+      "mandante": "Lille",
+      "visitante": "SK Sturm Graz",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "720322",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720323",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Sparta Prague",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "720324",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "Benfica",
+      "visitante": "Bologna",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720325",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "Arsenal",
+      "visitante": "AS Monaco",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "720326",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "Juventus",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720327",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": "720328",
+      "data": "2024-12-11",
+      "hora": "17:00",
+      "mandante": "AC Milan",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720329",
+      "data": "2025-01-21",
+      "hora": "14:45",
+      "mandante": "Atalanta",
+      "visitante": "SK Sturm Graz",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "720330",
+      "data": "2025-01-21",
+      "hora": "14:45",
+      "mandante": "AS Monaco",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720331",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Liverpool",
+      "visitante": "Lille",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720332",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Red Star Belgrade",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "720333",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Bologna",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720334",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Benfica",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "720335",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Bayer Leverkusen",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720336",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Club Brugge",
+      "visitante": "Juventus",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "720337",
+      "data": "2025-01-21",
+      "hora": "17:00",
+      "mandante": "Slovan Bratislava",
+      "visitante": "VfB Stuttgart",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "720338",
+      "data": "2025-01-22",
+      "hora": "14:45",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "Brest",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720339",
+      "data": "2025-01-22",
+      "hora": "14:45",
+      "mandante": "RB Leipzig",
+      "visitante": "Sporting CP",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720340",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "Sparta Prague",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720341",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "720342",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "Celtic",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720343",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "Arsenal",
+      "visitante": "Dinamo Zagreb",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "720344",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "720345",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        1
+      ]
+    },
+    {
+      "id": "720346",
+      "data": "2025-01-22",
+      "hora": "17:00",
+      "mandante": "AC Milan",
+      "visitante": "Girona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720347",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Internazionale",
+      "visitante": "AS Monaco",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "720348",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Juventus",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "720349",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Lille",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        6,
+        1
+      ]
+    },
+    {
+      "id": "720350",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Manchester City",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720351",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Liverpool",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "720352",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "SK Sturm Graz",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "720353",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Sporting CP",
+      "visitante": "Bologna",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "720354",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "VfB Stuttgart",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "720355",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Girona",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "720356",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "RB Salzburg",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "720357",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Slovan Bratislava",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720358",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Dinamo Zagreb",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "720359",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Young Boys",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "720360",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "720361",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Bayer Leverkusen",
+      "visitante": "Sparta Prague",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "720362",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Barcelona",
+      "visitante": "Atalanta",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "720363",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Aston Villa",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "720364",
+      "data": "2025-01-29",
+      "hora": "17:00",
+      "mandante": "Brest",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "732185",
+      "data": "2025-02-11",
+      "hora": "14:45",
+      "mandante": "Brest",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "732187",
+      "data": "2025-02-11",
+      "hora": "17:00",
+      "mandante": "Manchester City",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "732189",
+      "data": "2025-02-11",
+      "hora": "17:00",
+      "mandante": "Sporting CP",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "732190",
+      "data": "2025-02-11",
+      "hora": "17:00",
+      "mandante": "Juventus",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "732192",
+      "data": "2025-02-12",
+      "hora": "14:45",
+      "mandante": "Club Brugge",
+      "visitante": "Atalanta",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "732186",
+      "data": "2025-02-12",
+      "hora": "17:00",
+      "mandante": "Celtic",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "732188",
+      "data": "2025-02-12",
+      "hora": "17:00",
+      "mandante": "AS Monaco",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "732191",
+      "data": "2025-02-12",
+      "hora": "17:00",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "732194",
+      "data": "2025-02-18",
+      "hora": "14:45",
+      "mandante": "AC Milan",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "732193",
+      "data": "2025-02-18",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "732197",
+      "data": "2025-02-18",
+      "hora": "17:00",
+      "mandante": "Atalanta",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "732198",
+      "data": "2025-02-18",
+      "hora": "17:00",
+      "mandante": "Benfica",
+      "visitante": "AS Monaco",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "732199",
+      "data": "2025-02-19",
+      "hora": "14:45",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Sporting CP",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "732195",
+      "data": "2025-02-19",
+      "hora": "17:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Juventus",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "732196",
+      "data": "2025-02-19",
+      "hora": "17:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Brest",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "732200",
+      "data": "2025-02-19",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "733145",
+      "data": "2025-03-04",
+      "hora": "14:45",
+      "mandante": "Club Brugge",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "733601",
+      "data": "2025-03-04",
+      "hora": "17:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Lille",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "733602",
+      "data": "2025-03-04",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "733603",
+      "data": "2025-03-04",
+      "hora": "17:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        7
+      ]
+    },
+    {
+      "id": "733149",
+      "data": "2025-03-05",
+      "hora": "14:45",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "733143",
+      "data": "2025-03-05",
+      "hora": "17:00",
+      "mandante": "Benfica",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "733147",
+      "data": "2025-03-05",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Bayer Leverkusen",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "733600",
+      "data": "2025-03-05",
+      "hora": "17:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Liverpool",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "733144",
+      "data": "2025-03-11",
+      "hora": "14:45",
+      "mandante": "Barcelona",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "733148",
+      "data": "2025-03-11",
+      "hora": "17:00",
+      "mandante": "Bayer Leverkusen",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "733150",
+      "data": "2025-03-11",
+      "hora": "17:00",
+      "mandante": "Internazionale",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "733605",
+      "data": "2025-03-11",
+      "hora": "17:00",
+      "mandante": "Liverpool",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "733604",
+      "data": "2025-03-12",
+      "hora": "14:45",
+      "mandante": "Lille",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "733146",
+      "data": "2025-03-12",
+      "hora": "17:00",
+      "mandante": "Aston Villa",
+      "visitante": "Club Brugge",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "733606",
+      "data": "2025-03-12",
+      "hora": "17:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "733607",
+      "data": "2025-03-12",
+      "hora": "17:00",
+      "mandante": "Arsenal",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "733608",
+      "data": "2025-04-08",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "733611",
+      "data": "2025-04-08",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "733609",
+      "data": "2025-04-09",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Aston Villa",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "733610",
+      "data": "2025-04-09",
+      "hora": "16:00",
+      "mandante": "Barcelona",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "733613",
+      "data": "2025-04-15",
+      "hora": "16:00",
+      "mandante": "Aston Villa",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "733614",
+      "data": "2025-04-15",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "733612",
+      "data": "2025-04-16",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "733615",
+      "data": "2025-04-16",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "733616",
+      "data": "2025-04-29",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "733617",
+      "data": "2025-04-30",
+      "hora": "16:00",
+      "mandante": "Barcelona",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "733619",
+      "data": "2025-05-06",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "733618",
+      "data": "2025-05-07",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "733620",
+      "data": "2025-05-31",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    }
+  ]
+}

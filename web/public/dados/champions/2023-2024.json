@@ -1,0 +1,1636 @@
+{
+  "meta": {
+    "competicao": "UEFA Champions League",
+    "temporada": "2023-2024",
+    "quantidade": 125,
+    "finalizadas": 125,
+    "fonte": "ESPN"
+  },
+  "jogos": [
+    {
+      "id": "687536",
+      "data": "2023-09-19",
+      "hora": "13:45",
+      "mandante": "Young Boys",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687537",
+      "data": "2023-09-19",
+      "hora": "13:45",
+      "mandante": "AC Milan",
+      "visitante": "Newcastle United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "687538",
+      "data": "2023-09-19",
+      "hora": "16:00",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "FC Porto",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687539",
+      "data": "2023-09-19",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687540",
+      "data": "2023-09-19",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "687541",
+      "data": "2023-09-19",
+      "hora": "16:00",
+      "mandante": "Lazio",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687542",
+      "data": "2023-09-19",
+      "hora": "16:00",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687543",
+      "data": "2023-09-19",
+      "hora": "16:00",
+      "mandante": "Barcelona",
+      "visitante": "Antwerp",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "687544",
+      "data": "2023-09-20",
+      "hora": "13:45",
+      "mandante": "Real Madrid",
+      "visitante": "1. FC Union Berlin",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687545",
+      "data": "2023-09-20",
+      "hora": "13:45",
+      "mandante": "Galatasaray",
+      "visitante": "F.C. København",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "687546",
+      "data": "2023-09-20",
+      "hora": "16:00",
+      "mandante": "Braga",
+      "visitante": "Napoli",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "687547",
+      "data": "2023-09-20",
+      "hora": "16:00",
+      "mandante": "Sevilla",
+      "visitante": "Lens",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687548",
+      "data": "2023-09-20",
+      "hora": "16:00",
+      "mandante": "Real Sociedad",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687549",
+      "data": "2023-09-20",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        0
+      ]
+    },
+    {
+      "id": "687550",
+      "data": "2023-09-20",
+      "hora": "16:00",
+      "mandante": "Benfica",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "687551",
+      "data": "2023-09-20",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Manchester United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "687552",
+      "data": "2023-10-03",
+      "hora": "13:45",
+      "mandante": "RB Salzburg",
+      "visitante": "Real Sociedad",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "687553",
+      "data": "2023-10-03",
+      "hora": "13:45",
+      "mandante": "1. FC Union Berlin",
+      "visitante": "Braga",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687554",
+      "data": "2023-10-03",
+      "hora": "16:00",
+      "mandante": "Napoli",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687555",
+      "data": "2023-10-03",
+      "hora": "16:00",
+      "mandante": "F.C. København",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "687556",
+      "data": "2023-10-03",
+      "hora": "16:00",
+      "mandante": "Manchester United",
+      "visitante": "Galatasaray",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687557",
+      "data": "2023-10-03",
+      "hora": "16:00",
+      "mandante": "Lens",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687558",
+      "data": "2023-10-03",
+      "hora": "16:00",
+      "mandante": "Internazionale",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687559",
+      "data": "2023-10-03",
+      "hora": "16:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Sevilla",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "687560",
+      "data": "2023-10-04",
+      "hora": "13:45",
+      "mandante": "Antwerp",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687561",
+      "data": "2023-10-04",
+      "hora": "13:45",
+      "mandante": "Atlético Madrid",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "687562",
+      "data": "2023-10-04",
+      "hora": "16:00",
+      "mandante": "FC Porto",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "687563",
+      "data": "2023-10-04",
+      "hora": "16:00",
+      "mandante": "Newcastle United",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "687564",
+      "data": "2023-10-04",
+      "hora": "16:00",
+      "mandante": "RB Leipzig",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687565",
+      "data": "2023-10-04",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "687566",
+      "data": "2023-10-04",
+      "hora": "16:00",
+      "mandante": "Red Star Belgrade",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "687567",
+      "data": "2023-10-04",
+      "hora": "16:00",
+      "mandante": "Celtic",
+      "visitante": "Lazio",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "687568",
+      "data": "2023-10-24",
+      "hora": "13:45",
+      "mandante": "Internazionale",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687569",
+      "data": "2023-10-24",
+      "hora": "13:45",
+      "mandante": "Galatasaray",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687570",
+      "data": "2023-10-24",
+      "hora": "16:00",
+      "mandante": "Benfica",
+      "visitante": "Real Sociedad",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "687571",
+      "data": "2023-10-24",
+      "hora": "16:00",
+      "mandante": "1. FC Union Berlin",
+      "visitante": "Napoli",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "687572",
+      "data": "2023-10-24",
+      "hora": "16:00",
+      "mandante": "Braga",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "687573",
+      "data": "2023-10-24",
+      "hora": "16:00",
+      "mandante": "Sevilla",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "687574",
+      "data": "2023-10-24",
+      "hora": "16:00",
+      "mandante": "Manchester United",
+      "visitante": "F.C. København",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687575",
+      "data": "2023-10-24",
+      "hora": "16:00",
+      "mandante": "Lens",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687576",
+      "data": "2023-10-25",
+      "hora": "13:45",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Lazio",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "687577",
+      "data": "2023-10-25",
+      "hora": "13:45",
+      "mandante": "Barcelona",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687578",
+      "data": "2023-10-25",
+      "hora": "16:00",
+      "mandante": "Celtic",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "687579",
+      "data": "2023-10-25",
+      "hora": "16:00",
+      "mandante": "Antwerp",
+      "visitante": "FC Porto",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "687580",
+      "data": "2023-10-25",
+      "hora": "16:00",
+      "mandante": "Young Boys",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687581",
+      "data": "2023-10-25",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "687582",
+      "data": "2023-10-25",
+      "hora": "16:00",
+      "mandante": "Newcastle United",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "687583",
+      "data": "2023-10-25",
+      "hora": "16:00",
+      "mandante": "RB Leipzig",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "687584",
+      "data": "2023-11-07",
+      "hora": "14:45",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687585",
+      "data": "2023-11-07",
+      "hora": "14:45",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Newcastle United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687586",
+      "data": "2023-11-07",
+      "hora": "17:00",
+      "mandante": "AC Milan",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687587",
+      "data": "2023-11-07",
+      "hora": "17:00",
+      "mandante": "Manchester City",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "687588",
+      "data": "2023-11-07",
+      "hora": "17:00",
+      "mandante": "Lazio",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687589",
+      "data": "2023-11-07",
+      "hora": "17:00",
+      "mandante": "FC Porto",
+      "visitante": "Antwerp",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687590",
+      "data": "2023-11-07",
+      "hora": "17:00",
+      "mandante": "Red Star Belgrade",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "687591",
+      "data": "2023-11-07",
+      "hora": "17:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        6,
+        0
+      ]
+    },
+    {
+      "id": "687592",
+      "data": "2023-11-08",
+      "hora": "14:45",
+      "mandante": "Real Sociedad",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "687593",
+      "data": "2023-11-08",
+      "hora": "14:45",
+      "mandante": "Napoli",
+      "visitante": "1. FC Union Berlin",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687594",
+      "data": "2023-11-08",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Galatasaray",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687595",
+      "data": "2023-11-08",
+      "hora": "17:00",
+      "mandante": "Arsenal",
+      "visitante": "Sevilla",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687596",
+      "data": "2023-11-08",
+      "hora": "17:00",
+      "mandante": "F.C. København",
+      "visitante": "Manchester United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        3
+      ]
+    },
+    {
+      "id": "687597",
+      "data": "2023-11-08",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "Braga",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "687598",
+      "data": "2023-11-08",
+      "hora": "17:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Lens",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687599",
+      "data": "2023-11-08",
+      "hora": "17:00",
+      "mandante": "RB Salzburg",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "687600",
+      "data": "2023-11-28",
+      "hora": "14:45",
+      "mandante": "Shakhtar Donetsk",
+      "visitante": "Antwerp",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687601",
+      "data": "2023-11-28",
+      "hora": "14:45",
+      "mandante": "Lazio",
+      "visitante": "Celtic",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687602",
+      "data": "2023-11-28",
+      "hora": "17:00",
+      "mandante": "Young Boys",
+      "visitante": "Red Star Belgrade",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687603",
+      "data": "2023-11-28",
+      "hora": "17:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Newcastle United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687604",
+      "data": "2023-11-28",
+      "hora": "17:00",
+      "mandante": "AC Milan",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687605",
+      "data": "2023-11-28",
+      "hora": "17:00",
+      "mandante": "Manchester City",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "687606",
+      "data": "2023-11-28",
+      "hora": "17:00",
+      "mandante": "Feyenoord Rotterdam",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687607",
+      "data": "2023-11-28",
+      "hora": "17:00",
+      "mandante": "Barcelona",
+      "visitante": "FC Porto",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687608",
+      "data": "2023-11-29",
+      "hora": "14:45",
+      "mandante": "Sevilla",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687609",
+      "data": "2023-11-29",
+      "hora": "14:45",
+      "mandante": "Galatasaray",
+      "visitante": "Manchester United",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "687610",
+      "data": "2023-11-29",
+      "hora": "17:00",
+      "mandante": "Braga",
+      "visitante": "1. FC Union Berlin",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687611",
+      "data": "2023-11-29",
+      "hora": "17:00",
+      "mandante": "Arsenal",
+      "visitante": "Lens",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        6,
+        0
+      ]
+    },
+    {
+      "id": "687612",
+      "data": "2023-11-29",
+      "hora": "17:00",
+      "mandante": "Real Sociedad",
+      "visitante": "RB Salzburg",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "687613",
+      "data": "2023-11-29",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "Napoli",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "687614",
+      "data": "2023-11-29",
+      "hora": "17:00",
+      "mandante": "Benfica",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "687615",
+      "data": "2023-11-29",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "F.C. København",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "687616",
+      "data": "2023-12-12",
+      "hora": "14:45",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687617",
+      "data": "2023-12-12",
+      "hora": "14:45",
+      "mandante": "Lens",
+      "visitante": "Sevilla",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687618",
+      "data": "2023-12-12",
+      "hora": "17:00",
+      "mandante": "Internazionale",
+      "visitante": "Real Sociedad",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "687619",
+      "data": "2023-12-12",
+      "hora": "17:00",
+      "mandante": "1. FC Union Berlin",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687620",
+      "data": "2023-12-12",
+      "hora": "17:00",
+      "mandante": "RB Salzburg",
+      "visitante": "Benfica",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "687621",
+      "data": "2023-12-12",
+      "hora": "17:00",
+      "mandante": "Manchester United",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "687622",
+      "data": "2023-12-12",
+      "hora": "17:00",
+      "mandante": "Napoli",
+      "visitante": "Braga",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687623",
+      "data": "2023-12-12",
+      "hora": "17:00",
+      "mandante": "F.C. København",
+      "visitante": "Galatasaray",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "687624",
+      "data": "2023-12-13",
+      "hora": "14:45",
+      "mandante": "RB Leipzig",
+      "visitante": "Young Boys",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687625",
+      "data": "2023-12-13",
+      "hora": "14:45",
+      "mandante": "Red Star Belgrade",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "687626",
+      "data": "2023-12-13",
+      "hora": "17:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Lazio",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "687627",
+      "data": "2023-12-13",
+      "hora": "17:00",
+      "mandante": "Antwerp",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "687628",
+      "data": "2023-12-13",
+      "hora": "17:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "687629",
+      "data": "2023-12-13",
+      "hora": "17:00",
+      "mandante": "Celtic",
+      "visitante": "Feyenoord Rotterdam",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "687630",
+      "data": "2023-12-13",
+      "hora": "17:00",
+      "mandante": "FC Porto",
+      "visitante": "Shakhtar Donetsk",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        5,
+        3
+      ]
+    },
+    {
+      "id": "687631",
+      "data": "2023-12-13",
+      "hora": "17:00",
+      "mandante": "Newcastle United",
+      "visitante": "AC Milan",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "691512",
+      "data": "2024-02-13",
+      "hora": "17:00",
+      "mandante": "F.C. København",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "691514",
+      "data": "2024-02-13",
+      "hora": "17:00",
+      "mandante": "RB Leipzig",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "691513",
+      "data": "2024-02-14",
+      "hora": "17:00",
+      "mandante": "Lazio",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "691515",
+      "data": "2024-02-14",
+      "hora": "17:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Real Sociedad",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "691510",
+      "data": "2024-02-20",
+      "hora": "17:00",
+      "mandante": "Internazionale",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "691516",
+      "data": "2024-02-20",
+      "hora": "17:00",
+      "mandante": "PSV Eindhoven",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "691511",
+      "data": "2024-02-21",
+      "hora": "17:00",
+      "mandante": "FC Porto",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "691517",
+      "data": "2024-02-21",
+      "hora": "17:00",
+      "mandante": "Napoli",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "691521",
+      "data": "2024-03-05",
+      "hora": "17:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Lazio",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "691523",
+      "data": "2024-03-05",
+      "hora": "17:00",
+      "mandante": "Real Sociedad",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "691522",
+      "data": "2024-03-06",
+      "hora": "17:00",
+      "mandante": "Manchester City",
+      "visitante": "F.C. København",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "691525",
+      "data": "2024-03-06",
+      "hora": "17:00",
+      "mandante": "Real Madrid",
+      "visitante": "RB Leipzig",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "691518",
+      "data": "2024-03-12",
+      "hora": "17:00",
+      "mandante": "Arsenal",
+      "visitante": "FC Porto",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "691520",
+      "data": "2024-03-12",
+      "hora": "17:00",
+      "mandante": "Barcelona",
+      "visitante": "Napoli",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "691519",
+      "data": "2024-03-13",
+      "hora": "17:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Internazionale",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "691524",
+      "data": "2024-03-13",
+      "hora": "17:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "PSV Eindhoven",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "700716",
+      "data": "2024-04-09",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "Manchester City",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "700719",
+      "data": "2024-04-09",
+      "hora": "16:00",
+      "mandante": "Arsenal",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "700717",
+      "data": "2024-04-10",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Barcelona",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "700718",
+      "data": "2024-04-10",
+      "hora": "16:00",
+      "mandante": "Atlético Madrid",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "700720",
+      "data": "2024-04-16",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Atlético Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "700723",
+      "data": "2024-04-16",
+      "hora": "16:00",
+      "mandante": "Barcelona",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "700721",
+      "data": "2024-04-17",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Arsenal",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "700722",
+      "data": "2024-04-17",
+      "hora": "16:00",
+      "mandante": "Manchester City",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "702056",
+      "data": "2024-04-30",
+      "hora": "16:00",
+      "mandante": "Bayern Munich",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "701984",
+      "data": "2024-05-01",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Paris Saint-Germain",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "701985",
+      "data": "2024-05-07",
+      "hora": "16:00",
+      "mandante": "Paris Saint-Germain",
+      "visitante": "Borussia Dortmund",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "702057",
+      "data": "2024-05-08",
+      "hora": "16:00",
+      "mandante": "Real Madrid",
+      "visitante": "Bayern Munich",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "702410",
+      "data": "2024-06-01",
+      "hora": "16:00",
+      "mandante": "Borussia Dortmund",
+      "visitante": "Real Madrid",
+      "estado": "post",
+      "finalizado": true,
+      "placar": [
+        0,
+        2
+      ]
+    }
+  ]
+}
