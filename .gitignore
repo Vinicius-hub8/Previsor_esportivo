@@ -12,3 +12,13 @@ historico.db
 historico_backup.db
 historico_teste.db
 .vscode/
+
+# Bancos SQLite locais
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Cache Python
+__pycache__/
+*.pyc
