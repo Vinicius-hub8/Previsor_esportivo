@@ -3,8 +3,9 @@ import { pct } from '../lib/format.js';
 export function ZonaLegenda({ meta }) {
   return (
     <div className="key">
-      <span><i style={{ background: 'var(--accent)' }} /> Vaga continental (top {meta.topo}, simplificado)</span>
-      <span><i style={{ background: 'var(--bad)' }} /> Rebaixamento ({meta.rebaixa} últimos)</span>
+      <span><i style={{ background: 'var(--accent)' }} /> {meta.rotulo_topo ?? `Vaga continental (top ${meta.topo}, simplificado)`}</span>
+      {meta.rotulo_meio && <span><i style={{ background: 'var(--track)' }} /> {meta.rotulo_meio}</span>}
+      <span><i style={{ background: 'var(--bad)' }} /> {meta.rotulo_reb ?? `Rebaixamento (${meta.rebaixa} últimos)`}</span>
     </div>
   );
 }
@@ -60,9 +61,10 @@ export default function FutebolTabela({ data }) {
       </div>
       <ZonaLegenda meta={meta} />
       <p className="note" style={{ marginTop: 8 }}>
+        {meta.nota_tabela && <>{meta.nota_tabela} </>}
         Desempate: {meta.desempate_vitorias ? 'pontos, vitórias, saldo de gols e gols marcados' : 'pontos, saldo de gols e gols marcados'}.
         Confronto direto não é considerado{meta.repescagem ? '. O 16º colocado disputa uma repescagem, que não está marcada aqui' : ''}.
-        Baseada nos jogos já disputados ({pct(tabela.reduce((a, L) => a + L.j, 0) / (tabela.length * (meta.n_rodadas || 1)), 0)} da temporada).
+        Baseada nos jogos já disputados ({pct(tabela.reduce((a, L) => a + L.j, 0) / (tabela.length * (meta.n_rodadas_tabela || meta.n_rodadas || 1)), 0)} da temporada).
       </p>
     </div>
   );

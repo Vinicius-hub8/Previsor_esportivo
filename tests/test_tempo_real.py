@@ -40,6 +40,45 @@ def test_finais_so_terminados(monkeypatch=None):
         espn.jogos_do_periodo = original
 
 
+def test_espn_consulta_um_dia_por_vez():
+    """A ESPN recusa intervalos de datas (400): cada dia vira um pedido, e um dia que falha não derruba os outros."""
+    from datetime import date
+    pedidos = []
+    original = espn._baixar
+
+    def falso(url, tentativas=3):
+        pedidos.append(url)
+        if "20261102" in url:
+            raise OSError("falhou")
+        return AMOSTRA
+    espn._baixar = falso
+    try:
+        jogos = espn.jogos_dos_dias("nfl", espn.dias_entre(date(2026, 11, 1), date(2026, 11, 3)))
+    finally:
+        espn._baixar = original
+    assert len(pedidos) == 3 and all("-" not in u.split("dates=")[1] for u in pedidos)
+    assert sorted(j["id"] for j in jogos) == ["100", "101", "102"]          # sem repetição
+
+
+def test_pendentes_futebol():
+    from datetime import date
+    site = {"meta": {"espn": "eng.1"}, "rodadas": {"10": [
+        {"d": "2026-11-08", "espn": "7", "pl": None},        # acabou na ESPN, site sem placar -> pendente
+        {"d": "2026-11-08", "espn": "8", "pl": [1, 0]},      # já publicado
+        {"d": "2026-11-09", "pl": None},                      # sem id da ESPN: ignorado
+        {"d": "2026-10-01", "espn": "6", "pl": None},        # antigo demais: ignorado (não consulta a ESPN por ele)
+    ]}}
+    pedidos = []
+
+    def finais(esporte, datas):
+        pedidos.append((esporte, datas))
+        return {"7": (0, 2), "8": (0, 1), "99": (1, 1)}
+    assert V.pendentes_futebol(site, date(2026, 11, 9), finais) == ["7"]
+    assert pedidos == [("soccer/eng.1", [date(2026, 11, 7), date(2026, 11, 8)])]
+    assert V.pendentes_futebol({"meta": {"espn": "eng.1"}, "rodadas": {}}, date(2026, 11, 9), finais) == []
+    assert len(pedidos) == 1                                                  # nada pendente: nem consulta
+
+
 def test_pendentes():
     site = {"semanas": {"2026": {"5": {"jogos": [
         {"id": "2026_05_TB_DAL", "espn": "100", "placar": None},   # acabou na ESPN, site sem placar -> pendente

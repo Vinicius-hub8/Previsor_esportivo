@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Roda o modelo de futebol e grava, em web/public/dados/:
-     futebol.json            (resumo das ligas, usado na página inicial)
-     futebol/<liga>.json     (uma por liga: jogos por rodada, tabela atual, tabela prevista)
+     futebol.json            (resumo das ligas e da Champions, usado na página inicial)
+     futebol/<liga>.json     (uma por competição: jogos por rodada, tabela atual, tabela prevista)
 Se uma liga falhar (ex.: sem internet), o JSON antigo dela é mantido e as outras seguem."""
 import json
 import sys
@@ -18,6 +18,15 @@ import previsor_futebol as F
 RAIZ = Path(__file__).resolve().parent
 PASTA = RAIZ / "web" / "public" / "dados"
 FAIXAS = [(0.33, 0.45), (0.45, 0.55), (0.55, 0.65), (0.65, 1.01)]
+# Textos da tabela que mudam por competição (o site usa o padrão das ligas quando a chave não existe).
+ZONAS = {
+    "champions": {
+        "rotulo_topo": "Oitavas de final direto (1º ao 8º)", "rotulo_meio": "Playoff das oitavas (9º ao 24º)",
+        "rotulo_reb": "Eliminado (25º ao 36º)", "col_topo": "Top 8", "col_meio": "Playoff", "col_reb": "Eliminado",
+        "nota_tabela": "Tabela da fase de liga (36 clubes, 8 jogos cada).",
+        "nota_previsao": "Simulamos o resto da fase de liga e, a partir dela, o mata-mata (playoff, oitavas, quartas, semifinal e final).",
+    },
+}
 
 
 def r(x, n=3):
@@ -63,6 +72,8 @@ def exportar_liga(lid, pasta):
     for i, g in cur.sort_values(["rodada", "dia_br", "_h", "casa"]).iterrows():
         item = {"id": f"{lid}-{g.rodada}-{cod[g.casa]}-{cod[g.fora]}", "d": g.dia_br, "h": g.hora_br, "c": cod[g.casa], "f": cod[g.fora],
                 "pl": [int(g.gc), int(g.gf)] if g.jogado else None, "p": None, "g": None, "es": None, "ok": None}
+        if isinstance(g.espn, str) and g.espn:
+            item["espn"] = g.espn       # usado por verificar_novos.py para saber quando o jogo terminou
         if g.adiado and not g.jogado:
             item["adiado"] = True
         if not g.jogado:
@@ -90,7 +101,7 @@ def exportar_liga(lid, pasta):
         prev.append({"t": cod[n], "pts": base[n]["pts"], "j": base[n]["j"], "n_rest": int(rest_por_time.get(n, 0)),
                      "esp": r(sim["pts"][i], 1), "faixa": [int(round(sim["pts_lo"][i])), int(round(sim["pts_hi"][i]))],
                      "pos": r(sim["pos_media"][i], 1), "pos_prov": int(sim["dist"][i].argmax()) + 1,
-                     "tit": r(sim["tit"][i], 3), "topo": r(sim["topo"][i], 3), "reb": r(sim["rebaixa"][i], 3),
+                     "tit": r(sim["tit"][i], 3), "topo": r(sim["topo"][i], 3), "reb": r(sim["rebaixa"][i], 3), "meio": r(sim["meio"][i], 3),
                      "dist": [r(x, 4) for x in sim["dist"][i]]})
     prev.sort(key=lambda x: (-x["esp"], x["pos"]))
 
@@ -104,18 +115,23 @@ def exportar_liga(lid, pasta):
         x = ref[(conf >= lo) & (conf < hi)]
         faixas.append({"de": lo, "ate": min(hi, 1.0), "n": int(len(x)), "acc": r(x["ok"].mean()) if len(x) else None})
     anos = acc["anos_ref"]
-    rotulo_ano = (lambda y: f"{y}-{str(y + 1)[2:]}") if "eu" in cfg else str
+    rotulo_ano = (lambda y: f"{y}-{str(y + 1)[2:]}") if F.temporada_europeia(cfg) else str
+    rotulos = F.rotulos_rodada(cur)
+    nome_rodada = rotulos.get(str(atual), {}).get("nome", f"Rodada {atual}")
     out = {
         "meta": {
             "esporte": "Futebol", "liga": lid, "nome": cfg["nome"], "pais": cfg["pais"],
             "temporada": int(S["atual"]), "temporada_rotulo": rot, "rotulos_temporada": {str(S["atual"]): rot},
-            "semana_atual": str(atual), "semana_rotulo": f"Rodada {atual}", "n_rodadas": len(rodadas),
+            "semana_atual": str(atual), "semana_rotulo": nome_rodada, "n_rodadas": len(rodadas),
+            "n_rodadas_tabela": int(F.jogos_tabela(S)["rodada"].nunique()), "rotulos_rodada": rotulos, "espn": cfg["espn"],
             "atualizado": date.today().isoformat(), "usa_linha": False, "fuso": "Horário de Brasília",
             "acc": r(acc["acc"]), "acc_mandante": r(acc["acc_mandante"]), "freq_empate": r(acc["freq_empate"]), "n_ref": acc["n_ref"],
             "log_loss": r(acc["log_loss"], 4), "log_loss_base": r(acc["log_loss_base"], 4),
             "anos_ref": [rotulo_ano(anos[0]), rotulo_ano(anos[1])], "faixas": faixas,
             "acc_temporada": r(acc["acc_atual"]), "n_temporada": acc["n_atual"],
-            "fonte": "openfootball (domínio público) e ESPN", "avisos": F.AVISOS,
+            "fonte": "ESPN" if cfg.get("fonte") == "espn" else "openfootball (domínio público) e ESPN",
+            "avisos": F.AVISOS_CHAMPIONS if lid == "champions" else F.AVISOS,
+            **ZONAS.get(lid, {}),
             "topo": cfg["topo"], "rebaixa": cfg["rebaixa"], "repescagem": bool(cfg.get("repescagem")),
             "desempate_vitorias": bool(cfg.get("desempate_vitorias")),
             "como_ler": ("Para cada temporada de {a} a {b}, o modelo aprendeu só com os anos anteriores e previu os jogos daquele ano. "
@@ -152,7 +168,7 @@ def indice(pasta_ligas):
     n = sum(m["n_ref"] for m in metas)
     ponderar = lambda k: r(sum(m[k] * m["n_ref"] for m in metas) / n)
     return {"meta": {
-        "esporte": "Futebol", "temporada_rotulo": "2026", "semana_rotulo": f"{len(ligas)} ligas", "atualizado": max(m["atualizado"] for m in metas),
+        "esporte": "Futebol", "temporada_rotulo": "2026", "semana_rotulo": f"{len(ligas)} competições", "atualizado": max(m["atualizado"] for m in metas),
         "acc": ponderar("acc"), "acc_mandante": ponderar("acc_mandante"), "n_ref": n,
         "anos_ref": [min(m["anos_ref"][0][:4] for m in metas), max(m["anos_ref"][1][:4] for m in metas)],
         "fonte": "openfootball (domínio público) e ESPN", "usa_linha": False, "avisos": F.AVISOS,

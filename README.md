@@ -1,6 +1,6 @@
 # Fator Casa
 
-Previsões de jogos da NFL, da NBA e de 6 ligas de futebol com Python (pandas + scikit-learn) e um site em React para consultar os resultados:
+Previsões de jogos da NFL, da NBA, de 6 ligas de futebol e da Champions League com Python (pandas + scikit-learn) e um site em React para consultar os resultados:
 palpites de cada semana, projeção de recorde de cada time e a acurácia real do modelo.
 
 ## Estrutura
@@ -13,22 +13,23 @@ previsor-esportivo/
 ├── exportar_dados.py      # roda o modelo da NFL e gera web/public/dados/nfl.json
 ├── previsor_nba.py        # modelo da NBA + terminal
 ├── exportar_nba.py        # roda o modelo da NBA e gera web/public/dados/nba.json
-├── previsor_futebol.py    # modelo de futebol (6 ligas): Elo + gols (Poisson) + simulação da tabela
+├── previsor_futebol.py    # modelo de futebol (6 ligas + Champions): Elo + gols (Poisson) + simulação da tabela
 ├── exportar_futebol.py    # gera web/public/dados/futebol.json e futebol/<liga>.json
 ├── noticias.py            # ajustes por notícia (lesões etc.) lidos de ajustes_noticias.csv
 ├── ajustes_noticias.csv   # onde você registra as notícias que mudam a previsão
 ├── placar.py              # placar previsto (NFL/NBA) e horário de Brasília
 ├── docs/                  # paleta de cores (md + png) e logos (svg + png)
 ├── atualizar.py           # atualiza os dados de todos os esportes
-├── espn.py                # placares da ESPN (completa jogos recém-terminados)
+├── espn.py                # placares da ESPN, um dia por consulta (completa jogos recém-terminados; fonte da Champions)
 ├── verificar_novos.py     # detecta jogo terminado que o site ainda não mostra
-├── tests/                 # testes (python tests/test_tempo_real.py)
+├── tests/                 # testes (python -m pytest tests)
 ├── cloudflare/            # intermediário opcional para o placar ao vivo
 ├── requirements.txt       # dependências Python
 ├── notebooks/             # versão para o Google Colab
 ├── .github/workflows/     # publicar.yml (site) e ao-fim-do-jogo.yml (verifica jogos terminados)
 └── web/                   # site em React (Vite)
     ├── public/dados/nfl.json     # dados gerados pelo Python
+    ├── public/dados/champions/   # jogos da Champions por temporada (base guardada, vinda da ESPN)
     └── src/
         ├── components/    # Home, SportPage, GamesTab, GameCard, TeamTab, WinChart...
         ├── lib/           # formatação, rotas por hash, tema, carga de dados
@@ -76,7 +77,7 @@ Duas camadas, sem servidor:
    Se o navegador bloquear a consulta (erro de CORS no console), use o intermediário gratuito de `cloudflare/placar-worker.js`
    (instruções no próprio arquivo) e defina `VITE_PLACAR_PROXY` em `web/.env.production`.
 2. **Modelo e tabelas refeitos depois do jogo (10 a 20 minutos).** `ao-fim-do-jogo.yml` roda a cada 15 minutos, compara a ESPN com o
-   site publicado e, se algum jogo terminou e ainda não tem placar, dispara `publicar.yml` (Elo, projeção de recorde, tabela e chance
+   site publicado (NFL, NBA, as 6 ligas de futebol e a Champions) e, se algum jogo terminou e ainda não tem placar, dispara `publicar.yml` (Elo, projeção de recorde, tabela e chance
    de título). As bases abertas demoram horas, então `espn.py` completa os placares que faltam. Há um intervalo mínimo de 20 min entre
    publicações. O GitHub pode atrasar execuções agendadas e as desativa após 60 dias sem atividade no repositório.
 
@@ -85,10 +86,7 @@ O endereço da ESPN é público, mas não oficial: pode mudar sem aviso. Por iss
 ## Testes
 
 ```
-python tests/test_tempo_real.py
-python tests/test_futebol.py
-python tests/test_noticias.py
-python tests/test_placar.py
+python -m pytest tests
 ```
 
 ## Usar no terminal
@@ -130,16 +128,26 @@ Chegar a 70% de forma honesta não é realista na NFL; um número assim indicari
 
 ## Futebol
 
-Seis ligas: Premier League, La Liga, Serie A, Bundesliga, Ligue 1 e Brasileirão Série A. Cada uma tem três abas: **Jogos da rodada** (horário de Brasília), **Tabela atual** e **Tabela prevista**.
+Seis ligas (Premier League, La Liga, Serie A, Bundesliga, Ligue 1 e Brasileirão Série A) e a Champions League. Cada uma tem três abas: **Jogos da rodada** (horário de Brasília), **Tabela atual** e **Tabela prevista**.
 
 - **Dados:** calendário e placares do [openfootball](https://github.com/openfootball) (domínio público), 2018-19 em diante. Quando eles ainda não têm um resultado recente, a ESPN completa (o jogo é achado pelo nome dos times e pela data).
 - **Modelo:** Elo de cada time (peso maior para goleada, vantagem de casa, regressão à média a cada temporada) alimenta uma regressão de Poisson que dá os gols esperados de cada lado; daí saem as chances de vitória, empate e derrota e o placar mais provável.
 - **Acurácia (2020-21 a 2025-26, só com dados anteriores a cada temporada):** cerca de 53% nas ligas da Inglaterra, Espanha e Itália, 51% na Alemanha e na França e 48% no Brasileirão (o mandante vence 44% a 47% das vezes, e 1 jogo em 4 termina empatado). É normal: futebol tem três resultados e muito acaso. O Elo ficou num platô, e K, vantagem de casa e reversão à média quase não mudam o resultado.
 - **Tabela prevista:** simula os jogos restantes 10 mil vezes (gols sorteados + variação na força dos times, calibrada em backtest) e mostra pontos esperados, faixa de 80%, chance de título, de vaga continental (simplificada: top 4, top 3 na França, top 6 no Brasil) e de rebaixamento, além da chance de cada posição.
 - **Horários:** convertidos do fuso de cada país para Brasília. Jogo sem horário divulgado aparece como "horário a definir"; jogo adiado sem nova data aparece como "adiado".
-- Terminal: `python previsor_futebol.py premier` (ou `laliga`, `seriea`, `bundesliga`, `ligue1`, `brasileirao`) e `python atualizar.py futebol`.
-- Ainda não tem placar ao vivo no futebol; a tabela atualiza quando o site é publicado de novo.
-- Ao entrar em Futebol, o site mostra as 6 ligas para você escolher.
+- **ESPN:** desde o fim de 2026 a ESPN só responde consultas de um dia (`dates=AAAAMMDD`); intervalos dão erro 400. `espn.py` consulta dia a dia, em paralelo, desde o jogo mais antigo que ainda está sem placar (o openfootball pode passar semanas sem atualizar).
+- Terminal: `python previsor_futebol.py premier` (ou `laliga`, `seriea`, `bundesliga`, `ligue1`, `brasileirao`, `champions`), `python atualizar.py futebol` (6 ligas) e `python atualizar.py champions`.
+- Sem placar ao vivo na tela, mas o site é refeito de 15 a 30 minutos depois do fim de cada jogo (`ao-fim-do-jogo.yml`), como na NFL e na NBA.
+- Ao entrar em Futebol, o site mostra as 7 competições para você escolher.
+
+### Champions League
+
+Mesmas três abas e mesmo modelo das ligas, com as regras do formato de 36 clubes:
+- **Dados:** ESPN (temporadas desde 2018-19, só a competição principal), guardados em `web/public/dados/champions/AAAA-AAAA.json`. A cada atualização a temporada atual é completada a partir do jogo mais antigo ainda sem placar até o fim da fase de liga. Para baixar temporadas antigas de novo: `python previsor_futebol.py coletar-champions 2018 2025`.
+- **Jogos:** rodadas 1 a 8 da fase de liga e, depois, o mata-mata com nome (Playoff, Oitavas, Quartas e Semifinal, ida e volta, e Final).
+- **Tabela atual:** só a fase de liga; 1º ao 8º vão direto às oitavas, 9º ao 24º jogam o playoff e 25º ao 36º saem.
+- **Tabela prevista:** simula o resto da fase de liga e o mata-mata (chaveamento simplificado; confrontos que já estão na base, com os resultados e quem avançou, substituem os simulados) para dar a chance de título.
+- **Acurácia (2022-23 a 2025-26, só com dados anteriores):** cerca de 57% (o mandante vence 50% das vezes). O Elo vem só dos jogos de Champions, então clubes que jogaram pouco a competição têm força menos precisa.
 
 ## Placar previsto e horários
 
@@ -176,6 +184,8 @@ Ordem sugerida: terminar cada frente antes de abrir a próxima.
 - [x] NFL e NBA com palpites, projeção de recorde e acurácia medida (walk-forward)
 - [x] NBA: simulação da temporada (classificação, play-in, playoffs e chance de título)
 - [x] Futebol: 6 ligas com palpite de 3 resultados, tabela atual, tabela prevista e horário de Brasília
+- [x] Champions League no mesmo padrão das ligas (fase de liga, mata-mata e chance de título)
+- [x] Futebol: site refeito ao fim de cada jogo (placar da ESPN)
 - [x] Marca Fator Casa (logo, paleta, cores por esporte), placar previsto, horário de Brasília em tudo e ajustes por notícias
 - [x] NFL: classificação por divisão com recorde previsto
 - [x] Publicação automática (GitHub Pages) e placar ao vivo + atualização ao fim do jogo
@@ -185,8 +195,8 @@ Ordem sugerida: terminar cada frente antes de abrir a próxima.
 - [ ] Página do quarterback: onde no campo ele joga melhor (zona, profundidade, EPA, % de acerto, sob pressão)
 - [ ] Rotas só existem de 2023 em diante; a temporada atual entra quando a fonte publicar
 
-**2. Futebol** (as 6 ligas já estão no ar; falta o resto)
-- [ ] Placar ao vivo e atualização ao fim do jogo no futebol
+**2. Futebol** (as 6 ligas e a Champions já estão no ar; falta o resto)
+- [ ] Placar ao vivo na tela no futebol
 - [ ] Simulação dos playoffs da NFL (chance de título e de playoff por time)
 - [ ] Coletor automático de lesões (ESPN) para preencher os ajustes por notícia
 - [ ] Botão **Analytics**: mapas de calor de jogadores (Bundesliga 2023/24, dados abertos IMPECT, com crédito) e o que mais for possível

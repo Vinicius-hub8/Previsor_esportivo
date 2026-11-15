@@ -2,9 +2,9 @@
 """
 Previsor de Futebol
 ===================
-Seis ligas: Premier League, La Liga, Serie A, Bundesliga, Ligue 1 e Brasileirão.
+Seis ligas (Premier League, La Liga, Serie A, Bundesliga, Ligue 1 e Brasileirão) e a Champions League.
 
-Para cada liga:
+Para cada competição:
   1) Chance de vitória do mandante, empate e vitória do visitante em cada jogo (e o placar mais provável).
   2) Tabela atual.
   3) Tabela prevista: simulamos o resto da temporada 10 mil vezes (chance de título, vaga continental e rebaixamento).
@@ -18,11 +18,12 @@ Modelo (simples e explicável):
   - Cada temporada é prevista só com o que existia antes dela (walk-forward), então a acurácia não "olha o futuro".
 
 Dados: calendários e placares abertos do projeto openfootball (domínio público), completados com a ESPN quando o
-openfootball ainda não tem o resultado.
+openfootball ainda não tem o resultado. A Champions vem só da ESPN (guardada em web/public/dados/champions/<temporada>.json).
 
 Uso (terminal):
     python previsor_futebol.py                 -> resumo e acurácia de cada liga
-    python previsor_futebol.py premier         -> só uma liga (premier, laliga, seriea, bundesliga, ligue1, brasileirao)
+    python previsor_futebol.py premier         -> só uma liga (premier, laliga, seriea, bundesliga, ligue1, brasileirao, champions)
+    python previsor_futebol.py coletar-champions 2018 2021   -> baixa da ESPN temporadas antigas da Champions
 
 Requisitos: pandas, numpy, scikit-learn.
 """
@@ -64,6 +65,9 @@ LIGAS = {
     "bundesliga": dict(nome="Bundesliga", pais="Alemanha", eu="de.1", tz="Europe/Berlin", espn="ger.1", topo=4, rebaixa=2, repescagem=True),
     "ligue1": dict(nome="Ligue 1", pais="França", eu="fr.1", tz="Europe/Paris", espn="fra.1", topo=3, rebaixa=2, repescagem=True),
     "brasileirao": dict(nome="Brasileirão Série A", pais="Brasil", br="br1", tz="America/Sao_Paulo", espn="bra.1", topo=6, rebaixa=4, desempate_vitorias=True),
+    # Champions: fase de liga com 36 clubes (1º-8º direto às oitavas, 9º-24º playoff, 25º-36º eliminados) e depois mata-mata.
+    "champions": dict(nome="Champions League", pais="Europa", fonte="espn", espn="uefa.champions", tz="America/Sao_Paulo",
+                      topo=8, rebaixa=12, mata_mata=True, europeu=True),
 }
 
 # Elo: em teste com as seis ligas, K de 14 a 32, vantagem de casa de 55 a 75 e reversão de 0,75 a 0,88 dão praticamente o mesmo
@@ -80,6 +84,15 @@ AVISOS = [
     "A tabela prevista é um cenário: sorteamos os resultados dos jogos restantes e também uma variação na força de cada time.",
     "Desempate da tabela: pontos, saldo de gols e gols marcados (no Brasileirão, vitórias primeiro). Confronto direto não é considerado.",
     "As vagas continentais e o rebaixamento são simplificados (a regra pode mudar de um ano para o outro).",
+    "É um estudo estatístico, não uma recomendação de aposta.",
+]
+AVISOS_CHAMPIONS = [
+    "Lesões, suspensões, escalação, mercado da bola e troca de técnico não entram no modelo.",
+    "A força (Elo) de cada clube vem só dos jogos de Champions desde 2018-19. Clube que jogou pouco a competição tem força menos precisa.",
+    "Fase de liga: 36 clubes, 8 jogos cada. Do 1º ao 8º vão direto às oitavas, do 9º ao 24º disputam o playoff e do 25º ao 36º são eliminados.",
+    "Desempate da tabela: pontos, saldo de gols e gols marcados (a UEFA usa mais critérios, como gols fora de casa e vitórias).",
+    "Chance de título: depois da fase de liga, simulamos o mata-mata (ida e volta, final em jogo único) com chaveamento simplificado; os confrontos reais saem de sorteio.",
+    "Os horários são de Brasília.",
     "É um estudo estatístico, não uma recomendação de aposta.",
 ]
 
@@ -149,6 +162,12 @@ APELIDOS = {
     "Chapecoense AF": "Chapecoense", "Clube do Remo": "Remo", "Corinthians Paulista": "Corinthians", "Criciuma": "Criciúma", "Cuiaba": "Cuiabá",
     "Goias": "Goiás", "Gremio": "Grêmio", "Gremio Porto Alegre": "Grêmio", "Parana Clube": "Paraná", "Recife": "Sport", "Sport Recife": "Sport",
     "Sao Paulo": "São Paulo", "Vasco da Gama": "Vasco", "Vitoria": "Vitória", "Internacional": "Internacional",
+    # Champions (nomes da ESPN)
+    "Bayern Munich": "Bayern de Munique", "Internazionale": "Inter", "Feyenoord Rotterdam": "Feyenoord", "PSV Eindhoven": "PSV",
+    "Slavia Prague": "Slavia Praga", "Sparta Prague": "Sparta Praga", "Sabah FK": "Sabah", "Viking FK": "Viking", "Bodo/Glimt": "Bodø/Glimt",
+    "LASK Linz": "LASK", "Fenerbahce": "Fenerbahçe", "Sporting CP": "Sporting", "Shakhtar Donetsk": "Shakhtar", "Brugge": "Club Brugge",
+    "Red Star Belgrade": "Estrela Vermelha", "Red Bull Salzburg": "Salzburg", "Dinamo Zagreb": "Dínamo Zagreb", "Benfica": "Benfica",
+    "FC Copenhagen": "Copenhague", "Copenhagen": "Copenhague", "Besiktas": "Beşiktaş", "Olympiacos": "Olympiacos",
 }
 SIGLAS = {  # só onde a sigla automática ficaria estranha ou repetida
     "Man City": "MCI", "Man United": "MUN", "Nott'm Forest": "NFO", "Tottenham": "TOT", "West Ham": "WHU", "West Brom": "WBA",
@@ -256,12 +275,18 @@ def temporada_atual_europa(hoje):
     return hoje.year if hoje.month >= 7 else hoje.year - 1
 
 
+def temporada_europeia(cfg):
+    return "br" not in cfg
+
+
 def carregar_liga(lid, hoje=None, ate_ano=None):
     """DataFrame com todos os jogos (jogados ou não) das temporadas desde PRIMEIRO_ANO, já com horário de Brasília."""
     cfg = LIGAS[lid]
     hoje = hoje or date.today()
     linhas = []
-    if "eu" in cfg:
+    if cfg.get("fonte") == "espn":
+        linhas = linhas_champions(hoje, ate_ano)
+    elif "eu" in cfg:
         atual = ate_ano or temporada_atual_europa(hoje)
         for y in range(PRIMEIRO_ANO, atual + 1):
             rot = f"{y}-{str(y + 1)[2:]}"
@@ -296,6 +321,10 @@ def preparar(d):
     d["fora"] = d["fora_raw"].map(apelido)
     d["jogado"] = d["gc"].notna() & d["gf"].notna()
     d["ano"] = d["temp"].str[:4].astype(int)
+    for col, padrao in (("na_tabela", True), ("fase", None), ("nota", None), ("espn", None)):
+        if col not in d.columns:
+            d[col] = padrao
+    d["na_tabela"] = d["na_tabela"].astype(bool)
     return d.sort_values(["dt", "casa"]).reset_index(drop=True)
 
 
@@ -317,41 +346,232 @@ def _sim_nome(a, b):
 
 
 def casar_espn(d, eventos, folga_dias=2):
-    """Preenche gc/gf dos jogos ainda sem placar usando eventos da ESPN já terminados. Devolve quantos casou."""
+    """Acha cada evento da ESPN no calendário (nome dos times + data). Guarda o id da ESPN na coluna 'espn' e, se o evento
+    já terminou e o jogo ainda não tem placar, preenche gc/gf. Devolve quantos placares completou."""
+    if "espn" not in d.columns:
+        d["espn"] = None
+    d["espn"] = d["espn"].astype(object)
     n = 0
-    pend = d.index[~d["jogado"]]
+    dts = pd.to_datetime(d["dt"], utc=True).values.astype("datetime64[s]").astype(np.int64)
+    pend_adiado = (d["adiado"] & ~d["jogado"]).values
     for ev in eventos:
-        if not ev.get("final") or ev.get("pts_casa") is None or ev.get("pts_fora") is None or not ev.get("data"):
+        if not ev.get("data"):
             continue
-        dia = pd.Timestamp(ev["data"]).tz_convert("UTC")
-        melhor, nota = None, 0.0
-        for i in pend:
-            folga = 365 if d.at[i, "adiado"] else folga_dias   # jogo adiado: a nova data ainda não está na base
-            if d.at[i, "jogado"] or abs((d.at[i, "dt"] - dia).total_seconds()) > folga * 86400:
-                continue
-            s = _sim_nome(ev["nome_casa"], d.at[i, "casa_raw"]) + _sim_nome(ev["nome_fora"], d.at[i, "fora_raw"])
-            s = max(s, _sim_nome(ev["nome_casa"], d.at[i, "casa"]) + _sim_nome(ev["nome_fora"], d.at[i, "fora"]))
-            if s > nota:
-                melhor, nota = i, s
-        if melhor is not None and nota >= 1.5:
+        final = bool(ev.get("final")) and ev.get("pts_casa") is not None and ev.get("pts_fora") is not None
+        dia = int(pd.Timestamp(ev["data"]).tz_convert("UTC").timestamp())
+        perto = np.abs(dts - dia) <= folga_dias * 86400
+        if final:
+            perto |= pend_adiado & (np.abs(dts - dia) <= 365 * 86400)   # jogo adiado: a nova data ainda não está na base
+        def procurar(mascara):
+            melhor, nota = None, 0.0
+            for i in d.index[mascara]:
+                if d.at[i, "espn"] is not None and d.at[i, "espn"] != ev.get("id"):
+                    continue
+                s = _sim_nome(ev["nome_casa"], d.at[i, "casa_raw"]) + _sim_nome(ev["nome_fora"], d.at[i, "fora_raw"])
+                s = max(s, _sim_nome(ev["nome_casa"], d.at[i, "casa"]) + _sim_nome(ev["nome_fora"], d.at[i, "fora"]))
+                if s > nota:
+                    melhor, nota = i, s
+            return melhor, nota
+
+        melhor, nota = procurar(perto)
+        if (melhor is None or nota < 1.5) and final:
+            # jogo remarcado sem aviso na base (comum no Brasileirão): aceita até 30 dias de diferença, mas só com os dois
+            # nomes batendo quase exatamente (no mesmo turno, o mesmo mando acontece uma vez só)
+            melhor, nota = procurar(~d["jogado"].values & (np.abs(dts - dia) <= 30 * 86400))
+            if nota < 1.9:
+                melhor = None
+        if melhor is None or nota < 1.5:
+            continue
+        if ev.get("id"):
+            d.at[melhor, "espn"] = str(ev["id"])
+        if final and not d.at[melhor, "jogado"]:
             d.at[melhor, "gc"], d.at[melhor, "gf"], d.at[melhor, "jogado"] = float(ev["pts_casa"]), float(ev["pts_fora"]), True
             n += 1
     return n
 
 
-def completar_com_espn(d, lid, dias=45):
+def janela_espn(d, hoje=None, max_dias=200, adiante=7):
+    """Dias a consultar na ESPN: do jogo mais antigo que já devia ter acontecido e ainda não tem placar (menos 2 dias de folga)
+    até `adiante` dias à frente (para guardar o id da ESPN dos próximos jogos). Pelo menos os últimos 3 dias."""
+    hoje = hoje or datetime.now(TZ_BR).date()
+    agora = pd.Timestamp(hoje, tz="UTC") + pd.Timedelta(days=1)
+    atual = d["ano"].max()
+    pend = d[(d["ano"] == atual) & ~d["jogado"] & ~d["adiado"] & (d["dt"] < agora)]
+    ini = hoje - pd.Timedelta(days=3).to_pytimedelta()
+    if len(pend):
+        ini = min(ini, pend["dt"].min().date() - pd.Timedelta(days=2).to_pytimedelta())
+    ini = max(ini, hoje - pd.Timedelta(days=max_dias).to_pytimedelta())
+    import espn
+    return espn.dias_entre(ini, hoje + pd.Timedelta(days=adiante).to_pytimedelta())
+
+
+def completar_com_espn(d, lid, hoje=None):
+    if "espn" not in d.columns:
+        d["espn"] = None
     if os.environ.get("SEM_ESPN"):
         return d
     try:
         import espn
-        eventos = espn.jogos_do_periodo(f"soccer/{LIGAS[lid]['espn']}", dias=dias)
+        dias = janela_espn(d, hoje)
+        eventos = espn.jogos_dos_dias(f"soccer/{LIGAS[lid]['espn']}", dias)
     except Exception as e:
         print(f"::warning::ESPN indisponível para {lid} ({e}); seguindo só com o openfootball.")
         return d
     n = casar_espn(d, eventos)
-    if n:
-        print(f"ESPN: {n} placar(es) de {LIGAS[lid]['nome']} completado(s)")
+    print(f"ESPN: {len(eventos)} evento(s) em {len(dias)} dia(s); {n} placar(es) de {LIGAS[lid]['nome']} completado(s)")
     return d
+
+
+# ----------------------------------------------------------------------------
+# Champions League: a ESPN é a fonte. Cada temporada fica guardada em web/public/dados/champions/AAAA-AAAA.json
+# (só jogos da competição principal; a ESPN não traz as fases preliminares).
+# ----------------------------------------------------------------------------
+PASTA_CHAMPIONS = Path(__file__).resolve().parent / "web" / "public" / "dados" / "champions"
+FASES_TABELA = {"league-phase"}                       # fases que contam para a tabela
+FASES_MATA = {  # slug da ESPN -> (nome, sigla curta, ordem)
+    "knockout-round-playoffs": ("Playoff", "PO", 1), "round-of-16": ("Oitavas", "OI", 2), "quarterfinals": ("Quartas", "QF", 3),
+    "semifinals": ("Semifinal", "SF", 4), "final": ("Final", "F", 5),
+}
+
+
+def _arquivo_champions(ano, pasta=None):
+    return (pasta or PASTA_CHAMPIONS) / f"{ano}-{ano + 1}.json"
+
+
+def fase_preliminar(fase):
+    """Fases eliminatórias de agosto (antes da fase de grupos/liga): ficam fora da base."""
+    return bool(fase) and (fase.startswith("qualifying") or fase == "playoffs")
+
+
+def jogo_champions(ev):
+    """Evento da ESPN (espn.interpretar) -> registro guardado no arquivo da temporada (data e hora de Brasília)."""
+    if not ev.get("data") or fase_preliminar(ev.get("fase")):
+        return None
+    ini = pd.Timestamp(ev["data"]).tz_convert(TZ_BR)
+    final = bool(ev.get("final")) and ev.get("pts_casa") is not None and ev.get("pts_fora") is not None
+    return {"id": str(ev["id"]), "data": ini.strftime("%Y-%m-%d"), "hora": ini.strftime("%H:%M"),
+            "mandante": ev.get("nome_casa") or "?", "visitante": ev.get("nome_fora") or "?", "estado": ev.get("estado") or "pre",
+            "finalizado": final, "placar": [int(ev["pts_casa"]), int(ev["pts_fora"])] if final else None,
+            "fase": ev.get("fase"), "nota": ev.get("nota"), "temporada": ev.get("temporada")}
+
+
+def _ler_temporada(arq):
+    if not arq.exists():
+        return {}
+    import json
+    return {str(j["id"]): j for j in json.loads(arq.read_text(encoding="utf-8")).get("jogos", [])}
+
+
+def _gravar_temporada(arq, ano, jogos):
+    import json
+    lista = sorted(jogos.values(), key=lambda j: (j["data"], j.get("hora") or "", j["id"]))
+    arq.parent.mkdir(parents=True, exist_ok=True)
+    conteudo = {"meta": {"competicao": "UEFA Champions League", "temporada": f"{ano}-{ano + 1}", "quantidade": len(lista),
+                         "finalizadas": sum(bool(j.get("finalizado")) for j in lista), "fonte": "ESPN"}, "jogos": lista}
+    tmp = arq.with_suffix(".tmp")
+    tmp.write_text(json.dumps(conteudo, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(arq)
+
+
+def _juntar(antigo, novo):
+    """Nunca troca um resultado final por uma informação incompleta."""
+    if antigo and antigo.get("finalizado") and not novo.get("finalizado"):
+        return antigo
+    return novo
+
+
+def coletar_champions(ano, ini, fim, pasta=None):
+    """Consulta a ESPN dia a dia de `ini` a `fim` e junta ao arquivo da temporada `ano`. Devolve quantos jogos mudaram."""
+    import espn
+    arq = _arquivo_champions(ano, pasta)
+    jogos = _ler_temporada(arq)
+    mudou = 0
+    for ev in espn.jogos_dos_dias(f"soccer/{LIGAS['champions']['espn']}", espn.dias_entre(ini, fim)):
+        if ev.get("temporada") not in (None, ano):
+            continue
+        j = jogo_champions(ev)
+        if j is None:
+            continue
+        novo = _juntar(jogos.get(j["id"]), j)
+        if novo != jogos.get(j["id"]):
+            jogos[j["id"]] = novo
+            mudou += 1
+    if jogos:
+        _gravar_temporada(arq, ano, jogos)
+    return mudou
+
+
+def atualizar_champions(hoje=None, pasta=None):
+    """Atualiza a temporada atual: do jogo mais antigo ainda sem placar até o fim da fase de liga (ou 3 semanas à frente,
+    o que vier depois). Se o arquivo não tiver a fase dos jogos (formato antigo), baixa a temporada inteira de novo."""
+    hoje = hoje or datetime.now(TZ_BR).date()
+    ano = temporada_atual_europa(hoje)
+    jogos = _ler_temporada(_arquivo_champions(ano, pasta))
+    comeco = date(ano, 8, 1)
+    pend = [date.fromisoformat(j["data"]) for j in jogos.values() if not j.get("finalizado") and j["data"] <= hoje.isoformat()]
+    if not jogos or any(not j.get("fase") for j in jogos.values()):
+        ini = comeco
+    else:
+        ini = max(comeco, min([hoje - pd.Timedelta(days=3).to_pytimedelta()]
+                              + [p - pd.Timedelta(days=1).to_pytimedelta() for p in pend]))
+    fim = min(date(ano + 1, 6, 30), max(hoje + pd.Timedelta(days=21).to_pytimedelta(), date(ano + 1, 1, 31)))
+    n = coletar_champions(ano, ini, fim, pasta)
+    print(f"ESPN: Champions {ano}-{ano + 1}, {(fim - ini).days + 1} dia(s) consultado(s), {n} jogo(s) novo(s) ou atualizado(s)")
+
+
+def _rodadas_temporada(jogos):
+    """Numera as rodadas de uma temporada pela semana do jogo: primeiro as semanas da fase de liga (1 a 8), depois as do
+    mata-mata. Devolve {id: rodada}."""
+    sem = {j["id"]: date.fromisoformat(j["data"]).isocalendar()[:2] for j in jogos}
+    liga = sorted({sem[j["id"]] for j in jogos if j.get("fase") in FASES_TABELA})
+    resto = sorted({sem[j["id"]] for j in jogos if sem[j["id"]] not in liga})
+    ordem = {w: i + 1 for i, w in enumerate(liga + resto)}
+    return {j["id"]: ordem[sem[j["id"]]] for j in jogos}
+
+
+def linhas_champions(hoje=None, ate_ano=None, pasta=None, atualizar=True):
+    """Linhas (mesmo formato das outras ligas) de todas as temporadas guardadas desde PRIMEIRO_ANO."""
+    hoje = hoje or datetime.now(TZ_BR).date()
+    if atualizar and not os.environ.get("SEM_ESPN") and ate_ano is None:
+        try:
+            atualizar_champions(hoje, pasta)
+        except Exception as e:
+            print(f"::warning::ESPN indisponível para a Champions ({e}); seguindo com os jogos já guardados.")
+    linhas = []
+    for arq in sorted((pasta or PASTA_CHAMPIONS).glob("20??-20??.json")):
+        ano = int(arq.stem[:4])
+        if ano < PRIMEIRO_ANO or (ate_ano and ano > ate_ano):
+            continue
+        jogos = list(_ler_temporada(arq).values())
+        rod = _rodadas_temporada(jogos)
+        tem_liga = any(j.get("fase") in FASES_TABELA for j in jogos)
+        for j in jogos:
+            pl = j.get("placar") if j.get("finalizado") else None
+            linhas.append(dict(temp=f"{ano}-{str(ano + 1)[2:]}", rodada=rod[j["id"]], dia=j["data"], hora=j.get("hora"), tz="America/Sao_Paulo",
+                               casa_raw=j["mandante"], fora_raw=j["visitante"], gc=float(pl[0]) if pl else np.nan,
+                               gf=float(pl[1]) if pl else np.nan, adiado=False, espn=str(j["id"]), fase=j.get("fase"),
+                               nota=j.get("nota"), na_tabela=(j.get("fase") in FASES_TABELA) if tem_liga else True))
+    return linhas
+
+
+def rotulos_rodada(cur):
+    """Nome de cada rodada do mata-mata ({rodada: {nome, curto}}), a partir da fase da ESPN. Vazio se não houver."""
+    out = {}
+    if "fase" not in cur.columns:
+        return out
+    vistos = {}
+    for r, g in cur.sort_values("dt").groupby("rodada", sort=True):
+        fase = g["fase"].dropna().mode()
+        if fase.empty or fase.iloc[0] not in FASES_MATA:
+            continue
+        nome, curto, _ = FASES_MATA[fase.iloc[0]]
+        vistos[nome] = vistos.get(nome, 0) + 1
+        if fase.iloc[0] == "final":
+            out[str(int(r))] = {"nome": nome, "curto": curto}
+        else:
+            perna = "ida" if vistos[nome] == 1 else "volta"
+            out[str(int(r))] = {"nome": f"{nome} ({perna})", "curto": f"{curto}{vistos[nome]}"}
+    return out
 
 
 # ----------------------------------------------------------------------------
@@ -485,10 +705,16 @@ def chave_ordem(pts, v, sg, gp, vitorias_primeiro):
     return (((pts * 100 + (v if vitorias_primeiro else 0)) * 1000 + (sg + 300)) * 1000) + gp
 
 
-def tabela_atual(S, cfg):
+def jogos_tabela(S):
+    """Jogos da temporada atual que contam para a tabela (na Champions, só a fase de liga)."""
     d = S["d"]
-    t = d[(d["ano"] == S["atual"]) & d["jogado"]]
-    times = sorted(set(d[d["ano"] == S["atual"]]["casa"]) | set(d[d["ano"] == S["atual"]]["fora"]))
+    return d[(d["ano"] == S["atual"]) & d["na_tabela"]]
+
+
+def tabela_atual(S, cfg):
+    cur = jogos_tabela(S)
+    t = cur[cur["jogado"]]
+    times = sorted(set(cur["casa"]) | set(cur["fora"]))
     linhas = {x: dict(t=x, j=0, v=0, e=0, d=0, gp=0, gc=0, forma=[]) for x in times}
     for g in t.sort_values("dt").itertuples():
         for time_, gp, gc in ((g.casa, g.gc, g.gf), (g.fora, g.gf, g.gc)):
@@ -514,8 +740,7 @@ def sigma_incerteza(S):
 
 def simular(S, cfg, n=N_SIM, semente=2026, sigma=None):
     """Simula o resto da temporada n vezes. Devolve, por time, pontos esperados e chance de cada posição final."""
-    d = S["d"]
-    cur = d[d["ano"] == S["atual"]]
+    cur = jogos_tabela(S)
     resto = cur[~cur["jogado"]]
     atual = tabela_atual(S, cfg)
     times = [L["t"] for L in atual]
@@ -548,9 +773,117 @@ def simular(S, cfg, n=N_SIM, semente=2026, sigma=None):
     pos = (-chave).argsort(1).argsort(1)                                     # 0 = campeão
     dist = np.stack([(pos == p).mean(0) for p in range(T)], axis=1)          # (T, T): time x posição
     topo, baixo = cfg["topo"], cfg["rebaixa"]
+    tit = dist[:, 0]
+    if cfg.get("mata_mata"):
+        elo = np.array([S["elo"].get(t, ELO_INICIAL) for t in times])
+        tit = simular_mata_mata(S, (-chave).argsort(1), elo[None, :] + choque, ix, rng)
     return dict(n=n, times=times, sigma=sigma, pts=pts.mean(0), pts_lo=np.percentile(pts, 10, axis=0), pts_hi=np.percentile(pts, 90, axis=0),
-                pos_media=pos.mean(0) + 1, dist=dist, tit=dist[:, 0], topo=dist[:, :topo].sum(1), rebaixa=dist[:, T - baixo:].sum(1),
-                n_rest=int(len(resto)))
+                pos_media=pos.mean(0) + 1, dist=dist, tit=tit, topo=dist[:, :topo].sum(1), rebaixa=dist[:, T - baixo:].sum(1),
+                meio=dist[:, topo:T - baixo].sum(1), n_rest=int(len(resto)))
+
+
+# ----------------------------------------------------------------------------
+# Mata-mata da Champions (chance de título)
+# ----------------------------------------------------------------------------
+def _gols(S, rng, elo_c, elo_f, neutro=False):
+    """Gols sorteados de um jogo para cada simulação (elo_c e elo_f: arrays (n,))."""
+    a, (b, c) = S["modelo"].m.intercept_, S["modelo"].m.coef_
+    x = (elo_c - elo_f) / 100
+    casa = c / 2 if neutro else c
+    return rng.poisson(np.exp(a + b * x + casa)), rng.poisson(np.exp(a - b * x + (c / 2 if neutro else 0)))
+
+
+def _confronto(S, rng, A, B, forca, ja=None, pernas=None, vencedor=None):
+    """Quem passa em cada simulação. A e B: índices dos times (n,). forca: Elo por simulação (n, T).
+    ja: gols já marcados (A, B) em pernas jogadas; pernas: lista dos mandantes ('A' ou 'B') das pernas que faltam
+    (padrão: ida na casa de B, volta na casa de A). Empate no agregado: prorrogação/pênaltis, 50% para cada."""
+    n = len(A)
+    if vencedor is not None:
+        return np.where(vencedor == "A", A, B)
+    ga, gb = np.full(n, (ja or (0, 0))[0]), np.full(n, (ja or (0, 0))[1])
+    rows = np.arange(n)
+    ea, eb = forca[rows, A], forca[rows, B]
+    for mand in (["B", "A"] if pernas is None else pernas):
+        if mand == "N":
+            x, y = _gols(S, rng, ea, eb, neutro=True)
+            ga, gb = ga + x, gb + y
+        elif mand == "A":
+            x, y = _gols(S, rng, ea, eb)
+            ga, gb = ga + x, gb + y
+        else:
+            x, y = _gols(S, rng, eb, ea)
+            ga, gb = ga + y, gb + x
+    sorteio = rng.random(n) < 0.5
+    return np.where((ga > gb) | ((ga == gb) & sorteio), A, B)
+
+
+def _confrontos_reais(S, fase, ix):
+    """Confrontos de uma fase do mata-mata já definidos na base: [(A, B, ja, pernas_restantes, vencedor_ou_None)]."""
+    d = S["d"]
+    g = d[(d["ano"] == S["atual"]) & (d["fase"] == fase)].sort_values("dt")
+    pares = {}
+    for r in g.itertuples():
+        if r.casa not in ix or r.fora not in ix:
+            continue
+        pares.setdefault(frozenset((r.casa, r.fora)), []).append(r)
+    out = []
+    for jogos in pares.values():
+        if len(jogos) == 1 and fase != "final":
+            A, B = jogos[0].fora, jogos[0].casa       # só a ida na base: a volta será na casa de quem jogou fora
+        else:
+            A, B = jogos[-1].casa, jogos[-1].fora     # A recebe o último jogo (a volta)
+        nome_raw = {jogos[0].casa: jogos[0].casa_raw, jogos[0].fora: jogos[0].fora_raw}
+        ja, faltam, venc = [0, 0], [], None
+        for r in jogos:
+            if r.jogado:
+                ja[0] += int(r.gc if r.casa == A else r.gf)
+                ja[1] += int(r.gf if r.casa == A else r.gc)
+                # ex.: "2nd Leg - Arsenal advance 2-1 on aggregate" / "Paris Saint-Germain win 4-3 on penalties"
+                m = re.search(r"(.+?) (?:advance|win)\b", str(r.nota or "").split(" - ")[-1])
+                if m:
+                    venc = "A" if _sim_nome(m.group(1), nome_raw[A]) >= _sim_nome(m.group(1), nome_raw[B]) else "B"
+            else:
+                faltam.append("N" if fase == "final" else ("A" if r.casa == A else "B"))
+        if len(jogos) == 1 and fase != "final":
+            faltam.append("A")
+        if venc is None and not faltam:            # tudo jogado e sem nota: decide pelo agregado (empate = pênaltis, 50%)
+            venc = "A" if ja[0] > ja[1] else "B" if ja[1] > ja[0] else None
+            if venc is None:
+                faltam = []
+        out.append((ix[A], ix[B], tuple(ja), faltam, venc))
+    return out
+
+
+def simular_mata_mata(S, ordem, forca, ix, rng):
+    """Chance de título de cada time. ordem: (n, T) índices dos times do 1º ao último da fase de liga em cada simulação.
+    Chaveamento simplificado do formato 2024+: playoff 9º x 24º, 10º x 23º...; oitavas 1º x vencedor de 16º/17º, 2º x 15º/18º...;
+    quartas 1/8 x 4/5... Confrontos já definidos na base substituem os simulados."""
+    n, T = ordem.shape
+    if T < 24:
+        return np.zeros(T)
+    rows = np.arange(n)
+
+    def fase(nome, pares_sim):
+        """pares_sim: lista de (A, B) arrays (n,). Usa os confrontos reais se a fase já estiver na base."""
+        reais = _confrontos_reais(S, nome, ix)
+        if reais and len(reais) == len(pares_sim):
+            # ordena os confrontos reais na mesma ordem do chaveamento: pelo melhor colocado de cada um
+            pos = np.empty((n, T), dtype=int)
+            pos[rows[:, None], ordem] = np.arange(T)
+            melhor = [np.minimum(pos[:, a], pos[:, b]).mean() for a, b, *_ in reais]
+            reais = [reais[i] for i in np.argsort(melhor)]
+            return [_confronto(S, rng, np.full(n, a), np.full(n, b), forca, ja, pernas, None if v is None else np.full(n, v))
+                    for a, b, ja, pernas, v in reais]
+        return [_confronto(S, rng, A, B, forca, pernas=["N"] if nome == "final" else None) for A, B in pares_sim]
+
+    seed = lambda k: ordem[:, k - 1]                       # time na posição k em cada simulação
+    po = fase("knockout-round-playoffs", [(seed(9 + i), seed(24 - i)) for i in range(8)])     # po[i]: 9+i x 24-i
+    # oitavas: o k-ésimo colocado (k=1..8) enfrenta o vencedor de (17-k) x (16+k), que é po[8-k]
+    oit = fase("round-of-16", [(seed(k), po[8 - k]) for k in range(1, 9)])
+    qf = fase("quarterfinals", [(oit[i], oit[7 - i]) for i in range(4)])      # 1/8, 2/7, 3/6, 4/5
+    sf = fase("semifinals", [(qf[0], qf[3]), (qf[1], qf[2])])
+    campeao = fase("final", [(sf[0], sf[1])])[0]
+    return np.bincount(campeao, minlength=T) / n
 
 
 def prever_jogos(S, jogos):
@@ -569,7 +902,9 @@ def prever_jogos(S, jogos):
 # CLI
 # ----------------------------------------------------------------------------
 def montar(lid, hoje=None):
-    d = completar_com_espn(carregar_liga(lid, hoje), lid)
+    d = carregar_liga(lid, hoje)
+    if LIGAS[lid].get("fonte") != "espn":          # a Champions já vem da ESPN
+        d = completar_com_espn(d, lid, hoje)
     S = construir(d)
     S["adj"] = noticias.carregar("futebol", lid, hoje)
     ruins = noticias.desconhecidos(S["adj"], set(d["casa"]) | set(d["fora"]))
@@ -579,6 +914,12 @@ def montar(lid, hoje=None):
 
 
 def main(argv):
+    if argv[:1] == ["coletar-champions"]:
+        ini, fim = (int(argv[1]), int(argv[2] if len(argv) > 2 else argv[1])) if len(argv) > 1 else (PRIMEIRO_ANO, temporada_atual_europa(date.today()))
+        for ano in range(ini, fim + 1):
+            n = coletar_champions(ano, date(ano, 8, 1), min(date(ano + 1, 8, 31), date.today() + pd.Timedelta(days=120).to_pytimedelta()))
+            print(f"Champions {ano}-{ano + 1}: {n} jogo(s) novo(s) ou atualizado(s)")
+        return
     pedidas = argv or list(LIGAS)
     for lid in pedidas:
         if lid not in LIGAS:

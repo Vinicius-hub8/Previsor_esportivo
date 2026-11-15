@@ -4,8 +4,8 @@ import { ZonaLegenda, zonaDe } from './FutebolTabela.jsx';
 
 const PCT = (x) => (x < 0.005 ? '<1%' : x > 0.995 ? '>99%' : pct(x, 0));
 
-function Celula({ x }) {
-  return <td className="pc n" style={{ '--w': `${Math.round(x * 100)}%` }}>{PCT(x)}</td>;
+function Celula({ x, cls = '' }) {
+  return <td className={`pc n ${cls}`} style={{ '--w': `${Math.round(x * 100)}%` }}>{PCT(x)}</td>;
 }
 
 function Favoritos({ data }) {
@@ -70,6 +70,7 @@ export default function FutebolPrevisao({ data }) {
         Simulamos o resto da temporada {previsao.n.toLocaleString('pt-BR')} vezes: os {previsao.n_rest} jogos que faltam são sorteados com as
         chances do modelo (vitória, empate e derrota, com gols) e, para refletir a incerteza, cada simulação também sorteia o quanto a força de
         cada time pode mudar. O resultado é um cenário, não uma previsão exata.
+        {meta.nota_previsao && <> {meta.nota_previsao}</>}
       </p>
       <Favoritos data={data} />
       <div className="card">
@@ -85,8 +86,9 @@ export default function FutebolPrevisao({ data }) {
                 <th className="n" title="Pontos esperados no fim da temporada (média das simulações)">Pts previstos</th>
                 <th className="n hide-sm" title="Faixa em que ficam 80% das simulações">Faixa (80%)</th>
                 <th className="n" title="Chance de ser campeão">Título</th>
-                <th className="n" title={`Chance de terminar entre os ${meta.topo} primeiros`}>Top {meta.topo}</th>
-                <th className="n" title={`Chance de terminar entre os ${meta.rebaixa} últimos`}>Rebaixa</th>
+                <th className="n" title={`Chance de terminar entre os ${meta.topo} primeiros`}>{meta.col_topo ?? `Top ${meta.topo}`}</th>
+                {meta.col_meio && <th className="n hide-sm" title={meta.rotulo_meio}>{meta.col_meio}</th>}
+                <th className="n" title={`Chance de terminar entre os ${meta.rebaixa} últimos`}>{meta.col_reb ?? 'Rebaixa'}</th>
               </tr>
             </thead>
             <tbody>
@@ -99,6 +101,7 @@ export default function FutebolPrevisao({ data }) {
                   <td className="n hide-sm">{x.faixa[0]}–{x.faixa[1]}</td>
                   <Celula x={x.tit} />
                   <Celula x={x.topo} />
+                  {meta.col_meio && <Celula x={x.meio ?? 0} cls="hide-sm" />}
                   <Celula x={x.reb} />
                 </tr>
               ))}

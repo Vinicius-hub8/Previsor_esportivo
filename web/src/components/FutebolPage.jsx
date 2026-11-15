@@ -5,7 +5,6 @@ import Notice from './Notice.jsx';
 import FutebolJogos from './FutebolJogos.jsx';
 import FutebolTabela from './FutebolTabela.jsx';
 import FutebolPrevisao from './FutebolPrevisao.jsx';
-import ChampionsPage from './ChampionsPage.jsx';
 
 import { pct } from '../lib/format.js';
 import { useLiga } from '../lib/useLiga.js';
@@ -23,8 +22,6 @@ export default function FutebolPage({
   navigate
 }) {
   const ligas = indice.ligas;
-
-  const ehChampions = route[0] === 'champions';
 
   const valida = (id) =>
     ligas.some((l) => l.id === id);
@@ -46,10 +43,6 @@ export default function FutebolPage({
 
   const abrirAba = (id) =>
     navigate('futebol', lid, id);
-
-  if (ehChampions) {
-    return <ChampionsPage navigate={navigate} />;
-  }
 
   if (!ligaAberta) {
     return (
@@ -112,38 +105,6 @@ export default function FutebolPage({
               </span>
             </button>
           ))}
-
-          <button
-            className="liga-card"
-            onClick={() =>
-              navigate('futebol', 'champions')
-            }
-          >
-            <span className="pais">
-              Europa
-            </span>
-
-            <span className="nm">
-              🏆 Champions League
-            </span>
-
-            <span className="lin">
-              UEFA Champions League
-            </span>
-
-            <span className="lin">
-              Previsões com Elo + Poisson
-            </span>
-
-            <span className="lin dim">
-              Probabilidades de vitória,
-              empate e derrota
-            </span>
-
-            <span className="lin dim">
-              Modelo experimental
-            </span>
-          </button>
         </div>
       </>
     );
@@ -156,7 +117,7 @@ export default function FutebolPage({
           className="back"
           onClick={() => navigate('futebol')}
         >
-          ← Ligas
+          ← Competições
         </button>
       </div>
 
@@ -174,7 +135,7 @@ export default function FutebolPage({
       <div
         className="ligas"
         role="group"
-        aria-label="Liga"
+        aria-label="Competição"
       >
         {ligas.map((l) => (
           <button
@@ -189,13 +150,13 @@ export default function FutebolPage({
 
       {loading && (
         <p className="state">
-          Carregando a liga…
+          Carregando a competição…
         </p>
       )}
 
       {error && (
         <p className="state">
-          Não consegui carregar esta liga ({error}).
+          Não consegui carregar esta competição ({error}).
           Rode <code>python atualizar.py futebol</code>
           {' '}e recarregue.
         </p>

@@ -103,6 +103,35 @@ def test_espn_nomes_diferentes():
     assert d.loc[d["casa"] == "Bayern de Munique", "gc"].iloc[0] == 2
 
 
+def test_espn_guarda_id_dos_proximos_jogos():
+    d = F.preparar(pd.DataFrame([dict(temp="2026", rodada=1, dia="2026-11-22", hora="12:00", tz="Europe/London", casa_raw="Arsenal FC",
+                                      fora_raw="Chelsea FC", gc=np.nan, gf=np.nan, adiado=False)]))
+    ev = [{"id": "77", "final": False, "pts_casa": None, "pts_fora": None, "nome_casa": "Arsenal", "nome_fora": "Chelsea",
+           "data": "2026-11-22T12:00Z"}]
+    assert F.casar_espn(d, ev) == 0
+    assert d.at[0, "espn"] == "77" and not d.at[0, "jogado"]
+
+
+def test_espn_acha_jogo_remarcado():
+    d = F.preparar(pd.DataFrame([dict(temp="2026", rodada=33, dia="2026-10-28", hora="19:00", tz="America/Sao_Paulo",
+                                      casa_raw="Coritiba FBC", fora_raw="EC Vitória", gc=np.nan, gf=np.nan, adiado=False),
+                                 dict(temp="2026", rodada=34, dia="2026-11-04", hora="19:00", tz="America/Sao_Paulo",
+                                      casa_raw="Coritiba FBC", fora_raw="Grêmio FBPA", gc=np.nan, gf=np.nan, adiado=False)]))
+    ev = [{"id": "5", "final": True, "pts_casa": 1, "pts_fora": 0, "nome_casa": "Coritiba", "nome_fora": "Vitória", "data": "2026-10-31T19:00Z"},
+          {"id": "6", "final": True, "pts_casa": 2, "pts_fora": 2, "nome_casa": "Coritiba", "nome_fora": "Santos", "data": "2026-11-01T19:00Z"}]
+    assert F.casar_espn(d, ev) == 1                          # 3 dias depois da data da base: acha pelo nome
+    assert (d.at[0, "gc"], d.at[0, "espn"]) == (1, "5") and not d.at[1, "jogado"]   # outro adversário: não confunde
+
+
+def test_janela_espn_cobre_o_jogo_pendente_mais_antigo():
+    from datetime import date
+    d = F.preparar(pd.DataFrame([dict(temp="2026", rodada=r, dia=dia, hora="15:00", tz="Europe/London", casa_raw="A", fora_raw="B",
+                                      gc=gc, gf=gc, adiado=False)
+                                 for r, dia, gc in ((1, "2026-08-20", 1.0), (2, "2026-09-25", np.nan), (3, "2026-12-01", np.nan))]))
+    dias = F.janela_espn(d, hoje=date(2026, 11, 15))
+    assert dias[0] == date(2026, 9, 23) and dias[-1] == date(2026, 11, 22)
+
+
 if __name__ == "__main__":
     for nome, fn in list(globals().items()):
         if nome.startswith("test_"):

@@ -87,7 +87,10 @@ function Cartao({ g, times }) {
 
 export default function FutebolJogos({ data, rodada, onSelect }) {
   const { meta, rodadas, times } = data;
-  const chaves = Object.keys(rodadas);
+  // Champions: as rodadas do mata-mata têm nome ("Oitavas (ida)"); nas ligas é só o número.
+  const rotulos = meta.rotulos_rodada || {};
+  const nomeRodada = (k) => rotulos[k]?.nome ?? `Rodada ${k}`;
+  const chaves = Object.keys(rodadas).sort((a, b) => Number(a) - Number(b));
   const atual = String(meta.semana_atual);
   const chave = rodadas[rodada] ? rodada : rodadas[atual] ? atual : chaves[0];
   const jogos = rodadas[chave];
@@ -121,15 +124,15 @@ export default function FutebolJogos({ data, rodada, onSelect }) {
       <div className="ctrls">
         <div className="weeks" role="group" aria-label="Rodada" ref={chipsRef}>
           {chaves.map((k) => (
-            <button key={k} className={k === atual ? 'now' : ''} aria-pressed={k === chave} aria-label={`Rodada ${k}${k === atual ? ' (atual)' : ''}`} onClick={() => onSelect(k)}>
-              {k}
+            <button key={k} className={k === atual ? 'now' : ''} aria-pressed={k === chave} aria-label={`${nomeRodada(k)}${k === atual ? ' (atual)' : ''}`} onClick={() => onSelect(k)}>
+              {rotulos[k]?.curto ?? k}
             </button>
           ))}
         </div>
       </div>
       <div className="wk-head">
         <div>
-          <h2>Rodada {chave} · {meta.nome}</h2>
+          <h2>{nomeRodada(chave)} · {meta.nome}</h2>
           <div className="sum">{resumo}</div>
         </div>
         <span className="tag" title="Todos os horários desta página estão no horário de Brasília.">Horário de Brasília</span>

@@ -1,0 +1,2011 @@
+{
+ "meta": {
+  "competicao": "UEFA Champions League",
+  "temporada": "2020-2021",
+  "quantidade": 125,
+  "finalizadas": 125,
+  "fonte": "ESPN"
+ },
+ "jogos": [
+  {
+   "id": "585853",
+   "data": "2020-10-20",
+   "hora": "13:55",
+   "mandante": "Zenit St Petersburg",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585854",
+   "data": "2020-10-20",
+   "hora": "13:55",
+   "mandante": "Dynamo Kyiv",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585847",
+   "data": "2020-10-20",
+   "hora": "16:00",
+   "mandante": "Lazio",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585848",
+   "data": "2020-10-20",
+   "hora": "16:00",
+   "mandante": "Stade Rennais",
+   "visitante": "Krasnodar",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585849",
+   "data": "2020-10-20",
+   "hora": "16:00",
+   "mandante": "Barcelona",
+   "visitante": "Ferencvaros",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585850",
+   "data": "2020-10-20",
+   "hora": "16:00",
+   "mandante": "RB Leipzig",
+   "visitante": "Istanbul Basaksehir",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585851",
+   "data": "2020-10-20",
+   "hora": "16:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585852",
+   "data": "2020-10-20",
+   "hora": "16:00",
+   "mandante": "Chelsea",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585845",
+   "data": "2020-10-21",
+   "hora": "13:55",
+   "mandante": "RB Salzburg",
+   "visitante": "Lokomotiv Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585846",
+   "data": "2020-10-21",
+   "hora": "13:55",
+   "mandante": "Real Madrid",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585839",
+   "data": "2020-10-21",
+   "hora": "16:00",
+   "mandante": "FC Midtjylland",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585840",
+   "data": "2020-10-21",
+   "hora": "16:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585841",
+   "data": "2020-10-21",
+   "hora": "16:00",
+   "mandante": "Internazionale",
+   "visitante": "Borussia Mönchengladbach",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585842",
+   "data": "2020-10-21",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585843",
+   "data": "2020-10-21",
+   "hora": "16:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585844",
+   "data": "2020-10-21",
+   "hora": "16:00",
+   "mandante": "Olympiacos",
+   "visitante": "Marseille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585837",
+   "data": "2020-10-27",
+   "hora": "14:55",
+   "mandante": "Lokomotiv Moscow",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585838",
+   "data": "2020-10-27",
+   "hora": "14:55",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585831",
+   "data": "2020-10-27",
+   "hora": "17:00",
+   "mandante": "Atalanta",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585832",
+   "data": "2020-10-27",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "FC Midtjylland",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585833",
+   "data": "2020-10-27",
+   "hora": "17:00",
+   "mandante": "Marseille",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585834",
+   "data": "2020-10-27",
+   "hora": "17:00",
+   "mandante": "FC Porto",
+   "visitante": "Olympiacos",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585835",
+   "data": "2020-10-27",
+   "hora": "17:00",
+   "mandante": "Borussia Mönchengladbach",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585836",
+   "data": "2020-10-27",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585829",
+   "data": "2020-10-28",
+   "hora": "14:55",
+   "mandante": "Krasnodar",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585830",
+   "data": "2020-10-28",
+   "hora": "14:55",
+   "mandante": "Istanbul Basaksehir",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585823",
+   "data": "2020-10-28",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585824",
+   "data": "2020-10-28",
+   "hora": "17:00",
+   "mandante": "Ferencvaros",
+   "visitante": "Dynamo Kyiv",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585825",
+   "data": "2020-10-28",
+   "hora": "17:00",
+   "mandante": "Club Brugge",
+   "visitante": "Lazio",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585826",
+   "data": "2020-10-28",
+   "hora": "17:00",
+   "mandante": "Manchester United",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585827",
+   "data": "2020-10-28",
+   "hora": "17:00",
+   "mandante": "Sevilla",
+   "visitante": "Stade Rennais",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585828",
+   "data": "2020-10-28",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Zenit St Petersburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585821",
+   "data": "2020-11-03",
+   "hora": "14:55",
+   "mandante": "Lokomotiv Moscow",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585822",
+   "data": "2020-11-03",
+   "hora": "14:55",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Borussia Mönchengladbach",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    6
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585815",
+   "data": "2020-11-03",
+   "hora": "17:00",
+   "mandante": "FC Midtjylland",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585816",
+   "data": "2020-11-03",
+   "hora": "17:00",
+   "mandante": "RB Salzburg",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    6
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585817",
+   "data": "2020-11-03",
+   "hora": "17:00",
+   "mandante": "Real Madrid",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585818",
+   "data": "2020-11-03",
+   "hora": "17:00",
+   "mandante": "Atalanta",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585819",
+   "data": "2020-11-03",
+   "hora": "17:00",
+   "mandante": "FC Porto",
+   "visitante": "Marseille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585820",
+   "data": "2020-11-03",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Olympiacos",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585813",
+   "data": "2020-11-04",
+   "hora": "14:55",
+   "mandante": "Zenit St Petersburg",
+   "visitante": "Lazio",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585814",
+   "data": "2020-11-04",
+   "hora": "14:55",
+   "mandante": "Istanbul Basaksehir",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585807",
+   "data": "2020-11-04",
+   "hora": "17:00",
+   "mandante": "Club Brugge",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585808",
+   "data": "2020-11-04",
+   "hora": "17:00",
+   "mandante": "Barcelona",
+   "visitante": "Dynamo Kyiv",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585809",
+   "data": "2020-11-04",
+   "hora": "17:00",
+   "mandante": "Sevilla",
+   "visitante": "Krasnodar",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585810",
+   "data": "2020-11-04",
+   "hora": "17:00",
+   "mandante": "RB Leipzig",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585811",
+   "data": "2020-11-04",
+   "hora": "17:00",
+   "mandante": "Ferencvaros",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585812",
+   "data": "2020-11-04",
+   "hora": "17:00",
+   "mandante": "Chelsea",
+   "visitante": "Stade Rennais",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585805",
+   "data": "2020-11-24",
+   "hora": "14:55",
+   "mandante": "Stade Rennais",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585806",
+   "data": "2020-11-24",
+   "hora": "14:55",
+   "mandante": "Krasnodar",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585799",
+   "data": "2020-11-24",
+   "hora": "17:00",
+   "mandante": "Dynamo Kyiv",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585800",
+   "data": "2020-11-24",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585801",
+   "data": "2020-11-24",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "Ferencvaros",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585802",
+   "data": "2020-11-24",
+   "hora": "17:00",
+   "mandante": "Manchester United",
+   "visitante": "Istanbul Basaksehir",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585803",
+   "data": "2020-11-24",
+   "hora": "17:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585804",
+   "data": "2020-11-24",
+   "hora": "17:00",
+   "mandante": "Lazio",
+   "visitante": "Zenit St Petersburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585797",
+   "data": "2020-11-25",
+   "hora": "14:55",
+   "mandante": "Olympiacos",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585798",
+   "data": "2020-11-25",
+   "hora": "14:55",
+   "mandante": "Borussia Mönchengladbach",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585791",
+   "data": "2020-11-25",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585792",
+   "data": "2020-11-25",
+   "hora": "17:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "FC Midtjylland",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585793",
+   "data": "2020-11-25",
+   "hora": "17:00",
+   "mandante": "Marseille",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585794",
+   "data": "2020-11-25",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Lokomotiv Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585795",
+   "data": "2020-11-25",
+   "hora": "17:00",
+   "mandante": "Internazionale",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585796",
+   "data": "2020-11-25",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585789",
+   "data": "2020-12-01",
+   "hora": "14:55",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585790",
+   "data": "2020-12-01",
+   "hora": "14:55",
+   "mandante": "Lokomotiv Moscow",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585783",
+   "data": "2020-12-01",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585784",
+   "data": "2020-12-01",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585785",
+   "data": "2020-12-01",
+   "hora": "17:00",
+   "mandante": "Atalanta",
+   "visitante": "FC Midtjylland",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585786",
+   "data": "2020-12-01",
+   "hora": "17:00",
+   "mandante": "Borussia Mönchengladbach",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585787",
+   "data": "2020-12-01",
+   "hora": "17:00",
+   "mandante": "FC Porto",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585788",
+   "data": "2020-12-01",
+   "hora": "17:00",
+   "mandante": "Marseille",
+   "visitante": "Olympiacos",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585781",
+   "data": "2020-12-02",
+   "hora": "14:55",
+   "mandante": "Istanbul Basaksehir",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585782",
+   "data": "2020-12-02",
+   "hora": "14:55",
+   "mandante": "Krasnodar",
+   "visitante": "Stade Rennais",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585775",
+   "data": "2020-12-02",
+   "hora": "17:00",
+   "mandante": "Ferencvaros",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585776",
+   "data": "2020-12-02",
+   "hora": "17:00",
+   "mandante": "Sevilla",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585777",
+   "data": "2020-12-02",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "Dynamo Kyiv",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585778",
+   "data": "2020-12-02",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Lazio",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585779",
+   "data": "2020-12-02",
+   "hora": "17:00",
+   "mandante": "Manchester United",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585780",
+   "data": "2020-12-02",
+   "hora": "17:00",
+   "mandante": "Club Brugge",
+   "visitante": "Zenit St Petersburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585773",
+   "data": "2020-12-08",
+   "hora": "14:55",
+   "mandante": "Zenit St Petersburg",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585774",
+   "data": "2020-12-08",
+   "hora": "14:55",
+   "mandante": "Lazio",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585767",
+   "data": "2020-12-08",
+   "hora": "17:00",
+   "mandante": "Chelsea",
+   "visitante": "Krasnodar",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585768",
+   "data": "2020-12-08",
+   "hora": "17:00",
+   "mandante": "Dynamo Kyiv",
+   "visitante": "Ferencvaros",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585770",
+   "data": "2020-12-08",
+   "hora": "17:00",
+   "mandante": "Barcelona",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585771",
+   "data": "2020-12-08",
+   "hora": "17:00",
+   "mandante": "RB Leipzig",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585772",
+   "data": "2020-12-08",
+   "hora": "17:00",
+   "mandante": "Stade Rennais",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585765",
+   "data": "2020-12-09",
+   "hora": "14:55",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585766",
+   "data": "2020-12-09",
+   "hora": "14:55",
+   "mandante": "FC Midtjylland",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585769",
+   "data": "2020-12-09",
+   "hora": "14:55",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Istanbul Basaksehir",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585759",
+   "data": "2020-12-09",
+   "hora": "17:00",
+   "mandante": "RB Salzburg",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585760",
+   "data": "2020-12-09",
+   "hora": "17:00",
+   "mandante": "Real Madrid",
+   "visitante": "Borussia Mönchengladbach",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585761",
+   "data": "2020-12-09",
+   "hora": "17:00",
+   "mandante": "Olympiacos",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585762",
+   "data": "2020-12-09",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Lokomotiv Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585763",
+   "data": "2020-12-09",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Marseille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "585764",
+   "data": "2020-12-09",
+   "hora": "17:00",
+   "mandante": "Internazionale",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2020
+  },
+  {
+   "id": "590724",
+   "data": "2021-02-16",
+   "hora": "17:00",
+   "mandante": "RB Leipzig",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590726",
+   "data": "2021-02-16",
+   "hora": "17:00",
+   "mandante": "Barcelona",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590721",
+   "data": "2021-02-17",
+   "hora": "17:00",
+   "mandante": "Sevilla",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590723",
+   "data": "2021-02-17",
+   "hora": "17:00",
+   "mandante": "FC Porto",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590720",
+   "data": "2021-02-23",
+   "hora": "17:00",
+   "mandante": "Lazio",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590722",
+   "data": "2021-02-23",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590725",
+   "data": "2021-02-24",
+   "hora": "17:00",
+   "mandante": "Borussia Mönchengladbach",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590727",
+   "data": "2021-02-24",
+   "hora": "17:00",
+   "mandante": "Atalanta",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "590716",
+   "data": "2021-03-09",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Tied on aggregate - FC Porto win on away goals",
+   "temporada": 2020
+  },
+  {
+   "id": "590719",
+   "data": "2021-03-09",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Borussia Dortmund advance 5-4 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "590714",
+   "data": "2021-03-10",
+   "hora": "17:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Paris Saint-Germain advance 5-2 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "590718",
+   "data": "2021-03-10",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Liverpool advance 4-0 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "590712",
+   "data": "2021-03-16",
+   "hora": "17:00",
+   "mandante": "Real Madrid",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Real Madrid advance 4-1 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "590715",
+   "data": "2021-03-16",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Borussia Mönchengladbach",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Manchester City advance 4-0 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "590713",
+   "data": "2021-03-17",
+   "hora": "17:00",
+   "mandante": "Chelsea",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Chelsea advance 3-0 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "590717",
+   "data": "2021-03-17",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Lazio",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Bayern Munich advance 6-2 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "596888",
+   "data": "2021-04-06",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "596890",
+   "data": "2021-04-06",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "596889",
+   "data": "2021-04-07",
+   "hora": "16:00",
+   "mandante": "FC Porto",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "596891",
+   "data": "2021-04-07",
+   "hora": "16:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "596884",
+   "data": "2021-04-13",
+   "hora": "16:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Tied on aggregate - Paris Saint-Germain win on away goals",
+   "temporada": 2020
+  },
+  {
+   "id": "596885",
+   "data": "2021-04-13",
+   "hora": "16:00",
+   "mandante": "Chelsea",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Chelsea advance 2-1 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "596886",
+   "data": "2021-04-14",
+   "hora": "16:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Manchester City advance 4-2 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "596887",
+   "data": "2021-04-14",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Real Madrid advance 3-1 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "600629",
+   "data": "2021-04-27",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "semifinals",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "600630",
+   "data": "2021-04-28",
+   "hora": "16:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "semifinals",
+   "nota": "1st Leg",
+   "temporada": 2020
+  },
+  {
+   "id": "600627",
+   "data": "2021-05-04",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "semifinals",
+   "nota": "2nd Leg - Manchester City advance 4-1 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "600628",
+   "data": "2021-05-05",
+   "hora": "16:00",
+   "mandante": "Chelsea",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "semifinals",
+   "nota": "2nd Leg - Chelsea advance 3-1 on aggregate",
+   "temporada": 2020
+  },
+  {
+   "id": "600626",
+   "data": "2021-05-29",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "final",
+   "nota": null,
+   "temporada": 2020
+  }
+ ]
+}
