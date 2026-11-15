@@ -1,0 +1,2011 @@
+{
+ "meta": {
+  "competicao": "UEFA Champions League",
+  "temporada": "2021-2022",
+  "quantidade": 125,
+  "finalizadas": 125,
+  "fonte": "ESPN"
+ },
+ "jogos": [
+  {
+   "id": "618790",
+   "data": "2021-09-14",
+   "hora": "13:45",
+   "mandante": "Young Boys",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618791",
+   "data": "2021-09-14",
+   "hora": "13:45",
+   "mandante": "Sevilla",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618784",
+   "data": "2021-09-14",
+   "hora": "16:00",
+   "mandante": "Villarreal",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618785",
+   "data": "2021-09-14",
+   "hora": "16:00",
+   "mandante": "Barcelona",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618786",
+   "data": "2021-09-14",
+   "hora": "16:00",
+   "mandante": "Dynamo Kyiv",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618787",
+   "data": "2021-09-14",
+   "hora": "16:00",
+   "mandante": "Malmö FF",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618788",
+   "data": "2021-09-14",
+   "hora": "16:00",
+   "mandante": "Lille",
+   "visitante": "VfL Wolfsburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618789",
+   "data": "2021-09-14",
+   "hora": "16:00",
+   "mandante": "Chelsea",
+   "visitante": "Zenit St Petersburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618782",
+   "data": "2021-09-15",
+   "hora": "13:45",
+   "mandante": "Besiktas",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618783",
+   "data": "2021-09-15",
+   "hora": "13:45",
+   "mandante": "Sheriff Tiraspol",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618776",
+   "data": "2021-09-15",
+   "hora": "16:00",
+   "mandante": "Sporting CP",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618777",
+   "data": "2021-09-15",
+   "hora": "16:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618778",
+   "data": "2021-09-15",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "AC Milan",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618779",
+   "data": "2021-09-15",
+   "hora": "16:00",
+   "mandante": "Club Brugge",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618780",
+   "data": "2021-09-15",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    6,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618781",
+   "data": "2021-09-15",
+   "hora": "16:00",
+   "mandante": "Internazionale",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618774",
+   "data": "2021-09-28",
+   "hora": "13:45",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Besiktas",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618775",
+   "data": "2021-09-28",
+   "hora": "13:45",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618768",
+   "data": "2021-09-28",
+   "hora": "16:00",
+   "mandante": "AC Milan",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618769",
+   "data": "2021-09-28",
+   "hora": "16:00",
+   "mandante": "RB Leipzig",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618770",
+   "data": "2021-09-28",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "Sheriff Tiraspol",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618771",
+   "data": "2021-09-28",
+   "hora": "16:00",
+   "mandante": "FC Porto",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618772",
+   "data": "2021-09-28",
+   "hora": "16:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618773",
+   "data": "2021-09-28",
+   "hora": "16:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Sporting CP",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618766",
+   "data": "2021-09-29",
+   "hora": "13:45",
+   "mandante": "Zenit St Petersburg",
+   "visitante": "Malmö FF",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618767",
+   "data": "2021-09-29",
+   "hora": "13:45",
+   "mandante": "Atalanta",
+   "visitante": "Young Boys",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618760",
+   "data": "2021-09-29",
+   "hora": "16:00",
+   "mandante": "Benfica",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618761",
+   "data": "2021-09-29",
+   "hora": "16:00",
+   "mandante": "Juventus",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618762",
+   "data": "2021-09-29",
+   "hora": "16:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Dynamo Kyiv",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618763",
+   "data": "2021-09-29",
+   "hora": "16:00",
+   "mandante": "RB Salzburg",
+   "visitante": "Lille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618764",
+   "data": "2021-09-29",
+   "hora": "16:00",
+   "mandante": "VfL Wolfsburg",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618765",
+   "data": "2021-09-29",
+   "hora": "16:00",
+   "mandante": "Manchester United",
+   "visitante": "Villarreal",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618758",
+   "data": "2021-10-19",
+   "hora": "13:45",
+   "mandante": "Club Brugge",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618759",
+   "data": "2021-10-19",
+   "hora": "13:45",
+   "mandante": "Besiktas",
+   "visitante": "Sporting CP",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618752",
+   "data": "2021-10-19",
+   "hora": "16:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618753",
+   "data": "2021-10-19",
+   "hora": "16:00",
+   "mandante": "Internazionale",
+   "visitante": "Sheriff Tiraspol",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618754",
+   "data": "2021-10-19",
+   "hora": "16:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618755",
+   "data": "2021-10-19",
+   "hora": "16:00",
+   "mandante": "FC Porto",
+   "visitante": "AC Milan",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618756",
+   "data": "2021-10-19",
+   "hora": "16:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618757",
+   "data": "2021-10-19",
+   "hora": "16:00",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618750",
+   "data": "2021-10-20",
+   "hora": "13:45",
+   "mandante": "Barcelona",
+   "visitante": "Dynamo Kyiv",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618751",
+   "data": "2021-10-20",
+   "hora": "13:45",
+   "mandante": "RB Salzburg",
+   "visitante": "VfL Wolfsburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618744",
+   "data": "2021-10-20",
+   "hora": "16:00",
+   "mandante": "Manchester United",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618745",
+   "data": "2021-10-20",
+   "hora": "16:00",
+   "mandante": "Benfica",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618746",
+   "data": "2021-10-20",
+   "hora": "16:00",
+   "mandante": "Zenit St Petersburg",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618747",
+   "data": "2021-10-20",
+   "hora": "16:00",
+   "mandante": "Chelsea",
+   "visitante": "Malmö FF",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618748",
+   "data": "2021-10-20",
+   "hora": "16:00",
+   "mandante": "Lille",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618749",
+   "data": "2021-10-20",
+   "hora": "16:00",
+   "mandante": "Young Boys",
+   "visitante": "Villarreal",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618742",
+   "data": "2021-11-02",
+   "hora": "14:45",
+   "mandante": "Malmö FF",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618743",
+   "data": "2021-11-02",
+   "hora": "14:45",
+   "mandante": "VfL Wolfsburg",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618736",
+   "data": "2021-11-02",
+   "hora": "17:00",
+   "mandante": "Dynamo Kyiv",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618737",
+   "data": "2021-11-02",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618738",
+   "data": "2021-11-02",
+   "hora": "17:00",
+   "mandante": "Sevilla",
+   "visitante": "Lille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618739",
+   "data": "2021-11-02",
+   "hora": "17:00",
+   "mandante": "Atalanta",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618740",
+   "data": "2021-11-02",
+   "hora": "17:00",
+   "mandante": "Villarreal",
+   "visitante": "Young Boys",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618741",
+   "data": "2021-11-02",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "Zenit St Petersburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618734",
+   "data": "2021-11-03",
+   "hora": "14:45",
+   "mandante": "AC Milan",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618735",
+   "data": "2021-11-03",
+   "hora": "14:45",
+   "mandante": "Real Madrid",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618728",
+   "data": "2021-11-03",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618729",
+   "data": "2021-11-03",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618730",
+   "data": "2021-11-03",
+   "hora": "17:00",
+   "mandante": "Sporting CP",
+   "visitante": "Besiktas",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618731",
+   "data": "2021-11-03",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618732",
+   "data": "2021-11-03",
+   "hora": "17:00",
+   "mandante": "Sheriff Tiraspol",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618733",
+   "data": "2021-11-03",
+   "hora": "17:00",
+   "mandante": "RB Leipzig",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618726",
+   "data": "2021-11-23",
+   "hora": "14:45",
+   "mandante": "Dynamo Kyiv",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618727",
+   "data": "2021-11-23",
+   "hora": "14:45",
+   "mandante": "Villarreal",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618720",
+   "data": "2021-11-23",
+   "hora": "17:00",
+   "mandante": "Young Boys",
+   "visitante": "Atalanta",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618721",
+   "data": "2021-11-23",
+   "hora": "17:00",
+   "mandante": "Barcelona",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618722",
+   "data": "2021-11-23",
+   "hora": "17:00",
+   "mandante": "Chelsea",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618723",
+   "data": "2021-11-23",
+   "hora": "17:00",
+   "mandante": "Lille",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618724",
+   "data": "2021-11-23",
+   "hora": "17:00",
+   "mandante": "Sevilla",
+   "visitante": "VfL Wolfsburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618725",
+   "data": "2021-11-23",
+   "hora": "17:00",
+   "mandante": "Malmö FF",
+   "visitante": "Zenit St Petersburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618718",
+   "data": "2021-11-24",
+   "hora": "14:45",
+   "mandante": "Besiktas",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618719",
+   "data": "2021-11-24",
+   "hora": "14:45",
+   "mandante": "Internazionale",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618712",
+   "data": "2021-11-24",
+   "hora": "17:00",
+   "mandante": "Sporting CP",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618713",
+   "data": "2021-11-24",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618714",
+   "data": "2021-11-24",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "AC Milan",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618715",
+   "data": "2021-11-24",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618716",
+   "data": "2021-11-24",
+   "hora": "17:00",
+   "mandante": "Club Brugge",
+   "visitante": "RB Leipzig",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618717",
+   "data": "2021-11-24",
+   "hora": "17:00",
+   "mandante": "Sheriff Tiraspol",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618710",
+   "data": "2021-12-07",
+   "hora": "14:45",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618711",
+   "data": "2021-12-07",
+   "hora": "14:45",
+   "mandante": "RB Leipzig",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618704",
+   "data": "2021-12-07",
+   "hora": "17:00",
+   "mandante": "FC Porto",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618705",
+   "data": "2021-12-07",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Besiktas",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618706",
+   "data": "2021-12-07",
+   "hora": "17:00",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Sheriff Tiraspol",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618707",
+   "data": "2021-12-07",
+   "hora": "17:00",
+   "mandante": "Real Madrid",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618708",
+   "data": "2021-12-07",
+   "hora": "17:00",
+   "mandante": "AC Milan",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618709",
+   "data": "2021-12-07",
+   "hora": "17:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Sporting CP",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618702",
+   "data": "2021-12-08",
+   "hora": "14:45",
+   "mandante": "Zenit St Petersburg",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618703",
+   "data": "2021-12-08",
+   "hora": "14:45",
+   "mandante": "Juventus",
+   "visitante": "Malmö FF",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618696",
+   "data": "2021-12-08",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618697",
+   "data": "2021-12-08",
+   "hora": "17:00",
+   "mandante": "Benfica",
+   "visitante": "Dynamo Kyiv",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618698",
+   "data": "2021-12-08",
+   "hora": "17:00",
+   "mandante": "VfL Wolfsburg",
+   "visitante": "Lille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618699",
+   "data": "2021-12-08",
+   "hora": "17:00",
+   "mandante": "RB Salzburg",
+   "visitante": "Sevilla",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618701",
+   "data": "2021-12-08",
+   "hora": "17:00",
+   "mandante": "Manchester United",
+   "visitante": "Young Boys",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "618700",
+   "data": "2021-12-09",
+   "hora": "15:00",
+   "mandante": "Atalanta",
+   "visitante": "Villarreal",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2021
+  },
+  {
+   "id": "622999",
+   "data": "2022-02-15",
+   "hora": "17:00",
+   "mandante": "Sporting CP",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    5
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "623001",
+   "data": "2022-02-15",
+   "hora": "17:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "622995",
+   "data": "2022-02-16",
+   "hora": "17:00",
+   "mandante": "RB Salzburg",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "622998",
+   "data": "2022-02-16",
+   "hora": "17:00",
+   "mandante": "Internazionale",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "622996",
+   "data": "2022-02-22",
+   "hora": "17:00",
+   "mandante": "Villarreal",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "622997",
+   "data": "2022-02-22",
+   "hora": "17:00",
+   "mandante": "Chelsea",
+   "visitante": "Lille",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "622994",
+   "data": "2022-02-23",
+   "hora": "17:00",
+   "mandante": "Benfica",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "623000",
+   "data": "2022-02-23",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "622989",
+   "data": "2022-03-08",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Liverpool advance 2-1 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622991",
+   "data": "2022-03-08",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "RB Salzburg",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    7,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Bayern Munich advance 8-2 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622990",
+   "data": "2022-03-09",
+   "hora": "17:00",
+   "mandante": "Real Madrid",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Real Madrid advance 3-2 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622992",
+   "data": "2022-03-09",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Sporting CP",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Manchester City advance 5-0 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622986",
+   "data": "2022-03-15",
+   "hora": "17:00",
+   "mandante": "Manchester United",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Atlético Madrid advance 2-1 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622987",
+   "data": "2022-03-15",
+   "hora": "17:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Benfica advance 3-2 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622988",
+   "data": "2022-03-16",
+   "hora": "17:00",
+   "mandante": "Lille",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Chelsea advance 4-1 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "622993",
+   "data": "2022-03-16",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "Villarreal",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Villarreal advance 4-1 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "633244",
+   "data": "2022-04-05",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "633246",
+   "data": "2022-04-05",
+   "hora": "16:00",
+   "mandante": "Benfica",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "633245",
+   "data": "2022-04-06",
+   "hora": "16:00",
+   "mandante": "Villarreal",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "633247",
+   "data": "2022-04-06",
+   "hora": "16:00",
+   "mandante": "Chelsea",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "633241",
+   "data": "2022-04-12",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "Chelsea",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Real Madrid advance 5-4 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "633243",
+   "data": "2022-04-12",
+   "hora": "16:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Villarreal",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Villarreal advance 2-1 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "633240",
+   "data": "2022-04-13",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    3
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Liverpool advance 6-4 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "633242",
+   "data": "2022-04-13",
+   "hora": "16:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Manchester City advance 1-0 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "634246",
+   "data": "2022-04-26",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    3
+   ],
+   "fase": "semifinals",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "634247",
+   "data": "2022-04-27",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "Villarreal",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "semifinals",
+   "nota": "1st Leg",
+   "temporada": 2021
+  },
+  {
+   "id": "634248",
+   "data": "2022-05-03",
+   "hora": "16:00",
+   "mandante": "Villarreal",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "semifinals",
+   "nota": "2nd Leg - Liverpool advance 5-2 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "634249",
+   "data": "2022-05-04",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "semifinals",
+   "nota": "2nd Leg - Real Madrid advance 6-5 on aggregate",
+   "temporada": 2021
+  },
+  {
+   "id": "634861",
+   "data": "2022-05-28",
+   "hora": "16:36",
+   "mandante": "Liverpool",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "final",
+   "nota": null,
+   "temporada": 2021
+  }
+ ]
+}

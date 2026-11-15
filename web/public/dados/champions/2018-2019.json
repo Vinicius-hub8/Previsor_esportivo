@@ -1,0 +1,2011 @@
+{
+ "meta": {
+  "competicao": "UEFA Champions League",
+  "temporada": "2018-2019",
+  "quantidade": 125,
+  "finalizadas": 125,
+  "fonte": "ESPN"
+ },
+ "jogos": [
+  {
+   "id": "526507",
+   "data": "2018-09-18",
+   "hora": "13:55",
+   "mandante": "Barcelona",
+   "visitante": "PSV Eindhoven",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526508",
+   "data": "2018-09-18",
+   "hora": "13:55",
+   "mandante": "Internazionale",
+   "visitante": "Tottenham Hotspur",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526501",
+   "data": "2018-09-18",
+   "hora": "16:00",
+   "mandante": "AS Monaco",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526502",
+   "data": "2018-09-18",
+   "hora": "16:00",
+   "mandante": "Club Brugge",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526503",
+   "data": "2018-09-18",
+   "hora": "16:00",
+   "mandante": "Schalke 04",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526504",
+   "data": "2018-09-18",
+   "hora": "16:00",
+   "mandante": "Galatasaray",
+   "visitante": "Lokomotiv Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526505",
+   "data": "2018-09-18",
+   "hora": "16:00",
+   "mandante": "Red Star Belgrade",
+   "visitante": "Napoli",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526506",
+   "data": "2018-09-18",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526499",
+   "data": "2018-09-19",
+   "hora": "13:55",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "AEK Athens",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526500",
+   "data": "2018-09-19",
+   "hora": "13:55",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "TSG Hoffenheim",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526493",
+   "data": "2018-09-19",
+   "hora": "16:00",
+   "mandante": "Benfica",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526494",
+   "data": "2018-09-19",
+   "hora": "16:00",
+   "mandante": "Viktoria Plzen",
+   "visitante": "CSKA Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526495",
+   "data": "2018-09-19",
+   "hora": "16:00",
+   "mandante": "Valencia",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526496",
+   "data": "2018-09-19",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Lyon",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526497",
+   "data": "2018-09-19",
+   "hora": "16:00",
+   "mandante": "Young Boys",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526498",
+   "data": "2018-09-19",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "AS Roma",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526491",
+   "data": "2018-10-02",
+   "hora": "13:55",
+   "mandante": "TSG Hoffenheim",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526492",
+   "data": "2018-10-02",
+   "hora": "13:55",
+   "mandante": "Juventus",
+   "visitante": "Young Boys",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526485",
+   "data": "2018-10-02",
+   "hora": "16:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526486",
+   "data": "2018-10-02",
+   "hora": "16:00",
+   "mandante": "AEK Athens",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526487",
+   "data": "2018-10-02",
+   "hora": "16:00",
+   "mandante": "CSKA Moscow",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526488",
+   "data": "2018-10-02",
+   "hora": "16:00",
+   "mandante": "Lyon",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526489",
+   "data": "2018-10-02",
+   "hora": "16:00",
+   "mandante": "Manchester United",
+   "visitante": "Valencia",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526490",
+   "data": "2018-10-02",
+   "hora": "16:00",
+   "mandante": "AS Roma",
+   "visitante": "Viktoria Plzen",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526483",
+   "data": "2018-10-03",
+   "hora": "13:55",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Red Star Belgrade",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    6,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526484",
+   "data": "2018-10-03",
+   "hora": "13:55",
+   "mandante": "Lokomotiv Moscow",
+   "visitante": "Schalke 04",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526477",
+   "data": "2018-10-03",
+   "hora": "16:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "AS Monaco",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526478",
+   "data": "2018-10-03",
+   "hora": "16:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526479",
+   "data": "2018-10-03",
+   "hora": "16:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526480",
+   "data": "2018-10-03",
+   "hora": "16:00",
+   "mandante": "FC Porto",
+   "visitante": "Galatasaray",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526481",
+   "data": "2018-10-03",
+   "hora": "16:00",
+   "mandante": "PSV Eindhoven",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526482",
+   "data": "2018-10-03",
+   "hora": "16:00",
+   "mandante": "Napoli",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526475",
+   "data": "2018-10-23",
+   "hora": "13:55",
+   "mandante": "AEK Athens",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526476",
+   "data": "2018-10-23",
+   "hora": "13:55",
+   "mandante": "Young Boys",
+   "visitante": "Valencia",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526469",
+   "data": "2018-10-23",
+   "hora": "16:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526470",
+   "data": "2018-10-23",
+   "hora": "16:00",
+   "mandante": "AS Roma",
+   "visitante": "CSKA Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526471",
+   "data": "2018-10-23",
+   "hora": "16:00",
+   "mandante": "Manchester United",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526472",
+   "data": "2018-10-23",
+   "hora": "16:00",
+   "mandante": "TSG Hoffenheim",
+   "visitante": "Lyon",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526473",
+   "data": "2018-10-23",
+   "hora": "16:00",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526474",
+   "data": "2018-10-23",
+   "hora": "16:00",
+   "mandante": "Real Madrid",
+   "visitante": "Viktoria Plzen",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526467",
+   "data": "2018-10-24",
+   "hora": "13:55",
+   "mandante": "Club Brugge",
+   "visitante": "AS Monaco",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526468",
+   "data": "2018-10-24",
+   "hora": "13:55",
+   "mandante": "PSV Eindhoven",
+   "visitante": "Tottenham Hotspur",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526461",
+   "data": "2018-10-24",
+   "hora": "16:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526462",
+   "data": "2018-10-24",
+   "hora": "16:00",
+   "mandante": "Lokomotiv Moscow",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526463",
+   "data": "2018-10-24",
+   "hora": "16:00",
+   "mandante": "Barcelona",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526464",
+   "data": "2018-10-24",
+   "hora": "16:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Napoli",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526465",
+   "data": "2018-10-24",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "Red Star Belgrade",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526466",
+   "data": "2018-10-24",
+   "hora": "16:00",
+   "mandante": "Galatasaray",
+   "visitante": "Schalke 04",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526459",
+   "data": "2018-11-06",
+   "hora": "15:55",
+   "mandante": "AS Monaco",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526460",
+   "data": "2018-11-06",
+   "hora": "15:55",
+   "mandante": "Red Star Belgrade",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526453",
+   "data": "2018-11-06",
+   "hora": "18:00",
+   "mandante": "Internazionale",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526454",
+   "data": "2018-11-06",
+   "hora": "18:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526455",
+   "data": "2018-11-06",
+   "hora": "18:00",
+   "mandante": "Schalke 04",
+   "visitante": "Galatasaray",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526456",
+   "data": "2018-11-06",
+   "hora": "18:00",
+   "mandante": "FC Porto",
+   "visitante": "Lokomotiv Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526457",
+   "data": "2018-11-06",
+   "hora": "18:00",
+   "mandante": "Napoli",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526458",
+   "data": "2018-11-06",
+   "hora": "18:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "PSV Eindhoven",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526451",
+   "data": "2018-11-07",
+   "hora": "15:55",
+   "mandante": "CSKA Moscow",
+   "visitante": "AS Roma",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526452",
+   "data": "2018-11-07",
+   "hora": "15:55",
+   "mandante": "Valencia",
+   "visitante": "Young Boys",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526445",
+   "data": "2018-11-07",
+   "hora": "18:00",
+   "mandante": "Bayern Munich",
+   "visitante": "AEK Athens",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526446",
+   "data": "2018-11-07",
+   "hora": "18:00",
+   "mandante": "Benfica",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526447",
+   "data": "2018-11-07",
+   "hora": "18:00",
+   "mandante": "Lyon",
+   "visitante": "TSG Hoffenheim",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526448",
+   "data": "2018-11-07",
+   "hora": "18:00",
+   "mandante": "Juventus",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526449",
+   "data": "2018-11-07",
+   "hora": "18:00",
+   "mandante": "Viktoria Plzen",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    5
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526450",
+   "data": "2018-11-07",
+   "hora": "18:00",
+   "mandante": "Manchester City",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    6,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526443",
+   "data": "2018-11-27",
+   "hora": "15:55",
+   "mandante": "AEK Athens",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526444",
+   "data": "2018-11-27",
+   "hora": "15:55",
+   "mandante": "CSKA Moscow",
+   "visitante": "Viktoria Plzen",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526437",
+   "data": "2018-11-27",
+   "hora": "18:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Benfica",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526438",
+   "data": "2018-11-27",
+   "hora": "18:00",
+   "mandante": "Lyon",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526439",
+   "data": "2018-11-27",
+   "hora": "18:00",
+   "mandante": "AS Roma",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526440",
+   "data": "2018-11-27",
+   "hora": "18:00",
+   "mandante": "TSG Hoffenheim",
+   "visitante": "Shakhtar Donetsk",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526441",
+   "data": "2018-11-27",
+   "hora": "18:00",
+   "mandante": "Juventus",
+   "visitante": "Valencia",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526442",
+   "data": "2018-11-27",
+   "hora": "18:00",
+   "mandante": "Manchester United",
+   "visitante": "Young Boys",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526435",
+   "data": "2018-11-28",
+   "hora": "15:55",
+   "mandante": "Atlético Madrid",
+   "visitante": "AS Monaco",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526436",
+   "data": "2018-11-28",
+   "hora": "15:55",
+   "mandante": "Lokomotiv Moscow",
+   "visitante": "Galatasaray",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526429",
+   "data": "2018-11-28",
+   "hora": "18:00",
+   "mandante": "PSV Eindhoven",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526430",
+   "data": "2018-11-28",
+   "hora": "18:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Club Brugge",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526431",
+   "data": "2018-11-28",
+   "hora": "18:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "Internazionale",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526432",
+   "data": "2018-11-28",
+   "hora": "18:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526433",
+   "data": "2018-11-28",
+   "hora": "18:00",
+   "mandante": "Napoli",
+   "visitante": "Red Star Belgrade",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526434",
+   "data": "2018-11-28",
+   "hora": "18:00",
+   "mandante": "FC Porto",
+   "visitante": "Schalke 04",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526427",
+   "data": "2018-12-11",
+   "hora": "15:55",
+   "mandante": "Galatasaray",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526428",
+   "data": "2018-12-11",
+   "hora": "15:55",
+   "mandante": "Schalke 04",
+   "visitante": "Lokomotiv Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526421",
+   "data": "2018-12-11",
+   "hora": "18:00",
+   "mandante": "Club Brugge",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526422",
+   "data": "2018-12-11",
+   "hora": "18:00",
+   "mandante": "AS Monaco",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526423",
+   "data": "2018-12-11",
+   "hora": "18:00",
+   "mandante": "Liverpool",
+   "visitante": "Napoli",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526424",
+   "data": "2018-12-11",
+   "hora": "18:00",
+   "mandante": "Red Star Belgrade",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526425",
+   "data": "2018-12-11",
+   "hora": "18:00",
+   "mandante": "Internazionale",
+   "visitante": "PSV Eindhoven",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526426",
+   "data": "2018-12-11",
+   "hora": "18:00",
+   "mandante": "Barcelona",
+   "visitante": "Tottenham Hotspur",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526419",
+   "data": "2018-12-12",
+   "hora": "15:55",
+   "mandante": "Real Madrid",
+   "visitante": "CSKA Moscow",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526420",
+   "data": "2018-12-12",
+   "hora": "15:55",
+   "mandante": "Viktoria Plzen",
+   "visitante": "AS Roma",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526413",
+   "data": "2018-12-12",
+   "hora": "18:00",
+   "mandante": "Benfica",
+   "visitante": "AEK Athens",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526414",
+   "data": "2018-12-12",
+   "hora": "18:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    3
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526415",
+   "data": "2018-12-12",
+   "hora": "18:00",
+   "mandante": "Manchester City",
+   "visitante": "TSG Hoffenheim",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526416",
+   "data": "2018-12-12",
+   "hora": "18:00",
+   "mandante": "Young Boys",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526417",
+   "data": "2018-12-12",
+   "hora": "18:00",
+   "mandante": "Shakhtar Donetsk",
+   "visitante": "Lyon",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "526418",
+   "data": "2018-12-12",
+   "hora": "18:00",
+   "mandante": "Valencia",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "group-stage",
+   "nota": null,
+   "temporada": 2018
+  },
+  {
+   "id": "530636",
+   "data": "2019-02-12",
+   "hora": "18:00",
+   "mandante": "AS Roma",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530639",
+   "data": "2019-02-12",
+   "hora": "18:00",
+   "mandante": "Manchester United",
+   "visitante": "Paris Saint-Germain",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530635",
+   "data": "2019-02-13",
+   "hora": "18:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "Borussia Dortmund",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530640",
+   "data": "2019-02-13",
+   "hora": "18:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Real Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530633",
+   "data": "2019-02-19",
+   "hora": "17:00",
+   "mandante": "Lyon",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530634",
+   "data": "2019-02-19",
+   "hora": "17:00",
+   "mandante": "Liverpool",
+   "visitante": "Bayern Munich",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530637",
+   "data": "2019-02-20",
+   "hora": "17:00",
+   "mandante": "Atlético Madrid",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530638",
+   "data": "2019-02-20",
+   "hora": "17:00",
+   "mandante": "Schalke 04",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "round-of-16",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "530625",
+   "data": "2019-03-05",
+   "hora": "17:00",
+   "mandante": "Real Madrid",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Ajax Amsterdam win 5-3 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "530632",
+   "data": "2019-03-05",
+   "hora": "17:00",
+   "mandante": "Borussia Dortmund",
+   "visitante": "Tottenham Hotspur",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Tottenham Hotspur win 4-0 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "530629",
+   "data": "2019-03-06",
+   "hora": "17:00",
+   "mandante": "Paris Saint-Germain",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Tied on aggregate - Manchester United advance on away goals",
+   "temporada": 2018
+  },
+  {
+   "id": "530630",
+   "data": "2019-03-06",
+   "hora": "17:00",
+   "mandante": "FC Porto",
+   "visitante": "AS Roma",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - FC Porto win 4-3 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "530626",
+   "data": "2019-03-12",
+   "hora": "17:00",
+   "mandante": "Juventus",
+   "visitante": "Atlético Madrid",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Juventus win 3-2 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "530631",
+   "data": "2019-03-12",
+   "hora": "17:00",
+   "mandante": "Manchester City",
+   "visitante": "Schalke 04",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    7,
+    0
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Manchester City win 10-2 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "530627",
+   "data": "2019-03-13",
+   "hora": "17:00",
+   "mandante": "Bayern Munich",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    3
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Liverpool win 3-1 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "530628",
+   "data": "2019-03-13",
+   "hora": "17:00",
+   "mandante": "Barcelona",
+   "visitante": "Lyon",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    5,
+    1
+   ],
+   "fase": "round-of-16",
+   "nota": "2nd Leg - Barcelona win 5-1 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "538694",
+   "data": "2019-04-09",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "FC Porto",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "538696",
+   "data": "2019-04-09",
+   "hora": "16:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "Manchester City",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "538691",
+   "data": "2019-04-10",
+   "hora": "16:00",
+   "mandante": "Manchester United",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "538695",
+   "data": "2019-04-10",
+   "hora": "16:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Juventus",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    1
+   ],
+   "fase": "quarterfinals",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "538690",
+   "data": "2019-04-16",
+   "hora": "16:00",
+   "mandante": "Juventus",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    2
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Ajax Amsterdam win 3-2 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "538697",
+   "data": "2019-04-16",
+   "hora": "16:00",
+   "mandante": "Barcelona",
+   "visitante": "Manchester United",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Barcelona win 4-0 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "538692",
+   "data": "2019-04-17",
+   "hora": "16:00",
+   "mandante": "FC Porto",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    1,
+    4
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Liverpool win 6-1 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "538693",
+   "data": "2019-04-17",
+   "hora": "16:00",
+   "mandante": "Manchester City",
+   "visitante": "Tottenham Hotspur",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    3
+   ],
+   "fase": "quarterfinals",
+   "nota": "2nd Leg - Tied on aggregate - Tottenham Hotspur win on away goals",
+   "temporada": 2018
+  },
+  {
+   "id": "538700",
+   "data": "2019-04-30",
+   "hora": "16:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "Ajax Amsterdam",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    1
+   ],
+   "fase": "semifinals",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "538701",
+   "data": "2019-05-01",
+   "hora": "16:00",
+   "mandante": "Barcelona",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    3,
+    0
+   ],
+   "fase": "semifinals",
+   "nota": "1st Leg",
+   "temporada": 2018
+  },
+  {
+   "id": "538699",
+   "data": "2019-05-07",
+   "hora": "16:00",
+   "mandante": "Liverpool",
+   "visitante": "Barcelona",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    4,
+    0
+   ],
+   "fase": "semifinals",
+   "nota": "2nd Leg - Liverpool advance 4-3 on aggregate",
+   "temporada": 2018
+  },
+  {
+   "id": "538698",
+   "data": "2019-05-08",
+   "hora": "16:00",
+   "mandante": "Ajax Amsterdam",
+   "visitante": "Tottenham Hotspur",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    2,
+    3
+   ],
+   "fase": "semifinals",
+   "nota": "2nd Leg - Tied on aggregate - Tottenham Hotspur advance on away goals",
+   "temporada": 2018
+  },
+  {
+   "id": "539938",
+   "data": "2019-06-01",
+   "hora": "16:00",
+   "mandante": "Tottenham Hotspur",
+   "visitante": "Liverpool",
+   "estado": "post",
+   "finalizado": true,
+   "placar": [
+    0,
+    2
+   ],
+   "fase": "final",
+   "nota": null,
+   "temporada": 2018
+  }
+ ]
+}

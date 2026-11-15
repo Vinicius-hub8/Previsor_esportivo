@@ -117,7 +117,8 @@ def ler_esportes_americanos(pasta):
 
 def ler_futebol(pasta):
     """
-    Le as ligas nacionais de futebol.
+    Le as competicoes de futebol (as 6 ligas e a Champions League),
+    todas no mesmo formato: futebol/<liga>.json.
     """
     pasta_futebol = pasta / "futebol"
 
@@ -168,141 +169,6 @@ def ler_futebol(pasta):
                 }
 
 
-def ler_champions(pasta):
-    """
-    Le previsoes futuras e resultados
-    historicos da Champions League.
-
-    Mesmo que uma partida desapareca de
-    champions.json, seu resultado continua
-    disponivel nos arquivos por temporada.
-
-    Nunca cria previsoes retroativas.
-    """
-    arquivo_previsoes = pasta / "champions.json"
-    pasta_champions = pasta / "champions"
-
-    resultados = {}
-    ids_exportados = set()
-
-    # 1. Carregar os resultados confirmados
-    # dos arquivos historicos.
-    if pasta_champions.exists():
-        for caminho in sorted(
-            pasta_champions.glob("20??-20??.json")
-        ):
-            dados_temporada = carregar_json(caminho)
-
-            for jogo in dados_temporada.get("jogos", []):
-                if not jogo.get("finalizado"):
-                    continue
-
-                placar = jogo.get("placar")
-
-                if (
-                    not isinstance(
-                        placar, (list, tuple)
-                    )
-                    or len(placar) != 2
-                    or placar[0] is None
-                    or placar[1] is None
-                ):
-                    continue
-
-                identificador = str(jogo["id"])
-
-                resultados[identificador] = {
-                    "jogo": jogo,
-                    "temporada": caminho.stem,
-                    "placar": (
-                        int(placar[0]),
-                        int(placar[1]),
-                    ),
-                }
-
-    # 2. Ler previsoes exportadas.
-    if arquivo_previsoes.exists():
-        dados = carregar_json(
-            arquivo_previsoes
-        )
-
-        for jogo in dados.get("jogos", []):
-            identificador = str(jogo["id"])
-            ids_exportados.add(identificador)
-
-            p = jogo.get("probabilidades")
-            probabilidades = None
-
-            if isinstance(p, dict):
-                try:
-                    # champions.json armazena
-                    # porcentagens de 0 a 100.
-                    probabilidades = {
-                        "mandante": float(
-                            p["mandante"]
-                        ) / 100.0,
-                        "empate": float(
-                            p["empate"]
-                        ) / 100.0,
-                        "visitante": float(
-                            p["visitante"]
-                        ) / 100.0,
-                    }
-                except (
-                    KeyError,
-                    TypeError,
-                    ValueError,
-                ):
-                    pass
-
-            resultado = resultados.get(
-                identificador
-            )
-
-            yield {
-                "esporte": "futebol",
-                "liga": "champions",
-                "jogo_id": identificador,
-                "temporada": str(
-                    jogo["temporada"]
-                ),
-                "data_jogo": jogo["data"],
-                "hora_jogo": jogo.get("hora"),
-                "mandante": jogo["mandante"],
-                "visitante": jogo["visitante"],
-                "probabilidades": probabilidades,
-                "placar": (
-                    resultado["placar"]
-                    if resultado else None
-                ),
-            }
-
-    # 3. Ler resultados de partidas que
-    # nao estao mais no JSON de previsoes.
-    for identificador, resultado in resultados.items():
-        if identificador in ids_exportados:
-            continue
-
-        jogo = resultado["jogo"]
-
-        yield {
-            "esporte": "futebol",
-            "liga": "champions",
-            "jogo_id": identificador,
-            "temporada": resultado[
-                "temporada"
-            ],
-            "data_jogo": jogo["data"],
-            "hora_jogo": jogo.get("hora"),
-            "mandante": jogo["mandante"],
-            "visitante": jogo["visitante"],
-            # Nunca gerar probabilidades
-            # depois do resultado conhecido.
-            "probabilidades": None,
-            "placar": resultado["placar"],
-        }
-
-
 def ler_jogos(pasta=DADOS):
     """
     Retorna as partidas de todos
@@ -310,7 +176,6 @@ def ler_jogos(pasta=DADOS):
     """
     yield from ler_esportes_americanos(pasta)
     yield from ler_futebol(pasta)
-    yield from ler_champions(pasta)
 
 
 def inicio_partida(jogo):

@@ -10,85 +10,45 @@ Comandos:
     python atualizar.py futebol
     python atualizar.py champions
 
-A Champions possui seu proprio fluxo:
-coleta -> organizacao -> previsoes -> historico.
+A Champions League segue o mesmo fluxo das ligas de futebol (previsor_futebol.py):
+`python atualizar.py champions` atualiza so ela. No fim, as previsoes entram no historico (historico_previsoes.py).
 """
 
-import subprocess
 import sys
 import traceback
-from datetime import datetime, timedelta
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 import exportar_dados
 import exportar_futebol
 import exportar_nba
+import historico_previsoes
+import previsor_futebol as F
 
 
 RAIZ = Path(__file__).resolve().parent
-FUSO = ZoneInfo("America/Sao_Paulo")
 
 
-def executar_script(caminho, *argumentos):
-    comando = [
-        sys.executable,
-        str(RAIZ / caminho),
-        *map(str, argumentos),
-    ]
-
-    subprocess.run(
-        comando,
-        cwd=RAIZ,
-        check=True,
-    )
+def atualizar_futebol():
+    exportar_futebol.main(ligas=[l for l in F.LIGAS if l != "champions"])
 
 
 def atualizar_champions():
-    print("\n--- CHAMPIONS: COLETA ---", flush=True)
+    exportar_futebol.main(ligas=["champions"])
 
-    hoje = datetime.now(FUSO).date()
 
-    # Reconsulta alguns dias anteriores para
-    # encontrar resultados recem-finalizados
-    # e busca as partidas dos proximos 14 dias.
-    inicio = hoje - timedelta(days=3)
-    fim = hoje + timedelta(days=14)
-
-    executar_script(
-        "champions/coletar.py",
-        "--inicio",
-        inicio.isoformat(),
-        "--fim",
-        fim.isoformat(),
-    )
-
-    print(
-        "\n--- CHAMPIONS: ORGANIZACAO ---",
-        flush=True,
-    )
-
-    executar_script("champions/organizar.py")
-
-    print(
-        "\n--- CHAMPIONS: PREVISOES ---",
-        flush=True,
-    )
-
-    executar_script("champions/exportar.py")
-
-    print(
-        "\n--- CHAMPIONS: HISTORICO ---",
-        flush=True,
-    )
-
-    executar_script("historico_previsoes.py")
+def registrar_historico():
+    """Guarda as previsoes e os resultados no banco local (historico.db). Falhar aqui nao derruba a atualizacao."""
+    try:
+        historico_previsoes.executar()
+    except Exception:
+        traceback.print_exc()
+        print("Aviso: o historico de previsoes nao foi atualizado.", flush=True)
 
 
 ESPORTES = {
     "nfl": exportar_dados.main,
     "nba": exportar_nba.main,
-    "futebol": exportar_futebol.main,
+    "futebol": atualizar_futebol,
     "champions": atualizar_champions,
 }
 
